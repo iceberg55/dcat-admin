@@ -1,0 +1,8 @@
+/* Bootstrap setup */
+@import './bootstrap/functions';
+@import './bootstrap/variables';
+/* Muze setup */
+@import 'muze/variables';
+/* Bootstrap core */
+@import 'bootstrap/bootstrap';
+@import 'muze/muze';
