@@ -22,7 +22,8 @@ function themeJs(path) {
   return `${distPath}/js/${path}.js`
 }
 
-mix.copyDirectory('resources/assets/svg', distPath + '/svg');
+mix.copyDirectory('resources/assets/svg', distPath + '/svg')
+    .copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', distPath + '/fonts/fontawesome');
 
 // Theme
 mix.sass('resources/assets/sass/theme.scss', themeCss('theme'))
