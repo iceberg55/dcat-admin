@@ -2047,7 +2047,7 @@ caption, .caption {
     margin-left: -2em;
   }
   .form-check-input:checked[type="radio"] {
-    background-image: url("../../svg/icons/check-light.svg");
+    background-image: url("../svg/icons/check-light.svg");
     background-size: 1rem;
   }
 }
@@ -2135,7 +2135,7 @@ textarea.form-control {
   border-color: $gray-300;
   font-size: 0.875rem;
   height: 2.375rem;
-  background-image: url("../../svg/icons/down-arrow.svg");
+  background-image: url("../svg/icons/down-arrow.svg");
   background-repeat: no-repeat;
   background-size: 1rem 0.75rem;
   background-position: right 0.5rem center;
@@ -2511,7 +2511,7 @@ textarea.form-control {
 }
 /* 2.  28.  Muze Btn Close CSS */
 .btn-close {
-  background: transparent url("../../svg/icons/close1.svg");
+  background: transparent url("../svg/icons/close1.svg");
   background-repeat: no-repeat;
 }
 /* 2.  29.  Muze Opacity CSS */
@@ -2843,5 +2843,5 @@ textarea.form-control {
 }
 
 
-@import 'templates';
-@import 'dashboard';
+@import 'resources/assets/sass/templates';
+@import 'resources/assets/sass/dashboard';

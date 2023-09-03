@@ -1,6 +1,10 @@
 // jQuery
 window.$ = window.jQuery = require('jquery');
 
+// Bootstrap
+window.Popper = require('popper.js');
+require('bootstrap');
+
 //Muze Onhover Get Inline CSS JavaScript
 var muzeNavItem = document.querySelectorAll('.navbar-vertical .nav-item').forEach((muzeNavItem) => {
   muzeNavItem.addEventListener('mouseover', (e) => {

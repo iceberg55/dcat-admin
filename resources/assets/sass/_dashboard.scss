@@ -117,7 +117,7 @@
         &[data-bs-toggle="collapse"] {
           &:after {
             display: block;
-            content: url("../../svg/icons/chevron-down1.svg");
+            content: url("../svg/icons/chevron-down1.svg");
             margin-left: 0.8125rem;
             width: 0.75rem;
             transition: transform .2s;
@@ -378,7 +378,7 @@
       }
       .nav-link[data-bs-toggle="collapse"]:after {
         display: block;
-        content: url("../../svg/icons/chevron-down1.svg");
+        content: url("../svg/icons/chevron-down1.svg");
         margin-left: auto;
         width: 0.75rem;
         transition: transform .2s;
