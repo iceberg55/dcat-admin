@@ -21,9 +21,9 @@
     @else
         <li class="{{ $horizontal ? 'dropdown' : 'has-treeview' }} {{ $depth > 0 ? 'dropdown-submenu' : '' }} nav-item {{ $builder->isActive($item) ? 'menu-open' : '' }}">
             <a href="#sidebar{{ $item['id'] ?? '' }}"  data-id="{{ $item['id'] ?? '' }}"
-               class="nav-link {{ $builder->isActive($item) ? ($horizontal ? 'active' : '') : '' }}
-                    {{ $horizontal ? 'dropdown-toggle' : '' }}">
-                {!! str_repeat('&nbsp;', $depth) !!}<i class="fa fa-fw {{ $item['icon'] ?: $defaultIcon }}"></i>
+               class="nav-link {{ $builder->isActive($item) ? '' : 'collapsed' }}"
+               data-bs-toggle="collapse" role="button" aria-expanded="{{ $builder->isActive($item) ? 'true' : 'false' }}" aria-controls="sidebar{{ $item['id'] ?? '' }}">
+                {!! str_repeat('&nbsp;', $depth) !!}
                 <span class="ms-2">
                     {!! $builder->translate($item['title']) !!}
                     @if(! $horizontal)

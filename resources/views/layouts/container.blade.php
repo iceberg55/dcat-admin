@@ -10,7 +10,7 @@
     @include('admin::partials.navbar')
 
     <div class="app-content" id="{{ $pjaxContainerId }}">
-        @yield('app')
+{{--        @yield('app')--}}
     </div>
 </div>
 
