@@ -48,7 +48,7 @@
 {{--                    {!! Dcat\Admin\Admin::navbar()->render() !!}--}}
 
 {{--                    <ul class="nav navbar-nav">--}}
-{{--                        --}}{{--User Account Menu--}}
+{{--                        User Account Menu--}}
 {{--                        {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_USER_PANEL']) !!}--}}
 
 {{--                        {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_AFTER_USER_PANEL']) !!}--}}
@@ -58,10 +58,14 @@
 {{--        </div>--}}
 {{--    </div>--}}
 {{--</nav>--}}
+
 <div class="main-content">
     <div class="header border-bottom border-gray-200 header-fixed">
         <div class="container-fluid px-0">
             <div class="header-body px-3 px-xxl-5 py-3 py-lg-4">
+                <div class="navbar-left d-flex align-items-center">
+                    {!! Dcat\Admin\Admin::navbar()->render('left') !!}
+                </div>
                 <div class="row align-items-center">
                     <a href="javascript:void(0);" class="muze-hamburger d-block d-lg-none col-auto">
                         <img src="../assets/svg/icons/hamburger1.svg" alt="img">
@@ -108,7 +112,7 @@
                                         <div class="collapse collapse-box" id="sidebarDashboards2" data-bs-parent="#accordionExample2">
                                             <ul class="nav nav-sm flex-column">
                                                 <li class="nav-item">
-                                                    <a href="analytics.html" class="nav-link">Analytics</a>
+                                                    <a href="analytics.html" class="nav-link active">Analytics</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="project-management.html" class="nav-link">Project management</a>
@@ -174,7 +178,7 @@
                                                                 <a href="all-projects.html" class="nav-link">All projects</a>
                                                             </li>
                                                             <li class="nav-item">
-                                                                <a href="new-project.html" class="nav-link active">New project</a>
+                                                                <a href="new-project.html" class="nav-link">New project</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a href="project-details.html" class="nav-link">Project detail</a>
@@ -736,6 +740,7 @@
                             </div>
                         </div>
                         <div class="dropdown profile-dropdown">
+
                             <a href="#" class="avatar avatar-sm avatar-circle ms-4 ms-xxl-5" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton">
                                 <img class="avatar-img" src="../assets/img/avatar1.png" alt="Avatar">
                                 <span class="avatar-status avatar-sm-status avatar-success">&nbsp;</span>
@@ -800,7 +805,7 @@
                                 <div class="collapse collapse-box" id="sidebarDashboards3" data-bs-parent="#accordionExample3">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item">
-                                            <a href="analytics.html" class="nav-link">Analytics</a>
+                                            <a href="analytics.html" class="nav-link active">Analytics</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="project-management.html" class="nav-link">Project management</a>
@@ -866,7 +871,7 @@
                                                         <a href="all-projects.html" class="nav-link">All projects</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="new-project.html" class="nav-link active">New project</a>
+                                                        <a href="new-project.html" class="nav-link">New project</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a href="project-details.html" class="nav-link">Project detail</a>
@@ -997,4 +1002,5 @@
         </div>
     </div>
 </div>
+
 {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_AFTER']) !!}
