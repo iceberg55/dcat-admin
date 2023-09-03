@@ -26,9 +26,6 @@
                 {!! str_repeat('&nbsp;', $depth) !!}
                 <span class="ms-2">
                     {!! $builder->translate($item['title']) !!}
-                    @if(! $horizontal)
-                        <i class="right fa fa-angle-left"></i>
-                    @endif
                 </span>
             </a>
             <div class="collapse collapse-box" id="sidebar{{ $item['id'] ?? '' }}">
