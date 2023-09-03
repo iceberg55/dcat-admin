@@ -25,6 +25,10 @@ function themeJs(path) {
 mix.copyDirectory('resources/assets/svg', distPath + '/svg');
 
 // Theme
-mix.sass('resources/assets/sass/theme.scss', themeCss('theme')).sourceMaps();
+mix.sass('resources/assets/sass/theme.scss', themeCss('theme'))
+    .options({
+        processCssUrls: false
+    })
+    .sourceMaps();
 mix.js('resources/assets/js/theme.js', themeJs('theme')).sourceMaps();
 
