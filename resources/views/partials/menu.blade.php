@@ -12,7 +12,8 @@
             <a data-id="{{ $item['id'] ?? '' }}" @if(mb_strpos($item['uri'], '://') !== false || ( isset($item['is_target_blank']) && $item['is_target_blank'] == 1)) target="_blank" @endif
                href="{{ $builder->getUrl($item['uri']) }}"
                class="nav-link {!! $builder->isActive($item) ? 'active' : '' !!}">
-                {!! str_repeat('&nbsp;', $depth) !!}<i class="fa fa-fw {{ $item['icon'] ?: $defaultIcon }}"></i>
+                {!! str_repeat('&nbsp;', $depth) !!}
+                <i class="fa {{ $item['icon'] ?: $defaultIcon }}"></i>
                 <span class="ms-2">
                     {!! $builder->translate($item['title']) !!}
                 </span>
@@ -24,6 +25,7 @@
                class="nav-link {{ $builder->isActive($item) ? '' : 'collapsed' }}"
                data-bs-toggle="collapse" role="button" aria-expanded="{{ $builder->isActive($item) ? 'true' : 'false' }}" aria-controls="sidebar{{ $item['id'] ?? '' }}">
                 {!! str_repeat('&nbsp;', $depth) !!}
+                <i class="fa {{ $item['icon'] ?: $defaultIcon }}"></i>
                 <span class="ms-2">
                     {!! $builder->translate($item['title']) !!}
                 </span>
