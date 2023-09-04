@@ -1,6 +1,9 @@
 <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
     <a class="navbar-brand mx-auto d-none d-lg-block my-0 my-lg-4" href="#">
-      Iceberg Prop
+        <img src="../assets/svg/brand/logo.svg" alt="Muze">
+        <img src="../assets/svg/brand/logo-white.svg" alt="Muze" class="white-logo2">
+        <img src="../assets/svg/brand/muze-icon.svg" class="muze-icon" alt="Muze">
+        <img src="../assets/svg/brand/muze-icon-white.svg" class="muze-icon-white" alt="Muze">
     </a>
     <div class="navbar-collapse">
         <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
