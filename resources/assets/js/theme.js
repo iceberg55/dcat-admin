@@ -5,6 +5,12 @@ window.$ = window.jQuery = require('jquery');
 window.Popper = require('popper.js');
 require('bootstrap');
 
+// Theme
+import DarkMode from './extensions/DarkMode';
+window.theme = {
+  darkMode: new DarkMode(),
+}
+
 //Muze Onhover Get Inline CSS JavaScript
 var muzeNavItem = document.querySelectorAll('.navbar-vertical .nav-item').forEach((muzeNavItem) => {
   muzeNavItem.addEventListener('mouseover', (e) => {
