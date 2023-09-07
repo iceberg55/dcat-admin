@@ -7,14 +7,14 @@ export default class Menu {
 
     // 菜单点击选中效果
     init() {
-        if (! $('.main-sidebar .sidebar').length) {
+        if (! $('#sidebar').length) {
             return;
         }
 
         // 滚动条优化
-        new PerfectScrollbar('.main-sidebar .sidebar');
+        new PerfectScrollbar('#sidebar');
 
-        let $content = $('.main-menu-content'),
+        let $content = $('#sidebar'),
             $items = $content.find('li'),
             $hasSubItems = $content.find('li.has-treeview');
 
@@ -27,7 +27,7 @@ export default class Menu {
             $items.find('.nav-link').removeClass('active');
             // $hasSubItems.removeClass('menu-open');
 
-            $(this).addClass('active')
+            $(this).addClass('active');
         });
 
         // 启用sidebar_collapsed模式后点击菜单自动缩进
