@@ -33,7 +33,7 @@
 
         @yield('content-header')
 
-    <div class="content-body" id="app">
+    <div class="content-body p-3" id="app">
         {{-- 页面埋点--}}
         {!! admin_section(Dcat\Admin\Admin::SECTION['APP_INNER_BEFORE']) !!}
 
