@@ -1,4 +1,4 @@
-<nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
+<nav class="navbar navbar-vertical navbar-expand-lg navbar-light" id="sidebar">
     <a class="navbar-brand mx-auto d-none d-lg-block my-0 my-lg-4" href="#">
         <img src="../assets/svg/brand/logo.svg" alt="Muze">
         <img src="../assets/svg/brand/logo-white.svg" alt="Muze" class="white-logo2">
