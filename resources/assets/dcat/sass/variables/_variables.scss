@@ -1,12 +1,11 @@
 
 // 继承
-@import "../../../sass/bootstrap/functions";
+@import '~bootstrap/scss/functions';
 
-@import "../../../sass/variables/variables";
-@import "../../../sass/bootstrap/variables";
+@import '~bootstrap/scss/variables';
 
 // 按钮定义
-@import "../../../sass/bootstrap/mixins";
+@import "~bootstrap/scss/mixins";
 
 
 @import "../theme/colors";
