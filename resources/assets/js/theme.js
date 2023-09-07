@@ -1,6 +1,3 @@
-// jQuery
-window.$ = window.jQuery = require('jquery');
-
 // Bootstrap
 window.Popper = require('popper.js');
 require('bootstrap');
@@ -8,7 +5,7 @@ require('bootstrap');
 // Theme
 import DarkMode from './extensions/DarkMode';
 window.theme = {
-  darkMode: new DarkMode(),
+  darkMode: new DarkMode()
 }
 
 //Muze Onhover Get Inline CSS JavaScript
