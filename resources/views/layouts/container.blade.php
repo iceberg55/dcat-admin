@@ -1,4 +1,4 @@
-<body class="bg-gray-100 {{ $configData['body_class']}} {{ $configData['sidebar_class'] }} {{ $configData['navbar_class'] === 'fixed-top' ? 'navbar-fixed-top' : '' }} " >
+<body class="{{ $configData['body_class']}} {{ $configData['sidebar_class'] }} {{ $configData['navbar_class'] === 'fixed-top' ? 'navbar-fixed-top' : '' }} " >
 
 <script>
     var Dcat = CreateDcat({!! Dcat\Admin\Admin::jsVariables() !!});
@@ -8,7 +8,7 @@
 
 @include('admin::partials.sidebar')
 
-<div class="app-content main-content">
+<div class="main-content">
     @include('admin::partials.navbar')
 
     <div class="app-content" id="{{ $pjaxContainerId }}">
