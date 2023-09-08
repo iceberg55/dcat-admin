@@ -67,13 +67,13 @@ li {
 // 表单
 @import "./components/form";
 // 分页
-@import "./components/pagination";
+//@import "./components/pagination";
 // data-list-view 表格
 @import "./components/table";
 // grid
 @import "./components/grid";
 // 下拉菜单
-@import "./components/dropdown";
+//@import "./components/dropdown";
 // checkbox
 @import "./components/checkbox";
 // radio
@@ -95,8 +95,8 @@ li {
 // tab
 @import "./components/tab";
 // menu
-@import "./components/menu";
-@import "./components/horizontal-menu";
+//@import "./components/menu";
+//@import "./components/horizontal-menu";
 // alert
 @import "./components/alert";
 // code
@@ -115,4 +115,4 @@ li {
 @import "./components/icon-picker";
 
 // dark mode
-@import "./theme/dark";
+//@import "./theme/dark";

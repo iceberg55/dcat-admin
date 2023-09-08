@@ -9,9 +9,18 @@ $fa-font-path: "../fonts/fontawesome";
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
-/* Muze setup */
+/* Variables */
+@import 'muze-variables';
 @import 'variables';
 
 /* Bootstrap core */
 @import '~bootstrap/scss/bootstrap';
+
+/* Bootstrap extends */
+//@import 'bootstrap-extended';
+
+/* Theme */
 @import 'muze';
+
+/* Customize */
+@import 'custom';
