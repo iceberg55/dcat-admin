@@ -1,4 +1,4 @@
-/* Notification Button */
-.notification.dropdown-toggle::after {
-  display: none;
+:root,
+[data-bs-theme=light] {
+	--bs-link-color-rgb: 110, 110, 110;
 }
