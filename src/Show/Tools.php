@@ -252,7 +252,7 @@ class Tools implements Renderable
         return <<<HTML
 <div class="btn-group pull-right btn-mini" style="margin-right: 5px">
     <a href="{$this->getListPath()}" class="btn btn-sm btn-primary ">
-        <i class="feather icon-list"></i><span class="d-none d-sm-inline"> {$list}</span>
+        <i class="fas fa-list"></i><span class="d-none d-sm-inline"> {$list}</span>
     </a>
 </div>
 HTML;
@@ -277,7 +277,7 @@ HTML;
         if ($this->showEdit) {
             $btn = <<<EOF
 <a href="{$url}" class="btn btn-sm btn-primary">
-        <i class="feather icon-edit-1"></i><span class="d-none d-sm-inline"> {$edit}</span>
+        <i class="fas fa-pencil"></i><span class="d-none d-sm-inline"> {$edit}</span>
     </a>
 EOF;
         }
