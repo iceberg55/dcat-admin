@@ -9,7 +9,7 @@ class Edit extends RowAction
     public function html()
     {
         return <<<HTML
-<a href="{$this->resource()}/{$this->getKey()}/edit"><i class="feather icon-edit-1"></i>&nbsp;</a>
+<a href="{$this->resource()}/{$this->getKey()}/edit"><i class="fas fa-pencil"></i>&nbsp;</a>
 HTML;
     }
 }
