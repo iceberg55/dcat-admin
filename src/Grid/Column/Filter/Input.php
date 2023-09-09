@@ -52,14 +52,15 @@ JS;
         return <<<HTML
 &nbsp;<span class="dropdown">
     <form action="{$this->formAction()}" pjax-container style="display: inline-block;">
-    <a href="javascript:void(0);" class="feather icon-filter {$active}" data-toggle="dropdown">
-    </a>
-    <ul class="dropdown-menu" role="menu" style="width: 250px;padding: 10px;left: -70px;border-radius: 0;font-weight:normal;background:#fff;">
-        <li>
-            <input placeholder="{$this->placeholder}" type="text" name="{$this->getQueryName()}" value="{$value}" class="form-control input-sm {$this->class}" autocomplete="off"/>
-        </li>
-        {$this->renderFormButtons()}
-    </ul>
+        <a class="{$active}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-filter"></i>
+        </a>
+        <ul class="dropdown-menu" style="width: 250px;padding: 10px;left: -70px;border-radius: 0;font-weight:normal;background:#fff;">
+            <li>
+                <input placeholder="{$this->placeholder}" type="text" name="{$this->getQueryName()}" value="{$value}" class="form-control input-sm {$this->class}" autocomplete="off"/>
+            </li>
+            {$this->renderFormButtons()}
+        </ul>
     </form>
 </span>
 HTML;

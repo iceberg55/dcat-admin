@@ -83,7 +83,7 @@ class RowSelector
         return <<<HTML
 <div class="vs-checkbox-con vs-checkbox-{$this->style} checkbox-grid checkbox-grid-header">
     <input type="checkbox" class="select-all {$this->grid->getSelectAllName()}">
-    <span class="vs-checkbox"><span class="vs-checkbox--check"><i class="vs-icon feather icon-check"></i></span></span>
+    <span class="vs-checkbox"><span class="vs-checkbox--check"><i class="vs-icon fas fa-check"></i></span></span>
 </div>
 HTML;
     }
@@ -100,7 +100,7 @@ HTML;
         return <<<EOT
 <div class="vs-checkbox-con vs-checkbox-{$this->style} checkbox-grid checkbox-grid-column">
     <input type="checkbox" class="{$this->grid->getRowName()}-checkbox" data-id="{$id}" {$checked} {$disabled} data-label="{$title}">
-    <span class="vs-checkbox"><span class="vs-checkbox--check"><i class="vs-icon feather icon-check"></i></span></span>
+    <span class="vs-checkbox"><span class="vs-checkbox--check"><i class="vs-icon fas fa-check"></i></span></span>
 </div>        
 EOT;
     }
