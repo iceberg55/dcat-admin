@@ -23,8 +23,8 @@ class Show extends RowAction
 
     public function title()
     {
-        $icon = $this->getRow()->show ? 'icon-eye-off' : 'icon-eye';
+        $icon = $this->getRow()->show ? 'fa-eye-slash' : 'fa-eye';
 
-        return "&nbsp;<i class='feather $icon'></i>&nbsp;";
+        return "&nbsp;<i class='fas $icon'></i>&nbsp;";
     }
 }
