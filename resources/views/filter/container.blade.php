@@ -17,14 +17,19 @@
                     @endforeach
                 @endforeach
 
-                <button class="btn btn-primary btn-sm btn-mini submit" style="margin-left: 12px">
-                    <i class="feather icon-search"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.search') }}</span>
-                </button>
+                <div class="col-sm-1">
+                    <button class="btn btn-primary btn-sm btn-mini submit" style="margin-left: 12px">
+                        <i class="fas fa-search"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.search') }}</span>
+                    </button>
+                </div>
 
                 @if(!$disableResetButton)
-                <a style="margin-left: 6px" href="{!! $action !!}" class="reset btn btn-white btn-sm ">
-                    <i class="feather icon-rotate-ccw"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.reset') }}</span>
-                </a>
+                    <div class="col-sm-1">
+                        <a style="margin-left: 10px" href="{!! $action !!}" class="reset btn btn-danger btn-sm">
+                            <i class="fas fa-rotate-left"></i><span
+                                    class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.reset') }}</span>
+                        </a>
+                    </div>
                 @endif
             </div>
 
