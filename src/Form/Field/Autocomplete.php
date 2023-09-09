@@ -21,7 +21,7 @@ class Autocomplete extends Text
 
     public function __construct($column, $arguments = [])
     {
-        $this->prepend('<i class="feather icon-edit-2"></i>');
+        $this->prepend('<i class="fas fa-pencil"></i>');
 
         parent::__construct($column, $arguments);
     }

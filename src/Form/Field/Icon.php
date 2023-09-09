@@ -25,7 +25,7 @@ setTimeout(function () {
     var field = $('{$this->getElementClassSelector()}'),
         parent = field.parents('.form-field'),
         showIcon = function (icon) {
-            parent.find('.input-group-prepend .input-group-text').html('<i class="' + icon + '"></i>');
+            parent.find('.input-group-text').html('<i class="' + icon + '"></i>');
         };
     
     field.iconpicker({placement:'bottomLeft', animation: false});
