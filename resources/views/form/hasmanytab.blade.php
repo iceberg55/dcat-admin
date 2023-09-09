@@ -25,9 +25,9 @@
         @foreach($forms as $pk => $form)
             <li class="nav-item ">
                 <a href="#{{ $relationName . '_' . $pk }}" class="nav-link @if ($form == reset($forms)) active @endif " data-toggle="tab">
-                    {{ $pk }} <i class="feather icon-alert-circle text-red d-none"></i>
+                    {{ $pk }} <i class="fas fa-exclamation-circle text-red d-none"></i>
                 </a>
-                <i class="close-tab feather icon-trash text-red"></i>
+                <i class="close-tab fas fa-trash text-red"></i>
             </li>
         @endforeach
 
@@ -45,9 +45,9 @@
     <template class="nav-tab-tpl">
         <li class="new nav-item">
             <a href="#{{ $relationName . '_new_' . \Dcat\Admin\Form\NestedForm::DEFAULT_KEY_NAME }}" class="nav-link" data-toggle="tab">
-                &nbsp;New {{ \Dcat\Admin\Form\NestedForm::DEFAULT_KEY_NAME }} <i class="feather icon-alert-circle text-red d-none"></i>
+                &nbsp;New {{ \Dcat\Admin\Form\NestedForm::DEFAULT_KEY_NAME }} <i class="fas fa-exclamation-circle text-red d-none"></i>
             </a>
-            <i class="close-tab feather icon-trash text-red" ></i>
+            <i class="close-tab fas fa-trash text-red" ></i>
         </li>
     </template>
     <template class="pane-tpl">

@@ -20,7 +20,7 @@
                         </li>
                     @endforeach
                     <li>
-                        <a href="{{ $self->url($column) }}" class="clear"><i class="feather icon-trash-2"></i></a>
+                        <a href="{{ $self->url($column) }}" class="clear"><i class="fas fa-trash"></i></a>
                     </li>
                 </ul>
             </div>

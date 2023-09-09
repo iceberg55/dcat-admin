@@ -101,40 +101,40 @@ let defaultActions = {
         });
     },
 
-    dropdown () {
-        function hide() {
-            $('.dropdown-menu').removeClass('show')
-        }
-        $document.off('click', document, hide)
-        $document.on('click', hide);
-
-        function toggle(event) {
-            var $this = $(this);
-
-            $('.dropdown-menu').each(function () {
-                if ($this.next()[0] !== this) {
-                    $(this).removeClass('show');
-                }
-            });
-
-            $this.Dropdown('toggleSubmenu')
-        }
-
-        function fix(event) {
-            event.preventDefault()
-            event.stopPropagation()
-
-            let $this = $(this);
-
-            setTimeout(function() {
-                $this.Dropdown('fixPosition')
-            }, 1)
-        }
-
-        let selector = '[data-toggle="dropdown"]';
-
-        $document.off('click',selector).on('click', selector, toggle).on('click', selector, fix);
-    },
+    // dropdown () {
+    //     function hide() {
+    //         $('.dropdown-menu').removeClass('show')
+    //     }
+    //     $document.off('click', document, hide)
+    //     $document.on('click', hide);
+    //
+    //     function toggle(event) {
+    //         var $this = $(this);
+    //
+    //         $('.dropdown-menu').each(function () {
+    //             if ($this.next()[0] !== this) {
+    //                 $(this).removeClass('show');
+    //             }
+    //         });
+    //
+    //         $this.Dropdown('toggleSubmenu')
+    //     }
+    //
+    //     function fix(event) {
+    //         event.preventDefault()
+    //         event.stopPropagation()
+    //
+    //         let $this = $(this);
+    //
+    //         setTimeout(function() {
+    //             $this.Dropdown('fixPosition')
+    //         }, 1)
+    //     }
+    //
+    //     let selector = '[data-toggle="dropdown"]';
+    //
+    //     $document.off('click',selector).on('click', selector, toggle).on('click', selector, fix);
+    // },
 };
 
 export default class DataActions {

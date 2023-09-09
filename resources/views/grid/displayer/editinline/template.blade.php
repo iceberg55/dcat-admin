@@ -14,7 +14,7 @@
         <span class="ie-display">
             {{ $display }}
             @if(! $display)
-                <i class="feather icon-edit-2"></i>
+                <i class="fas fa-pencil"></i>
             @endif
         </span>
     </a>
@@ -165,7 +165,7 @@
                 var $display = $popover.data('display');
                 $display.text(label);
                 if (! label) {
-                    $display.html('<i class="feather icon-edit-2"></i>');
+                    $display.html('<i class="fas fa-pencil"></i>');
                 }
                 $trigger.data('value', val).data('original', val);
                 hide();

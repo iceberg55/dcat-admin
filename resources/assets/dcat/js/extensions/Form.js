@@ -23,11 +23,11 @@ class Form {
             // 表单错误信息容器选择器
             errorContainerSelector: '.with-errors',
             // 表单组css选择器
-            groupSelector: '.form-group,.form-label-group,.form-field',
+            groupSelector: '.form-label,.form-control',
             // tab表单css选择器
             tabSelector: '.tab-pane',
             // 错误信息模板
-            errorTemplate: '<label class="control-label" for="inputError"><i class="feather icon-x-circle"></i> {message}</label><br/>',
+            errorTemplate: '<label class="text-danger" for="inputError"><i class="fas fa-ban"></i> {message}</label><br/>',
             // 是否允许跳转
             redirect: true,
             // 自动移除表单错误信息
@@ -175,7 +175,7 @@ class Form {
                 }
 
                 for (let j in msg) {
-                    $group.find(_this.options.errorContainerSelector).first().append(
+                    $group.parent().find(_this.options.errorContainerSelector).first().append(
                         _this.options.errorTemplate.replace('{message}', msg[j])
                     );
                 }

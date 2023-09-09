@@ -1,6 +1,6 @@
 
-@import "bootstrap/functions";
-@import "bootstrap/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
 
 // mixins
 @import "bootstrap-extended/mixins/_buttons";
@@ -8,8 +8,8 @@
 @import "bootstrap-extended/mixins/_forms";
 
 // Bootstrap  variables
-@import "bootstrap/variables";
-@import "variables/variables";
+@import "~bootstrap/scss/variables";
+@import "variables";
 
 // Components
 @import "bootstrap-extended/code";

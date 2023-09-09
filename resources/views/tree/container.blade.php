@@ -18,7 +18,7 @@
 
         @if($useRefresh)
             &nbsp;<div class="btn-group" style="margin-right:3px">
-                <button class="btn btn-outline-primary btn-sm" data-action="refresh" ><i class="feather icon-refresh-cw"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.refresh') }}</span></button>
+                <button class="btn btn-outline-primary btn-sm" data-action="refresh" ><i class="fas fa-arrows-rotate"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.refresh') }}</span></button>
             </div>
         @endif
 
@@ -43,7 +43,7 @@
                     @include($branchView)
                 @endforeach
             @else
-                <span class="help-block" style="margin-bottom:0"><i class="feather icon-alert-circle"></i>&nbsp;{{ trans('admin.no_data') }}</span>
+                <span class="help-block" style="margin-bottom:0"><i class="fas fa-triangle-exclamation"></i>&nbsp;{{ trans('admin.no_data') }}</span>
             @endif
         </ol>
     </div>

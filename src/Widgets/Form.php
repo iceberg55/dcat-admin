@@ -633,14 +633,14 @@ HTML;
         if (! empty($this->buttons['reset'])) {
             $reset = trans('admin.reset');
 
-            return "<button type=\"reset\" class=\"btn btn-white pull-left\"><i class=\"feather icon-rotate-ccw\"></i> {$reset}</button>";
+            return "<button type=\"reset\" class=\"btn btn-white pull-left\"><i class=\"fas fa-rotate-left\"></i> {$reset}</button>";
         }
     }
 
     protected function renderSubmitButton()
     {
         if (! empty($this->buttons['submit'])) {
-            return "<button type=\"submit\" class=\"btn btn-primary pull-right\"><i class=\"feather icon-save\"></i> {$this->getSubmitButtonLabel()}</button>";
+            return "<button type=\"submit\" class=\"btn btn-primary pull-right\"><i class=\"fas fa-save\"></i> {$this->getSubmitButtonLabel()}</button>";
         }
     }
 

@@ -44,11 +44,10 @@ JS;
         return <<<HTML
 &nbsp;<span class="dropdown">
 <form action="{$this->formAction()}" {$pjaxContainer} style="display: inline-block;">
-    <a href="javascript:void(0);" class="{$active}" data-toggle="dropdown">
-        <i class="feather icon-filter"></i>
+    <a class="dropdown-toggle {$active}" data-toggle="dropdown">
+        <i class="fas fa-filter"></i>
     </a>
     <ul class="dropdown-menu" role="menu" style="padding: 10px;left: -70px;border-radius: 0;font-weight:normal;background:#fff">
-        
         <li>
             <ul style='padding: 0;'>
                 <li class="dropdown-item" style="margin: 0;padding-left:5px">

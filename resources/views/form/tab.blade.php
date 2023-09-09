@@ -3,7 +3,7 @@
         @foreach($tabObj->getTabs() as $tab)
             <li class="nav-item">
                 <a class="nav-link {{ $tab['active'] ? 'active' : '' }}" href="#{{ $tab['id'] }}" data-toggle="tab">
-                    {!! $tab['title'] !!} &nbsp;<i class="feather icon-alert-circle has-tab-error text-danger d-none"></i>
+                    {!! $tab['title'] !!} &nbsp;<i class="fas fa-exclamation-triangle has-tab-error text-danger d-none"></i>
                 </a>
             </li>
         @endforeach
