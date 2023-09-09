@@ -1,5 +1,5 @@
 
-<div class="dcat-box">
+<div class="table-wrapper">
 
     <div class="d-block pb-0">
         @include('admin::grid.table-toolbar')
@@ -11,7 +11,7 @@
 
     <div class="{!! $grid->formatTableParentClass() !!}">
         <table class="{{ $grid->formatTableClass() }}" id="{{ $tableId }}" >
-            <thead>
+            <thead class="table-dark">
             @if ($headers = $grid->getVisibleComplexHeaders())
                 <tr>
                     @foreach($headers as $header)
@@ -41,7 +41,7 @@
             @if ($grid->rows()->isEmpty())
                 <tr>
                     <td colspan="{!! count($grid->getVisibleColumnNames()) !!}">
-                        <div style="margin:5px 0 0 10px;"><span class="help-block" style="margin-bottom:0"><i class="feather icon-alert-circle"></i>&nbsp;{{ trans('admin.no_data') }}</span></div>
+                        <div style="margin:5px 0 0 10px;"><span class="help-block" style="margin-bottom:0"><i class="fas fa-triangle-exclamation"></i>&nbsp;{{ trans('admin.no_data') }}</span></div>
                     </td>
                 </tr>
             @endif
