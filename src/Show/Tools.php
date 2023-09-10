@@ -252,7 +252,7 @@ class Tools implements Renderable
         return <<<HTML
 <div class="btn-group pull-right btn-mini" style="margin-right: 5px">
     <a href="{$this->getListPath()}" class="btn btn-sm btn-primary ">
-        <i class="fas fa-list"></i><span class="d-none d-sm-inline"> {$list}</span>
+        <i class="fas fa-list"></i><span class="d-none d-sm-inline">&nbsp;{$list}</span>
     </a>
 </div>
 HTML;
@@ -277,7 +277,7 @@ HTML;
         if ($this->showEdit) {
             $btn = <<<EOF
 <a href="{$url}" class="btn btn-sm btn-primary">
-        <i class="fas fa-pencil"></i><span class="d-none d-sm-inline"> {$edit}</span>
+        <i class="fas fa-pencil"></i><span class="d-none d-sm-inline">&nbsp;{$edit}</span>
     </a>
 EOF;
         }
@@ -316,8 +316,8 @@ HTML;
 
         return <<<HTML
 <div class="btn-group pull-right btn-mini" style="margin-right: 5px">
-    <button class="btn btn-sm btn-white " data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
-        <i class="feather icon-trash"></i><span class="d-none d-sm-inline">  {$delete}</span>
+    <button class="btn btn-sm btn-danger " data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
+        <i class="fas fa-trash"></i><span class="d-none d-sm-inline">&nbsp;{$delete}</span>
     </button>
 </div>
 HTML;
