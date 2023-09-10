@@ -213,8 +213,8 @@ HTML;
 
         return <<<HTML
 <div class="btn-group pull-right" style="margin-right: 5px">
-    <a class="btn btn-sm btn-white" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
-        <i class="feather icon-trash"></i><span class="d-none d-sm-inline"> {$delete}</span>
+    <a class="btn btn-sm btn-danger" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
+        <i class="fas fa-trash"></i><span class="d-none d-sm-inline"> {$delete}</span>
     </a>
 </div>
 HTML;
