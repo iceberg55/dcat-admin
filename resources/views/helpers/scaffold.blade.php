@@ -155,7 +155,7 @@
                             <td><input type="text" class="form-control" placeholder="{{trans('admin.scaffold.comment')}}" name="fields[{{$index}}][comment]" value="{{$field['comment']}}" /></td>
                             <td>
                                 <button class="btn btn-sm btn-white table-field-sort-handle" type="button" title="{{trans('admin.order')}}"><i class="fa fa-sort"></i></button>
-                                <button class="btn btn-sm btn-white table-field-remove"><i class="feather icon-trash"></i></button>
+                                <button class="btn btn-sm btn-white table-field-remove"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>
                     @endforeach
@@ -195,7 +195,7 @@
                         <td><input type="text" class="form-control" placeholder="{{trans('admin.scaffold.comment')}}" name="fields[0][comment]"></td>
                         <td>
                             <button class="btn btn-sm btn-white table-field-sort-handle" type="button" title="{{trans('admin.order')}}"><i class="fa fa-sort"></i></button>
-                            <button class="btn btn-sm btn-white table-field-remove"><i class="feather icon-trash"></i></button>
+                            <button class="btn btn-sm btn-white table-field-remove"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                 @endif
@@ -292,7 +292,7 @@
         <td><input value="{comment}" type="text" class="form-control" placeholder="{{trans('admin.scaffold.comment')}}" name="fields[__index__][comment]"></td>
         <td>
             <button class="btn btn-sm btn-white table-field-sort-handle" type="button" title="{{trans('admin.order')}}"><i class="fa fa-sort"></i></button>
-            <button class="btn btn-sm btn-white table-field-remove"><i class="feather icon-trash"></i></button>
+            <button class="btn btn-sm btn-white table-field-remove"><i class="fas fa-trash"></i></button>
         </td>
     </tr>
 </template>
