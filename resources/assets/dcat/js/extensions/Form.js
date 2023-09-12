@@ -166,16 +166,15 @@ class Form {
     showError($form, column, errors) {
         let _this = this,
             $field = _this.queryFieldByName($form, column),
-            $group = $field.closest(_this.options.groupSelector),
             render = function (msg) {
-                $group.addClass(_this.options.errorClass);
+                $field.addClass(_this.options.errorClass);
 
                 if (typeof msg === 'string') {
                     msg = [msg];
                 }
 
                 for (let j in msg) {
-                    $group.parent().find(_this.options.errorContainerSelector).first().append(
+                    $field.parent().find(_this.options.errorContainerSelector).first().append(
                         _this.options.errorTemplate.replace('{message}', msg[j])
                     );
                 }
@@ -269,10 +268,10 @@ class Form {
     // 移除给定字段的错误信息
     removeError($field, column) {
         let options = this.options,
-            parent = $field.parents(options.groupSelector),
-            errorClass = this.errorClass;
+            parent = $field.parent(),
+            errorClass = this.options.errorClass;
 
-        parent.removeClass(errorClass);
+        $field.removeClass(errorClass);
         parent.find(options.errorContainerSelector).html('');
 
         // tab页下没有错误信息了，隐藏title的错误图标
@@ -296,7 +295,7 @@ class Form {
 
         // 移除所有字段的错误信息
         _this.$form.find(_this.options.errorContainerSelector).each(function (_, $err) {
-            $($err).parents(_this.options.groupSelector).removeClass(_this.options.errorClass);
+            $($err).parent().find('.' + _this.options.errorClass).removeClass(_this.options.errorClass);
             $($err).html('');
         });
 
