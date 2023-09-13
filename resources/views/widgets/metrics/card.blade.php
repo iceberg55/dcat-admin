@@ -23,16 +23,16 @@
         @endif
 
         @if(! empty($dropdown))
-        <div class="dropdown chart-dropdown">
-            <button class="btn btn-sm btn-light shadow-0 dropdown-toggle p-0 waves-effect" data-toggle="dropdown">
-                {{ current($dropdown) }}
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-                @foreach($dropdown as $key => $value)
-                <li class="dropdown-item"><a href="javascript:void(0)" class="select-option" data-option="{{ $key }}">{{ $value }}</a></li>
-                @endforeach
+            <div class="dropdown chart-dropdown">
+                <button class="btn btn-sm btn-light dropdown-toggle p-0 waves-effect" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ current($dropdown) }}
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach($dropdown as $key => $value)
+                        <li><a href="#" class="dropdown-item select-option" data-option="{{ $key }}">{{ $value }}</a></li>
+                    @endforeach
+                </ul>
             </div>
-        </div>
         @endif
     </div>
 
