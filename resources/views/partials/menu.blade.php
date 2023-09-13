@@ -13,7 +13,7 @@
                href="{{ $builder->getUrl($item['uri']) }}"
                class="nav-link {!! $builder->isActive($item) ? 'active' : '' !!}">
                 {!! str_repeat('&nbsp;', $depth) !!}
-                <i class="fa {{ $item['icon'] ?: $defaultIcon }}"></i>
+                <i class="fas {{ $item['icon'] ?: $defaultIcon }}"></i>
                 <span class="ms-2">
                     {!! $builder->translate($item['title']) !!}
                 </span>
@@ -25,7 +25,7 @@
                class="nav-link {{ $builder->isActive($item) ? '' : 'collapsed' }}"
                data-bs-toggle="collapse" role="button" aria-expanded="{{ $builder->isActive($item) ? 'true' : 'false' }}" aria-controls="sidebar{{ $item['id'] ?? '' }}">
                 {!! str_repeat('&nbsp;', $depth) !!}
-                <i class="fa {{ $item['icon'] ?: $defaultIcon }}"></i>
+                <i class="fas {{ $item['icon'] ?: $defaultIcon }}"></i>
                 <span class="ms-2">
                     {!! $builder->translate($item['title']) !!}
                 </span>
