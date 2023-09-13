@@ -138,7 +138,7 @@
                                     <input name="fields[{{$index}}][nullable]" type="checkbox" {{ \Illuminate\Support\Arr::get($field, 'nullable') == 'on' ? 'checked': '' }}>
                                     <span class="vs-checkbox vs-checkbox-">
                                       <span class="vs-checkbox--check">
-                                        <i class="vs-icon feather icon-check"></i>
+                                        <i class="vs-icon fas fa-check"></i>
                                       </span>
                                     </span>
                                 </div>
@@ -179,7 +179,7 @@
                                 <input name="fields[0][nullable]" type="checkbox"  />
                                 <span class="vs-checkbox vs-checkbox-">
                                   <span class="vs-checkbox--check">
-                                    <i class="vs-icon feather icon-check"></i>
+                                    <i class="vs-icon fas fa-check"></i>
                                   </span>
                                 </span>
                             </div>
@@ -277,7 +277,7 @@
                 <input {nullable} name="fields[__index__][nullable]" type="checkbox"  />
                 <span class="vs-checkbox vs-checkbox-">
                   <span class="vs-checkbox--check">
-                    <i class="vs-icon feather icon-check"></i>
+                    <i class="vs-icon fas fa-check"></i>
                   </span>
                 </span>
             </div>
