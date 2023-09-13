@@ -31,12 +31,12 @@ class ExportButton implements Renderable
         $script = <<<JS
 $('.{$this->grid->getExportSelectedName()}').on('click', function (e) {
     e.preventDefault();
-    
+
     var rows = Dcat.grid.selected('{$this->grid->getName()}').join(',');
     if (! rows) {
         return false;
     }
-    
+
     var href = $(this).attr('href').replace('__rows__', rows);
     location.href = href;
 });
@@ -104,7 +104,7 @@ JS;
         return $this->grid->tools()->format(
             <<<EOT
 <div class="btn-group dropdown" style="margin-right:3px">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
         <i class="fas fa-download"></i>
         <span class="d-none d-sm-inline">&nbsp;{$export}&nbsp;</span>
         <span class="caret"></span>
