@@ -250,8 +250,8 @@ class Tools implements Renderable
         $list = trans('admin.list');
 
         return <<<HTML
-<div class="btn-group pull-right btn-mini" style="margin-right: 5px">
-    <a href="{$this->getListPath()}" class="btn btn-sm btn-primary ">
+<div class="btn-group pull-right" style="margin-right: 5px">
+    <a href="{$this->getListPath()}" class="btn btn-primary ">
         <i class="fas fa-list"></i><span class="d-none d-sm-inline">&nbsp;{$list}</span>
     </a>
 </div>
@@ -297,7 +297,7 @@ EOF;
         }
 
         return <<<HTML
-<div class="btn-group pull-right btn-mini" style="margin-right: 5px">{$btn}{$quickBtn}</div>
+<div class="btn-group pull-right" style="margin-right: 5px">{$btn}{$quickBtn}</div>
 HTML;
     }
 
@@ -315,7 +315,7 @@ HTML;
         $delete = trans('admin.delete');
 
         return <<<HTML
-<div class="btn-group pull-right btn-mini" style="margin-right: 5px">
+<div class="btn-group pull-right" style="margin-right: 5px">
     <button class="btn btn-sm btn-danger " data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
         <i class="fas fa-trash"></i><span class="d-none d-sm-inline">&nbsp;{$delete}</span>
     </button>

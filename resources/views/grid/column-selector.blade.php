@@ -1,5 +1,5 @@
 <span class="dropdown column-selector">
-    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa fa-table"></i>
         <span class="caret"></span>
     </button>
