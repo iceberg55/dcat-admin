@@ -1,9 +1,7 @@
 <nav class="navbar navbar-vertical navbar-expand-lg navbar-light" id="sidebar">
-    <a class="navbar-brand mx-auto d-none d-lg-block my-0 my-lg-4" href="#">
-        <img src="../assets/svg/brand/logo.svg" alt="Muze">
-        <img src="../assets/svg/brand/logo-white.svg" alt="Muze" class="white-logo2">
-        <img src="../assets/svg/brand/muze-icon.svg" class="muze-icon" alt="Muze">
-        <img src="../assets/svg/brand/muze-icon-white.svg" class="muze-icon-white" alt="Muze">
+    <a href="{{ admin_url('/') }}" class="navbar-brand waves-effect waves-light">
+        <img src="/storage/{!! config('admin.logo-image') !!}">
+        <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo2">
     </a>
     <div class="navbar-collapse">
         <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
