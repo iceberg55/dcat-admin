@@ -7,7 +7,7 @@
         <input {!! in_array($k, $disabled) ? 'disabled' : '' !!} value="{{$k}}" {!! $attributes !!} {!! (in_array($k, $checked)) ? 'checked' : '' !!}>
         <span class="vs-checkbox vs-checkbox-{{ $size }}">
           <span class="vs-checkbox--check">
-            <i class="vs-icon feather icon-check"></i>
+            <i class="vs-icon fas fa-check"></i>
           </span>
         </span>
         @if($label !== null && $label !== '')
