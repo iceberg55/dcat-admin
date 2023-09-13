@@ -13,7 +13,7 @@ export default class SweetAlert2 {
         Swal.warning = _this.warning.bind(_this);
         Swal.confirm = _this.confirm.bind(_this);
 
-        w.swal = w.Swal = _this.swal = Dcat.swal = Swal;
+        w.swal = w.Swal = _this.swal = this.swal = Dcat.swal = Swal;
         
         Dcat.confirm = Swal.confirm;
     }
