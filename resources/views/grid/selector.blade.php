@@ -13,9 +13,9 @@
                                class="{{$active ? 'active' : ''}}">{{ $option }}</a>
                             @if(!$active && $selector['type'] == 'many')
                                 &nbsp;
-                                <a href="{{ $self->url($column, $value) }}" class="add"><i class="feather icon-plus-square"></i></a>
+                                <a href="{{ $self->url($column, $value) }}" class="add"><i class="fas fa-plus-square"></i></a>
                             @else
-                                <a style="visibility: hidden;"><i class="feather icon-plus-square"></i></a>
+                                <a style="visibility: hidden;"><i class="fas fa-plus-square"></i></a>
                             @endif
                         </li>
                     @endforeach

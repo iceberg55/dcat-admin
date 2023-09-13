@@ -2485,9 +2485,14 @@ textarea.form-control {
   }
 }
 /* 2.  26.  Muze Table CSS */
+.table-radius-wrapper {
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
 .table-responsive {
   position: relative;
 }
+
 /* 2.  27.  Muze List Group CSS */
 .list-group {
   .list-group-item {
