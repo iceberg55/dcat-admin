@@ -994,7 +994,7 @@ HTML;
         $tableCollaps = $this->option('table_collapse') ? 'table-collapse' : '';
         $scrollbarX = $this->option('scrollbar_x') ? 'table-scrollbar-x' : '';
 
-        return "table-responsive table-wrapper complex-container table-middle mt-1 {$tableCollaps} {$scrollbarX}";
+        return "table-responsive table-wrapper complex-container table-middle {$tableCollaps} {$scrollbarX}";
     }
 
     /**
