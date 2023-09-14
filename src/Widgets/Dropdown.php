@@ -219,8 +219,8 @@ class Dropdown extends Widget
             $v = $builder->call($this, $v, $k);
         }
 
-        $v = mb_strpos($v, '</a>') ? $v : "<a href='javascript:void(0)'>$v</a>";
-        $v = "<li class='dropdown-item'>$v</li>";
+        $v = mb_strpos($v, '</a>') ? $v : "<a class='dropdown-item' href='javascript:void(0)'>$v</a>";
+        $v = "<li>$v</li>";
 
         if ($this->divider) {
             $v .= static::$dividerHtml;
