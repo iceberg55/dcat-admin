@@ -49,15 +49,15 @@ export default class AddUploadedFile {
             html += "<div class='file-panel' >";
 
             if (!options.disabled) {
-                html += `<a class='btn btn-sm btn-white' data-file-act='deleteurl' data-id='${file.serverId}'><i class='fas fa-trash red-dark' style='font-size:13px'></i></a>`;
+                html += `<a class='btn btn-sm btn-danger' data-file-act='deleteurl' data-id='${file.serverId}'><i class='fas fa-trash red-dark' style='font-size:13px'></i></a>`;
             }
-            html += `<a class='btn btn-sm btn-white' data-file-act='preview' data-url='${file.serverUrl}' ><i class='fas fa-magnifying-glass-plus'></i></a>`;
+            html += `<a class='btn btn-sm btn-success' data-file-act='preview' data-url='${file.serverUrl}' ><i class='fas fa-magnifying-glass-plus'></i></a>`;
 
             if (options.sortable) {
                 // 文件排序
                 html += `
-<a class='btn btn-sm btn-white' data-file-act='order' data-order="1" data-id='${file.serverId}'><i class='feather icon-arrow-up'></i></a>
-<a class='btn btn-sm btn-white' data-file-act='order' data-order="0" data-id='${file.serverId}'><i class='feather icon-arrow-down'></i></a>
+<a class='btn btn-sm btn-info' data-file-act='order' data-order="1" data-id='${file.serverId}'><i class='fas fa-arrow-up'></i></a>
+<a class='btn btn-sm btn-info' data-file-act='order' data-order="0" data-id='${file.serverId}'><i class='fas fa-arrow-down'></i></a>
 `;
             }
 
