@@ -35,7 +35,7 @@ class PermissionController extends AdminController
             $tree->branch(function ($branch) {
                 $branchName = htmlspecialchars($branch['name']);
                 $branchSlug = htmlspecialchars($branch['slug']);
-                $payload = "<div class='pull-left' style='min-width:310px'><b>{$branchName}</b>&nbsp;&nbsp;[<span class='text-primary'>{$branchSlug}</span>]";
+                $payload = "<div class='float-start' style='min-width:310px'><b>{$branchName}</b>&nbsp;&nbsp;[<span class='text-primary'>{$branchSlug}</span>]";
 
                 $path = array_filter($branch['http_path']);
 
