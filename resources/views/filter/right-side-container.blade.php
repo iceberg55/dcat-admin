@@ -8,7 +8,7 @@
                             <i class="fas fa-search"></i> &nbsp;{{ __('admin.search') }}
                         </button>&nbsp;
                         @if(!$disableResetButton)
-                            <a href="{!! $action !!}" class="reset btn btn-sm btn-white">
+                            <a href="{!! $action !!}" class="reset btn btn-sm btn-warning">
                                 <i class="fas fa-rotate-left"></i> &nbsp;{{ __('admin.reset') }}
                             </a>
                         @endif
