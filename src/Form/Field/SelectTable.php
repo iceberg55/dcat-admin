@@ -193,7 +193,7 @@ class SelectTable extends Field
         $this->setUpTable();
         $this->formatOptions();
 
-        $this->prepend('<i class="feather icon-arrow-up"></i>')
+        $this->prepend('<i class="fas fa-arrow-up"></i>')
             ->defaultAttribute('class', 'form-control '.$this->getElementClassString())
             ->defaultAttribute('type', 'text')
             ->defaultAttribute('name', $this->getElementName());
@@ -214,7 +214,7 @@ class SelectTable extends Field
     {
         return <<<HTML
 <div class="btn btn-{$this->style}">
-    &nbsp;<i class="feather icon-arrow-up"></i>&nbsp;
+    &nbsp;<i class="fas fa-arrow-up"></i>&nbsp;
 </div>
 HTML;
     }
@@ -231,7 +231,7 @@ HTML;
 
         return <<<HTML
 <button class="btn btn-primary btn-sm submit-btn" style="color: #fff">&nbsp;{$submit}&nbsp;</button>&nbsp;
-<button  class="btn btn-white btn-sm cancel-btn">&nbsp;{$cancel}&nbsp;</button>
+<button  class="btn btn-warning btn-sm cancel-btn">&nbsp;{$cancel}&nbsp;</button>
 HTML;
     }
 }
