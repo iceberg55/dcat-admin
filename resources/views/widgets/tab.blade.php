@@ -1,6 +1,6 @@
 <div {!! $attributes !!}>
     <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs nav-tabs-md nav-tabs-line" id="nav-tab" role="tablist">
             @foreach($tabs as $id => $tab)
                 @if($tab['type'] == \Dcat\Admin\Widgets\Tab::TYPE_CONTENT)
                     <a class="nav-link {{ $id == $active ? 'active' : '' }}" data-bs-toggle="tab" href="#tab_{{ $tab['id'] }}" role="tab" aria-controls="tab_{{ $tab['id'] }}" aria-selected="true">{!! $tab['title'] !!}</a>
