@@ -6,7 +6,7 @@
         <input type="hidden" name="{{ $id }}_group" class="{{ $group_name }}-operation" value="{{ request($id.'_group', 0) }}"/>
         <ul class="dropdown-menu {{ $group_name }}">
             @foreach($group as $index => $item)
-                <li class="dropdown-item"><a  data-index="{{ $index }}"> {{ $item['label'] }} </a></li>
+                <li><a class="dropdown-item" data-index="{{ $index }}">{{ $item['label'] }}</a></li>
             @endforeach
         </ul>
     @endif
