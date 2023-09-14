@@ -207,7 +207,7 @@
             <div class='form-inline d-flex justify-content-between' style="width: 100%; padding: 0 20px 12px;">
 
                 <div class='form-group'>
-                    <button type="button" class="btn btn-sm btn-primary btn-outline text-capitalize" id="add-table-field"><i class="feather icon-plus"></i>&nbsp;&nbsp;{{(trans('admin.scaffold.add_field'))}}</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-outline text-capitalize" id="add-table-field"><i class="fas fa-plus"></i>&nbsp;&nbsp;{{(trans('admin.scaffold.add_field'))}}</button>
                     <button type="button" class="btn btn-sm btn-primary btn-outline text-capitalize ml-1" id="sync-translation-with-comment"><i class="feather icon-repeat"></i>&nbsp;&nbsp;{{(trans('admin.scaffold.sync_translation_with_comment'))}}</button>
                 </div>
 
