@@ -616,7 +616,7 @@ class Tree implements Renderable
             $quickBtn = "<button data-url='$url' class='btn btn-sm btn-primary tree-quick-create'>$text</button>";
         }
 
-        return "&nbsp;<div class='btn-group pull-right' style='margin-right:3px'>{$btn}{$quickBtn}</div>";
+        return "&nbsp;<div class='btn-group float-end' style='margin-right:3px'>{$btn}{$quickBtn}</div>";
     }
 
     /**
