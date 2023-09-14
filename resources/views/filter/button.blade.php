@@ -14,7 +14,7 @@
                 {!! $scope->render() !!}
             @endforeach
             <li role="separator" class="dropdown-divider"></li>
-            <li class="dropdown-item"><a href="{{ $url_no_scopes }}">{{ trans('admin.cancel') }}</a></li>
+            <li><a class="dropdown-item" href="{{ $url_no_scopes }}">{{ trans('admin.cancel') }}</a></li>
         </ul>
         <button type="button" class="btn btn-outline-info px-3" data-toggle="dropdown" style="border-left: 0">
             @if($current_label) <span>{{ $current_label }}&nbsp;</span>@endif <i class="fas fa-chevron-down"></i>
