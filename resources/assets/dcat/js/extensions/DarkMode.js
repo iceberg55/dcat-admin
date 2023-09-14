@@ -1,5 +1,77 @@
-
 export default class DarkMode {
+
+    constructor(Dcat) {
+        this.options = {
+            selector: '.dark-mode-switcher',
+            class: 'muze-dark-mode',
+            icons: {
+                light: 'fa-moon',
+                dark: 'fa-sun',
+            },
+            storageKey: 'theme-color',
+            defaultColor: Dcat.config.dark_mode ? 'dark':'light',
+        }
+
+        this.initSwitcher();
+
+        Dcat.darkMode = this;
+    }
+
+    initSwitcher () {
+        let darkMode = this;
+        this.setDarkMode(this.getDarkMode());
+
+        $(document).on('click', this.options.selector, function () {
+            darkMode.toggle();
+        });
+
+        window.addEventListener('storage', function (event) {
+            if (event.key === key) {
+                darkMode.setDarkMode(event.newValue);
+            }
+        });
+    }
+
+    getStorage() {
+        return localStorage || {setItem:function () {}, getItem: function () {}};
+    }
+
+    getDarkMode() {
+        return this.getStorage().getItem(this.options.storageKey);
+    }
+    setDarkMode(color) {
+        switch (color){
+            case 'light':
+                this.getStorage().setItem(this.options.storageKey, color);
+                $('body').removeClass(this.options.class);
+                $(this.options.selector).find('i')
+                    .removeClass(this.options.icons.dark)
+                    .addClass(this.options.icons.light);
+                break;
+            case 'dark':
+                this.getStorage().setItem(this.options.storageKey, color);
+                $('body').addClass(this.options.class);
+                $(this.options.selector).find('i')
+                    .removeClass(this.options.icons.light)
+                    .addClass(this.options.icons.dark);
+                break;
+            default:
+                this.getStorage().setItem(this.options.storageKey, this.options.defaultColor);
+                this.setDarkMode(this.options.defaultColor);
+                break;
+        }
+    }
+
+    toggle() {
+        let darkMode = this.getDarkMode();
+        if (!darkMode || darkMode === 'light') {
+            this.setDarkMode('dark');
+        } else {
+            this.setDarkMode('light');
+        }
+    }
+}
+export class DarkModeOld {
     constructor(Dcat) {
         this.options = {
             sidebar_dark: Dcat.config.sidebar_dark,
