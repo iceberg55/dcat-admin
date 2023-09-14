@@ -292,7 +292,7 @@
     }
     .navbar-nav {
       flex-direction: column;
-      height: calc(100vh - 10rem);
+      height: 100vh;
       margin-left: -2rem;
       margin-right: -2rem;
       .nav-item {
@@ -469,9 +469,9 @@
           position: static;
           margin-top: 1.875rem;
           > .nav-link {
-            font-size: 0;
             position: relative;
-            .ms-2 {
+            span {
+              font-size: 0;
               margin-left: 0 !important;
             }
           }
