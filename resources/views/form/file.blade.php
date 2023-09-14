@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="statusBar" style="display:none;">
-                <div class="upload-progress progress progress-bar-primary pull-left">
+                <div class="upload-progress progress progress-bar-primary float-start">
                     <div class="progress-bar progress-bar-striped active" style="line-height:18px">0%</div>
                 </div>
                 <div class="info"></div>
