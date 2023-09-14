@@ -2101,12 +2101,9 @@ footer {
   }
 
   .switchery {
-    background-color: $black-600 !important;
-    border-color: $black-500 !important;
-    box-shadow: $shadow-200;
-  }
-  .switchery>small {
-    background-color: $black-500 !important;
+    >small {
+      background-color: $black-500;
+    }
   }
 
   .layui-layer {
