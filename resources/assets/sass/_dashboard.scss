@@ -2132,6 +2132,49 @@ footer {
       background-color: $black-500;
     }
   }
+
+  .apexcharts-legend-series {
+    .apexcharts-legend-text {
+      color: $gray-400 !important;
+    }
+  }
+  .apexcharts-radialbar-track {
+    path {
+      stroke: $black-600;
+    }
+  }
+  .apexcharts-inner {
+    polygon {
+      stroke: $black-500 !important;
+      fill: $black-600 !important;
+    }
+  }
+  .apexcharts-pie-series {
+    path {
+      stroke: $black-600;
+    }
+  }
+  .apexcharts-menu {
+    background-color: $black-600;
+    border: 0;
+  }
+  .apexcharts-toolbar {
+    .apexcharts-zoom-in-icon,
+    .apexcharts-zoom-out-icon,
+    .apexcharts-zoom-icon,
+    .apexcharts-menu-icon,
+    .apexcharts-reset-zoom-icon {
+      &:hover {
+        svg {
+          fill: $gray-400;
+        }
+      }
+    }
+  }
+  .apexcharts-tooltip {
+    color: $black-500;
+  }
+  
   .card-table {
     th {
       background-color: $gray-800;
