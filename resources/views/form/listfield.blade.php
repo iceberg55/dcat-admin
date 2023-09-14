@@ -29,7 +29,7 @@
                     </td>
 
                     <td style="width: 85px;">
-                        <div class="{{$class}}-remove list-remove btn btn-white btn-sm pull-right">
+                        <div class="{{$class}}-remove list-remove btn btn-white btn-sm float-end">
                             <i class="fas fa-trash">&nbsp;</i>
                         </div>
                     </td>
@@ -39,7 +39,7 @@
             <tfoot>
             <tr>
                 <td colspan="2">
-                    <div class="list-add btn btn-primary btn-outline btn-sm pull-left">
+                    <div class="list-add btn btn-primary btn-outline btn-sm float-start">
                         <i class="feather icon-save"></i>&nbsp;{{ __('admin.new') }}
                     </div>
                     <div class="text-center">
@@ -63,7 +63,7 @@
             </td>
 
             <td style="width: 85px;">
-                <div class="list-remove btn btn-white btn-sm pull-right">
+                <div class="list-remove btn btn-white btn-sm float-end">
                     <i class="fas fa-trash">&nbsp;</i>
                 </div>
             </td>
