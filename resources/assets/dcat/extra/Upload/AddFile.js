@@ -23,12 +23,12 @@ export default class AddFile {
                     </li>`);
 
             $btns = $(`<div class="file-panel">
-                    <a class="btn btn-sm btn-white" data-file-act="cancel"><i class="fas fa-ban red-dark" style="font-size:13px"></i></a>
-                    <a class="btn btn-sm btn-white" data-file-act="delete" style="display: none">
+                    <a class="btn btn-sm btn-secondary" data-file-act="cancel"><i class="fas fa-ban red-dark" style="font-size:13px"></i></a>
+                    <a class="btn btn-sm btn-secondary" data-file-act="delete" style="display: none">
                     <i class="fas fa-trash red-dark" style="font-size:13px"></i></a>
-                    <a class="btn btn-sm btn-white" data-file-act="preview" ><i class="fas fa-magnifying-glass-plus"></i></a>
-                    <a class='btn btn-sm btn-white' data-file-act='order' data-order="1" style="display: none"><i class='feather icon-arrow-up'></i></a>
-                    <a class='btn btn-sm btn-white' data-file-act='order' data-order="0" style="display: none"><i class='feather icon-arrow-down'></i></a>
+                    <a class="btn btn-sm btn-secondary" data-file-act="preview" ><i class="fas fa-magnifying-glass-plus"></i></a>
+                    <a class='btn btn-sm btn-secondary' data-file-act='order' data-order="1" style="display: none"><i class='feather icon-arrow-up'></i></a>
+                    <a class='btn btn-sm btn-secondary' data-file-act='order' data-order="0" style="display: none"><i class='feather icon-arrow-down'></i></a>
 
                     </div>`).appendTo($li);
         } else {
