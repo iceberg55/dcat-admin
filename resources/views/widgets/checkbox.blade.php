@@ -3,7 +3,7 @@
 @endif
 
 @foreach($options as $k => $label)
-    <div class="vs-checkbox-con vs-checkbox-{{ $style }}" style="margin-right: {{ $right }}">
+    <div class="vs-checkbox-con vs-checkbox-{{ $style }} mb-1" style="margin-right: {{ $right }}">
         <input {!! in_array($k, $disabled) ? 'disabled' : '' !!} value="{{$k}}" {!! $attributes !!} {!! (in_array($k, $checked)) ? 'checked' : '' !!}>
         <span class="vs-checkbox vs-checkbox-{{ $size }}">
           <span class="vs-checkbox--check">
