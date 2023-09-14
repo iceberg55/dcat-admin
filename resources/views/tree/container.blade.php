@@ -2,23 +2,23 @@
 
     <div>
         <div class="btn-group" style="margin-right:3px">
-            <button class="btn btn-primary btn-sm {{ $id }}-tree-tools" data-action="expand">
+            <button class="btn btn-primary {{ $id }}-tree-tools" data-action="expand">
                 <i class="fas fa-plus-square"></i>&nbsp;<span class="d-none d-sm-inline">{{ trans('admin.expand') }}</span>
             </button>
-            <button class="btn btn-primary btn-sm {{ $id }}-tree-tools" data-action="collapse">
+            <button class="btn btn-primary {{ $id }}-tree-tools" data-action="collapse">
                 <i class="fas fa-minus-square"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.collapse') }}</span>
             </button>
         </div>
 
         @if($useSave)
             &nbsp;<div class="btn-group" style="margin-right:3px">
-                <button class="btn btn-primary btn-sm {{ $id }}-save" ><i class="feather icon-save"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.save') }}</span></button>
+                <button class="btn btn-primary {{ $id }}-save" ><i class="fas fa-save"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.save') }}</span></button>
             </div>
         @endif
 
         @if($useRefresh)
             &nbsp;<div class="btn-group" style="margin-right:3px">
-                <button class="btn btn-outline-primary btn-sm" data-action="refresh" ><i class="fas fa-arrows-rotate"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.refresh') }}</span></button>
+                <button class="btn btn-primary" data-action="refresh" ><i class="fas fa-arrows-rotate"></i><span class="d-none d-sm-inline">&nbsp;{{ trans('admin.refresh') }}</span></button>
             </div>
         @endif
 
