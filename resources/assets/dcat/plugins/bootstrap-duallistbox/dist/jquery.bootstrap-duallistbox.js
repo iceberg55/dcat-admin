@@ -371,7 +371,7 @@
         '   <label></label>' +
         '   <span class="info-container">' +
         '     <span class="info"></span>' +
-        '     <button type="button" class="btn clear1 pull-right"></button>' +
+        '     <button type="button" class="btn clear1 float-end"></button>' +
         '   </span>' +
         '   <input class="filter" type="text">' +
         '   <div class="btn-group buttons">' +
@@ -389,7 +389,7 @@
         '   <label></label>' +
         '   <span class="info-container">' +
         '     <span class="info"></span>' +
-        '     <button type="button" class="btn clear2 pull-right"></button>' +
+        '     <button type="button" class="btn clear2 float-end"></button>' +
         '   </span>' +
         '   <input class="filter" type="text">' +
         '   <div class="btn-group buttons">' +
