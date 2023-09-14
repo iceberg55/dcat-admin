@@ -61,9 +61,9 @@ li {
 // 顶部导航栏
 @import "./components/header-navbar";
 // 页面头
-//@import "./components/content-header";
+@import "./components/content-header";
 // 表格自定义样式
-//@import "./components/custom-data-table";
+@import "./components/custom-data-table";
 // 表单
 @import "./components/form";
 // 分页
