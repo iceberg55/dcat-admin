@@ -222,7 +222,7 @@ $table-bg: darken(#f7f7f9, 3.8%);
 }
 
 
-body:not(.dark-mode) {
+body:not(.muze-dark-mode) {
   .table-collapse {
     box-shadow: $shadow;
     background: $table-bg;
