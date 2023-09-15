@@ -18,14 +18,14 @@
                 @endforeach
 
                 <div class="col-sm-1">
-                    <button class="btn btn-primary btn-sm submit">
+                    <button class="btn btn-primary submit">
                         <i class="fas fa-search"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.search') }}</span>
                     </button>
                 </div>
 
                 @if(!$disableResetButton)
                     <div class="col-sm-1">
-                        <a href="{!! $action !!}" class="reset btn btn-danger btn-sm">
+                        <a href="{!! $action !!}" class="reset btn btn-danger">
                             <i class="fas fa-rotate-left"></i><span
                                     class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.reset') }}</span>
                         </a>
