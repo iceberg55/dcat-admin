@@ -10,7 +10,7 @@ class Marketplace extends AbstractTool
 
     public function title()
     {
-        return '<i class="feather icon-shopping-cart"></i> &nbsp;'.trans('admin.marketplace');
+        return '<i class="fas fa-shopping-cart"></i> &nbsp;'.trans('admin.marketplace');
     }
 
     public function html()
