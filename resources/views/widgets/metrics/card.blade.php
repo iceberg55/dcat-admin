@@ -17,14 +17,14 @@
         </div>
 
         @if (! empty($subTitle))
-            <span class="btn btn-sm bg-light shadow-0 p-0">
+            <span class="btn bg-light shadow-0 p-0">
                 {{ $subTitle }}
             </span>
         @endif
 
         @if(! empty($dropdown))
             <div class="dropdown chart-dropdown">
-                <button class="btn btn-sm btn-light dropdown-toggle waves-effect" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-light dropdown-toggle waves-effect" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ current($dropdown) }}
                 </button>
                 <ul class="dropdown-menu">
