@@ -207,7 +207,7 @@ JS
     protected function renderButton()
     {
         return <<<HTML
-<div class="btn btn-{$this->style} btn-sm">
+<div class="btn btn-{$this->style}">
     &nbsp;<i class="fas fa-arrow-up"></i>&nbsp;
 </div>
 HTML;
@@ -224,8 +224,8 @@ HTML;
         $cancel = trans('admin.cancel');
 
         return <<<HTML
-<button class="btn btn-primary btn-sm submit-btn" style="color: #fff">&nbsp;{$submit}&nbsp;</button>&nbsp;
-<button class="btn btn-warning btn-sm cancel-btn">&nbsp;{$cancel}&nbsp;</button>
+<button class="btn btn-primary submit-btn" style="color: #fff">&nbsp;{$submit}&nbsp;</button>&nbsp;
+<button class="btn btn-warning cancel-btn">&nbsp;{$cancel}&nbsp;</button>
 HTML;
     }
 }
