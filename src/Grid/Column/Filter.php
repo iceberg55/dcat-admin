@@ -160,8 +160,8 @@ abstract class Filter implements Renderable
         return <<<HMLT
 <li class="dropdown-divider"></li>
 <li>
-    <button class="btn btn-sm btn-primary column-filter-submit "><i class="fas fa-search"></i></button>&nbsp;
-    <a href="{$this->urlWithoutFilter()}" class="btn btn-sm btn-default"><i class="fas fa-rotate-left"></i></a>
+    <button class="btn btn-primary column-filter-submit "><i class="fas fa-search"></i></button>&nbsp;
+    <a href="{$this->urlWithoutFilter()}" class="btn btn-default"><i class="fas fa-rotate-left"></i></a>
 </li>
 HMLT;
     }
