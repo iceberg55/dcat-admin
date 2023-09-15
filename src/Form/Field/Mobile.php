@@ -19,7 +19,7 @@ class Mobile extends Text
 
         $this->defaultAttribute('style', 'width: 160px;flex:none');
 
-        $this->prepend('<i class="feather icon-smartphone"></i>');
+        $this->prepend('<i class="fas fa-mobile"></i>');
 
         return parent::render();
     }
