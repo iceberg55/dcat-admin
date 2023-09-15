@@ -45,7 +45,7 @@
 
                     <td class="form-group">
                         <div>
-                            <div class="kv-remove btn btn-white btn-sm float-end">
+                            <div class="kv-remove btn btn-danger float-end">
                                 <i class="fas fa-trash">&nbsp;</i>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <div class="kv-add btn btn-primary btn-outline btn-sm float-end">
+                    <div class="kv-add btn btn-primary btn-outline float-end">
                         <i class="feather icon-save"></i>&nbsp;{{ __('admin.new') }}
                     </div>
                 </td>
@@ -88,7 +88,7 @@
 
             <td class="form-group">
                 <div>
-                    <div class="kv-remove btn btn-white btn-sm float-end">
+                    <div class="kv-remove btn btn-danger float-end">
                         <i class="fas fa-trash">&nbsp;</i>
                     </div>
                 </div>
