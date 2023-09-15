@@ -1866,7 +1866,7 @@ footer {
     }
   }
   .link-dark:not(:hover) {
-    color: $gray-500;
+    color: $gray-500 !important;
     svg {
       path {
         fill: $gray-500;
