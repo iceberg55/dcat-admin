@@ -2072,9 +2072,7 @@ footer {
     border-color: $black-500;
     color: $gray-400;
   }
-
-
-
+  
   .pagination {
     .page-item:not(.active):not(:hover) {
       .page-link {
@@ -2100,12 +2098,132 @@ footer {
     }
   }
 
+  .text-dark {
+    color: $gray-600 !important;
+  }
 
+  .table-collapse {
+    .custom-data-table {
+      border-spacing: 0;
+    }
+  }
+  .table.default-table td,
+  .table.default-table th {
+    border-color: $black-600 !important;
+  }
 
+  table.table-bordered.dataTable.complex-headers,
+  .table.default-table {
+    th {
+      background: darken($black-600, 3%);
+    }
 
+    td {
+      background: darken($black-600, 1%);
+    }
+  }
 
+  .table {
+    background-color: $black-600;
 
+    th, td {
+      border-color: $black-600;
+    }
 
+    .thead,
+    tbody {
+      tr:not([class*="table-"]) {
+        th,
+        td {
+          border: 0;
+          color: $gray-400;
+          code {
+            background-color: $gray-600;
+          }
+        }
+      }
+    }
+    thead {
+      tr {
+        th {
+          background-color: $black-700;
+          color: $gray-400;
+        }
+      }
+    }
+    tbody {
+      tr {
+        background: $black-600 !important;
+
+        &[class*="table-"] {
+          td,
+          th {
+            color: $black;
+            border-color: $black-600;
+          }
+        }
+        &.table-dark {
+          td,
+          th {
+            color: $white;
+          }
+        }
+        &.table-active {
+          td,
+          th {
+            color: $gray-300;
+          }
+        }
+        th {
+          background-color: lighten($black-600, 5%);
+        }
+        td {
+          background-color: lighten($black-600, 5%);
+          color: $gray-400;
+        }
+      }
+    }
+
+    &.table-bordered {
+      border-color: $black-400 !important;
+      thead,
+      tbody {
+        tr {
+          th,
+          td {
+            border-color: $black-400 !important;
+          }
+        }
+      }
+    }
+
+    &.table-striped {
+      tbody {
+        tr {
+          &:nth-child(odd){
+            th, td {
+              background-color: lighten($black-600, 2%);
+            }
+          }
+        }
+      }
+    }
+
+    &.table-hover {
+      tbody {
+        tr {
+          &:hover {
+            background-color: $gray-700;
+
+            th,
+            td {
+              background-color: unset;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .select2-container--default .select2-selection--single,
   .select2-container--default .select2-selection--multiple {
