@@ -1,5 +1,5 @@
 <nav aria-label="Page navigation" class="float-end">
-    <ul class="pagination pagination-sm m-0">
+    <ul class="pagination m-0">
         <!-- Previous Page Link -->
         @if (!$paginator->onFirstPage())
             <li class="page-item previous">
