@@ -47,7 +47,7 @@
                     <div class="add-file-button"></div>
                     @if($showUploadBtn)
                     &nbsp;
-                    <div class="upload-btn btn btn-primary"><i class="feather icon-upload"></i> &nbsp;{{trans('admin.upload')}}</div>
+                    <div class="upload-btn btn btn-primary"><i class="fas fa-upload"></i> &nbsp;{{trans('admin.upload')}}</div>
                     @endif
                 </div>
             </div>
