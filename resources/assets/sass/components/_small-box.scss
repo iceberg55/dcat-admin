@@ -7,17 +7,19 @@
   display: block;
   margin-bottom: 20px;
   position: relative;
+  overflow: hidden;
 
   // content wrapper
   > .inner {
     padding: 10px;
+    min-height: 200px;
   }
 
   > .small-box-footer {
     background: rgba($black, 0.1);
     color: rgba($white, 0.8);
     display: block;
-    padding: 3px 0;
+    padding: 10px 0;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -97,19 +99,9 @@
     > i {
       font-size: 90px;
       position: absolute;
-      right: 15px;
-      top: 15px;
+      right: -10px;
+      bottom: 60px;
       transition: all .3s linear;
-
-      &.fa,
-      &.fas,
-      &.far,
-      &.fab,
-      &.glyphicon,
-      &.ion {
-        font-size: 70px;
-        top: 20px;
-      }
     }
 
   }
@@ -120,16 +112,8 @@
 
     // Animate icons on small box hover
     .icon > i {
-      font-size: 95px;
-
-      &.fa,
-      &.fas,
-      &.far,
-      &.fab,
-      &.glyphicon,
-      &.ion {
-        font-size: 75px;
-      }
+      font-size: 130px;
+      opacity: 0.5;
     }
   }
 }
