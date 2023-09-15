@@ -20,7 +20,7 @@
                     <div class="form-group row">
                         <label class="{{$viewClass['label']}} control-label"></label>
                         <div class="{{$viewClass['field']}}">
-                            <div class="{{$columnClass}}-remove btn btn-white btn-sm float-end"><i class="fas fa-trash">&nbsp;</i>{{ trans('admin.remove') }}</div>
+                            <div class="{{$columnClass}}-remove btn btn-danger float-end"><i class="fas fa-trash">&nbsp;</i>{{ trans('admin.remove') }}</div>
                         </div>
                     </div>
                 @endif
@@ -39,7 +39,7 @@
             <div class="form-group row">
                 <label class="{{$viewClass['label']}} control-label"></label>
                 <div class="{{$viewClass['field']}}">
-                    <div class="{{$columnClass}}-remove btn btn-white btn-sm float-end"><i class="fas fa-trash"></i>&nbsp;{{ trans('admin.remove') }}</div>
+                    <div class="{{$columnClass}}-remove btn btn-danger float-end"><i class="fas fa-trash"></i>&nbsp;{{ trans('admin.remove') }}</div>
                 </div>
             </div>
             <hr>
