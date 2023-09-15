@@ -8,9 +8,9 @@
                     <img src="../assets/svg/icons/hamburger1.svg" alt="img">
                     <img src="../assets/svg/icons/close1.svg" style="width:20px;" class="menu-close" alt="img">
                 </a>
-                <a class="navbar-brand mx-auto d-lg-none col-auto px-0" href="#">
-                    <img src="../assets/svg/brand/logo.svg" alt="Muze">
-                    <img src="../assets/svg/brand/logo-white.svg" alt="Muze" class="white-logo">
+                <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col-auto px-0">
+                    <img src="/storage/{!! config('admin.logo-image') !!}">
+                    <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo">
                 </a>
                 <div class="col d-flex align-items-center">
                     <a href="javascript:void(0);"
