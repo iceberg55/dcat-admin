@@ -195,7 +195,7 @@ EOT;
 
         return <<<HTML
 <div class="btn-group float-end" style="margin-right: 5px">
-    <a href="{$this->getViewPath()}" class="btn btn-sm btn-primary">
+    <a href="{$this->getViewPath()}" class="btn btn-primary">
         <i class="fas fa-eye"></i><span class="d-none d-sm-inline"> {$view}</span>
     </a>
 </div>
@@ -213,7 +213,7 @@ HTML;
 
         return <<<HTML
 <div class="btn-group float-end" style="margin-right: 5px">
-    <a class="btn btn-sm btn-danger" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
+    <a class="btn btn-danger" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
         <i class="fas fa-trash"></i><span class="d-none d-sm-inline"> {$delete}</span>
     </a>
 </div>
