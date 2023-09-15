@@ -36,7 +36,13 @@ class Donut extends Card
     {
         $color = Admin::color();
 
-        $colors = [$color->primary(), $color->alpha('blue2', 0.5), $color->orange2()];
+        $colors = [
+            $color->primary(),
+            $color->success(),
+            $color->info(),
+            $color->warning(),
+            $color->danger()
+        ];
 
         return [
             'chart' => [
@@ -54,13 +60,6 @@ class Donut extends Card
             ],
             'stroke' => [
                 'width' => 0,
-            ],
-            'plotOptions' => [
-                'pie' => [
-                    'donut' => [
-                        'size' => '15%',
-                    ],
-                ],
             ],
         ];
     }
