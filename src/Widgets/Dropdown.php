@@ -21,7 +21,7 @@ class Dropdown extends Widget
      */
     protected $button = [
         'text'  => null,
-        'class' => 'btn btn-sm btn-secondary waves-effect',
+        'class' => 'btn btn-secondary waves-effect',
         'style' => null,
     ];
 
@@ -220,7 +220,7 @@ class Dropdown extends Widget
         }
 
         $v = mb_strpos($v, '</a>') ? $v : "<a class='dropdown-item' href='javascript:void(0)'>$v</a>";
-        $v = "<li>$v</li>";
+        $v = "<li class='dropdown-item'>$v</li>";
 
         if ($this->divider) {
             $v .= static::$dividerHtml;
