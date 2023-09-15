@@ -276,7 +276,7 @@ HTML;
 
         if ($this->showEdit) {
             $btn = <<<EOF
-<a href="{$url}" class="btn btn-sm btn-primary">
+<a href="{$url}" class="btn btn-primary">
         <i class="fas fa-pencil"></i><span class="d-none d-sm-inline">&nbsp;{$edit}</span>
     </a>
 EOF;
@@ -293,7 +293,7 @@ EOF;
 
             $text = $this->showEdit ? '' : "<span class='d-none d-sm-inline'> &nbsp; $edit</span>";
 
-            $quickBtn = "<button data-url='$url' class='btn btn-sm btn-primary {$id}'><i class=' fa fa-clone'></i>$text</button>";
+            $quickBtn = "<button data-url='$url' class='btn btn-primary {$id}'><i class=' fa fa-clone'></i>$text</button>";
         }
 
         return <<<HTML
@@ -316,7 +316,7 @@ HTML;
 
         return <<<HTML
 <div class="btn-group float-end" style="margin-right: 5px">
-    <button class="btn btn-sm btn-danger" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
+    <button class="btn btn-danger" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
         <i class="fas fa-trash"></i><span class="d-none d-sm-inline">&nbsp;{$delete}</span>
     </button>
 </div>
