@@ -9,13 +9,13 @@
                 @endforeach
 
                 <div class="btn-group ml-1 mb-1" style="height: fit-content;margin-right: 10px">
-                    <button class="btn btn-primary btn-sm btn-mini submit">
+                    <button class="btn btn-primary submit">
                         <i class="fas fa-search"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.search') }}</span>
                     </button>
                 </div>
                 <div class="btn-group btn-group-sm default btn-mini" style="height: fit-content"  >
                     @if(!$disableResetButton)
-                        <a  href="{!! $action !!}" class="reset btn btn-white btn-sm ">
+                        <a  href="{!! $action !!}" class="reset btn btn-warning">
                             <i class="fas fa-rotate-left"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.reset') }}</span>
                         </a>
                     @endif
