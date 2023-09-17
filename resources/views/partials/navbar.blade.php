@@ -5,12 +5,16 @@
         <div class="header-body px-3 px-xxl-5 py-3 py-lg-4">
             <div class="row align-items-center">
                 <a href="javascript:void(0);" class="muze-hamburger d-block d-lg-none col-auto">
-                    <img src="../assets/svg/icons/hamburger1.svg" alt="img">
-                    <img src="../assets/svg/icons/close1.svg" style="width:20px;" class="menu-close" alt="img">
+                    <img src="/vendor/dcat-admin/svg/icons/hamburger1.svg" alt="img">
+                    <img src="/vendor/dcat-admin/svg/icons/close1.svg" style="width:20px;" class="menu-close" alt="img">
                 </a>
                 <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col-auto px-0">
-                    <img src="/storage/{!! config('admin.logo-image') !!}">
-                    <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo">
+                    @if( config('admin.logo-image') )
+                        <img src="/storage/{!! config('admin.logo-image') !!}">
+                    @endif
+                    @if( config('admin.logo-dark-image') )
+                        <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo">
+                    @endif
                 </a>
                 <div class="col d-flex align-items-center">
                     <a href="javascript:void(0);"
