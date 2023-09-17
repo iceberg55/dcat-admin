@@ -301,7 +301,7 @@
                     </div>
                 @endif
                 <div class="col-auto d-flex flex-wrap align-items-center icon-blue-hover ps-0">
-                    
+
                     {!! Dcat\Admin\Admin::navbar()->render() !!}
                     {{--User Account Menu--}}
                     {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_USER_PANEL']) !!}
