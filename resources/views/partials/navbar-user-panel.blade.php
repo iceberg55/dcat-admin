@@ -1,7 +1,7 @@
 @if($user)
 
 <div class="dropdown profile-dropdown">
-    <a href="#" class="avatar avatar-sm avatar-circle ms-2 ms-xxl-5" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton">
+    <a href="#" class="avatar avatar-sm avatar-circle ms-4 ms-sm-2 ms-xxl-5" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton">
         <img class="avatar-img" src="{{ $user->getAvatar() }}" alt="Avatar">
         <span class="avatar-status avatar-sm-status avatar-success">&nbsp;</span>
     </a>
