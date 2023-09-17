@@ -31,12 +31,12 @@ class ExportButton implements Renderable
         $script = <<<JS
 $('.{$this->grid->getExportSelectedName()}').on('click', function (e) {
     e.preventDefault();
-    
+
     var rows = Dcat.grid.selected('{$this->grid->getName()}').join(',');
     if (! rows) {
         return false;
     }
-    
+
     var href = $(this).attr('href').replace('__rows__', rows);
     location.href = href;
 });
@@ -55,7 +55,7 @@ JS;
         }
         $all = trans('admin.all');
 
-        return "<li class='dropdown-item'><a href=\"{$this->grid->exportUrl('all')}\" target=\"_blank\">{$all}</a></li>";
+        return "<li><a href=\"{$this->grid->exportUrl('all')}\" target=\"_blank\" class=\"dropdown-item\">{$all}</a></li>";
     }
 
     /**
@@ -70,7 +70,7 @@ JS;
         $page = $this->grid->model()->getCurrentPage() ?: 1;
         $currentPage = trans('admin.current_page');
 
-        return "<li class='dropdown-item'><a href=\"{$this->grid->exportUrl('page', $page)}\" target=\"_blank\">{$currentPage}</a></li>";
+        return "<li><a href=\"{$this->grid->exportUrl('page', $page)}\" target=\"_blank\" class=\"dropdown-item\">{$currentPage}</a></li>";
     }
 
     /**
@@ -87,7 +87,7 @@ JS;
 
         $selectedRows = trans('admin.selected_rows');
 
-        return "<li class='dropdown-item'><a href=\"{$this->grid->exportUrl('selected', '__rows__')}\" target=\"_blank\" class='{$this->grid->getExportSelectedName()}'>{$selectedRows}</a></li>";
+        return "<li><a href=\"{$this->grid->exportUrl('selected', '__rows__')}\" target=\"_blank\" class='dropdown-item {$this->grid->getExportSelectedName()}'>{$selectedRows}</a></li>";
     }
 
     /**
@@ -105,7 +105,7 @@ JS;
             <<<EOT
 <div class="btn-group dropdown" style="margin-right:3px">
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        <i class="feather icon-download"></i>
+        <i class="fas fa-download"></i>
         <span class="d-none d-sm-inline">&nbsp;{$export}&nbsp;</span>
         <span class="caret"></span>
         <span class="sr-only"></span>

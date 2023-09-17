@@ -164,7 +164,7 @@ import AddUploadedFile from './Upload/AddUploadedFile'
                 // 添加“添加文件”的按钮，
                 uploader.addButton({
                     id: options.addFileButton,
-                    label: '<i class="feather icon-folder"></i> &nbsp;' + _this.lang.trans('go_on_add')
+                    label: '<i class="fas fa-upload"></i> &nbsp;' + _this.lang.trans('go_on_add')
                 });
             }
 

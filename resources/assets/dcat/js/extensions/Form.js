@@ -23,11 +23,11 @@ class Form {
             // 表单错误信息容器选择器
             errorContainerSelector: '.with-errors',
             // 表单组css选择器
-            groupSelector: '.form-group,.form-label-group,.form-field',
+            groupSelector: '.form-label,.form-control',
             // tab表单css选择器
             tabSelector: '.tab-pane',
             // 错误信息模板
-            errorTemplate: '<label class="control-label" for="inputError"><i class="feather icon-x-circle"></i> {message}</label><br/>',
+            errorTemplate: '<label class="text-danger" for="inputError"><i class="fas fa-ban"></i> {message}</label><br/>',
             // 是否允许跳转
             redirect: true,
             // 自动移除表单错误信息
@@ -166,16 +166,15 @@ class Form {
     showError($form, column, errors) {
         let _this = this,
             $field = _this.queryFieldByName($form, column),
-            $group = $field.closest(_this.options.groupSelector),
             render = function (msg) {
-                $group.addClass(_this.options.errorClass);
+                $field.addClass(_this.options.errorClass);
 
                 if (typeof msg === 'string') {
                     msg = [msg];
                 }
 
                 for (let j in msg) {
-                    $group.find(_this.options.errorContainerSelector).first().append(
+                    $field.parent().find(_this.options.errorContainerSelector).first().append(
                         _this.options.errorTemplate.replace('{message}', msg[j])
                     );
                 }
@@ -269,10 +268,10 @@ class Form {
     // 移除给定字段的错误信息
     removeError($field, column) {
         let options = this.options,
-            parent = $field.parents(options.groupSelector),
-            errorClass = this.errorClass;
+            parent = $field.parent(),
+            errorClass = this.options.errorClass;
 
-        parent.removeClass(errorClass);
+        $field.removeClass(errorClass);
         parent.find(options.errorContainerSelector).html('');
 
         // tab页下没有错误信息了，隐藏title的错误图标
@@ -296,7 +295,7 @@ class Form {
 
         // 移除所有字段的错误信息
         _this.$form.find(_this.options.errorContainerSelector).each(function (_, $err) {
-            $($err).parents(_this.options.groupSelector).removeClass(_this.options.errorClass);
+            $($err).parent().find('.' + _this.options.errorClass).removeClass(_this.options.errorClass);
             $($err).html('');
         });
 

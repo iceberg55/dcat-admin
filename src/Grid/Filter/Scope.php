@@ -83,7 +83,7 @@ class Scope implements Renderable
             $this->filter->grid()->model()->getPageName() => null,
         ]);
 
-        return "<li class='dropdown-item'><a href=\"{$url}\">{$this->label}</a></li>";
+        return "<li><a class='dropdown-item' href=\"{$url}\">{$this->label}</a></li>";
     }
 
     /**

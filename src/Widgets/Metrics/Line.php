@@ -2,6 +2,8 @@
 
 namespace Dcat\Admin\Widgets\Metrics;
 
+use Dcat\Admin\Admin;
+
 /**
  * 折/曲线图卡片.
  *
@@ -15,60 +17,6 @@ class Line extends Card
      * @var int
      */
     protected $chartHeight = 57;
-
-    /**
-     * 图表默认配置.
-     *
-     * @var array
-     */
-    protected $chartOptions = [
-        'chart' => [
-            'type' => 'area',
-            'toolbar' => [
-                'show' => false,
-            ],
-            'sparkline' => [
-                'enabled' => true,
-            ],
-            'grid' => [
-                'show' => false,
-                'padding' => [
-                    'left' => 0,
-                    'right' => 0,
-                ],
-            ],
-        ],
-        'tooltip' => [
-            'x' => [
-                'show' => false,
-            ],
-        ],
-        'xaxis' => [
-            'labels' => [
-                'show' => false,
-            ],
-            'axisBorder' => [
-                'show' => false,
-            ],
-        ],
-        'yaxis' => [
-            'y' => 0,
-            'offsetX' => 0,
-            'offsetY' => 0,
-            'padding' => ['left' => 0, 'right' => 0],
-        ],
-        'dataLabels' => [
-            'enabled' => false,
-        ],
-        'stroke' => [
-            'width' => 2.5,
-            'curve' => 'smooth',
-        ],
-        'fill' => [
-            'opacity' => 0.1,
-            'type' => 'solid',
-        ],
-    ];
 
     /**
      * 初始化.
@@ -103,6 +51,75 @@ class Line extends Card
     {
         return $this->chartOption('stroke.curve', 'smooth');
     }
+
+    /**
+     * 趋势图图表默认配置.
+     *
+     * @return array
+     */
+    protected function defaultChartOptions()
+    {
+        $color = Admin::color();
+
+        $colors = [
+            $color->primary(),
+            $color->success(),
+            $color->info(),
+            $color->warning(),
+            $color->danger()
+        ];
+
+        return [
+            'chart' => [
+                'type' => 'area',
+                'toolbar' => [
+                    'show' => false,
+                ],
+                'sparkline' => [
+                    'enabled' => true,
+                ],
+                'grid' => [
+                    'show' => false,
+                    'padding' => [
+                        'left' => 0,
+                        'right' => 0,
+                    ],
+                ],
+            ],
+            'colors' => $colors,
+            'tooltip' => [
+                'x' => [
+                    'show' => false,
+                ],
+            ],
+            'xaxis' => [
+                'labels' => [
+                    'show' => false,
+                ],
+                'axisBorder' => [
+                    'show' => false,
+                ],
+            ],
+            'yaxis' => [
+                'y' => 0,
+                'offsetX' => 0,
+                'offsetY' => 0,
+                'padding' => ['left' => 0, 'right' => 0],
+            ],
+            'dataLabels' => [
+                'enabled' => false,
+            ],
+            'stroke' => [
+                'width' => 2.5,
+                'curve' => 'smooth',
+            ],
+            'fill' => [
+                'opacity' => 0.1,
+                'type' => 'solid',
+            ],
+        ];
+    }
+
 
     /**
      * 渲染内容，加上图表.

@@ -16,6 +16,6 @@ class InstallFromLocal extends AbstractTool
             ->lg()
             ->title($title = trans('admin.install_from_local'))
             ->body(InstallFromLocalForm::make())
-            ->button("<button class='btn btn-primary'><i class=\"feather icon-folder\"></i> &nbsp;{$title}</button> &nbsp;");
+            ->button("<button class='btn btn-primary'><i class=\"fas fa-upload\"></i> &nbsp;{$title}</button> &nbsp;");
     }
 }

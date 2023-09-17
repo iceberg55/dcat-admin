@@ -30,7 +30,7 @@ class DropdownController extends Controller
 
         $menu2 = Dropdown::make()
             ->button('使用标题')
-            ->buttonClass('btn btn-sm btn-inverse')
+            ->buttonClass('btn btn-inverse')
             ->options($this->tian, '天干')
             ->options($this->di, '地支');
 
@@ -66,7 +66,7 @@ class DropdownController extends Controller
             ->options($this->tian, '天干')
             ->options($this->di, '地支')
             ->click()
-            ->buttonClass('btn btn-sm btn-light')
+            ->buttonClass('btn btn-light')
             ->map(function ($v, $k) {
                 $k++;
 

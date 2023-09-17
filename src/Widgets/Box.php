@@ -76,7 +76,7 @@ class Box extends Widget
     public function collapsable()
     {
         $this->tools[] =
-            '<button class="border-0 bg-white" data-action="collapse"><i class="feather icon-minus"></i></button>';
+            '<button class="border-0 bg-white" data-action="collapse"><i class="fas fa-minus"></i></button>';
 
         return $this;
     }
@@ -89,7 +89,7 @@ class Box extends Widget
     public function removable()
     {
         $this->tools[] =
-            '<button class="border-0 bg-white" data-action="remove"><i class="feather icon-x"></i></button>';
+            '<button class="border-0 bg-white" data-action="remove"><i class="fas fa-ban"></i></button>';
 
         return $this;
     }

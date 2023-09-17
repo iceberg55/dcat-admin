@@ -19,7 +19,7 @@ class QuickEdit extends RowAction
             ->dimensions($width, $height);
 
         return <<<HTML
-<a href="javascript:void(0);" data-url="{$this->resource()}/{$this->getKey()}/edit" class="tree-quick-edit"><i class="feather icon-edit"></i>&nbsp;</a>
+<a href="javascript:void(0);" data-url="{$this->resource()}/{$this->getKey()}/edit" class="tree-quick-edit"><i class="fas fa-pencil"></i>&nbsp;</a>
 HTML;
     }
 }

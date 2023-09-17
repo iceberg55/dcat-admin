@@ -324,7 +324,7 @@ return [
         'color' => 'default',
 
         // sidebar-separate
-        'body_class' => [],
+        'body_class' => ['muze-dark-mode'],
 
         'horizontal_menu' => false,
 

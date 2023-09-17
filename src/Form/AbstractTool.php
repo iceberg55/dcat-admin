@@ -15,7 +15,7 @@ abstract class AbstractTool extends Action
     /**
      * @var string
      */
-    protected $style = 'btn btn-sm btn-primary';
+    protected $style = 'btn btn-primary';
 
     /**
      * Whether the action should only allow in creation page.

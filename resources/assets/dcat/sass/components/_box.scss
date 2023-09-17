@@ -12,7 +12,7 @@
   border-top: 1px solid $divider-color;
 }
 
-.box-header {
+.box-header, .card-header {
   padding: 1rem;
   display: inherit;
   justify-content: space-between;

@@ -170,7 +170,7 @@
 }
 
 .round{@include border-radius(1.5rem);}
-.square{@include border-radius($btn-border-radius-square);}
+.square{@include border-radius($btn-border-radius);}
 
 .icon-line-height{
   line-height : 1.5rem !important;

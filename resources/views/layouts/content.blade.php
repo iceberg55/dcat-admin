@@ -1,10 +1,9 @@
 @section('content-header')
 @if($header || $description)
-<div class="content-header">
-
+<div class="content-header px-3">
     <section class="content-header breadcrumbs-top">
         @if($header || $description)
-            <h1 class=" float-left">
+            <h1>
                 <span class="text-capitalize">{!! $header !!}</span>
                 <small>{!! $description !!}</small>
             </h1>
@@ -13,7 +12,6 @@
         @endif
 
         @include('admin::partials.breadcrumb')
-
     </section>
 </div>
 @endif
@@ -33,7 +31,7 @@
 
         @yield('content-header')
 
-    <div class="content-body" id="app">
+    <div class="content-body p-3" id="app">
         {{-- 页面埋点--}}
         {!! admin_section(Dcat\Admin\Admin::SECTION['APP_INNER_BEFORE']) !!}
 

@@ -596,7 +596,7 @@ class Admin
         $bodyClass = config('admin.layout.body_class');
 
         return in_array(
-            'dark-mode',
+            'muze-dark-mode',
             is_array($bodyClass) ? $bodyClass : explode(' ', $bodyClass),
             true
         );

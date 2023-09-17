@@ -37,7 +37,7 @@ export default class AddUploadedFile {
         if (showImg) {
             html += `<p class='imgWrap'><img src='${file.serverUrl}'></p>`
         } else if (!options.disabled) {
-            html += `<p class="file-action" data-file-act="delete" data-id="${file.serverId}"><i class="feather icon-trash red-dark"></i></p>`;
+            html += `<p class="file-action" data-file-act="delete" data-id="${file.serverId}"><i class="fas fa-trash red-dark"></i></p>`;
         }
 
         html += "<p class='title' style=''><i class='feather icon-check text-white icon-success text-white'></i>";
@@ -49,15 +49,15 @@ export default class AddUploadedFile {
             html += "<div class='file-panel' >";
 
             if (!options.disabled) {
-                html += `<a class='btn btn-sm btn-white' data-file-act='deleteurl' data-id='${file.serverId}'><i class='feather icon-trash red-dark' style='font-size:13px'></i></a>`;
+                html += `<a class='btn btn-danger' data-file-act='deleteurl' data-id='${file.serverId}'><i class='fas fa-trash red-dark' style='font-size:13px'></i></a>`;
             }
-            html += `<a class='btn btn-sm btn-white' data-file-act='preview' data-url='${file.serverUrl}' ><i class='feather icon-zoom-in'></i></a>`;
+            html += `<a class='btn btn-success' data-file-act='preview' data-url='${file.serverUrl}' ><i class='fas fa-magnifying-glass-plus'></i></a>`;
 
             if (options.sortable) {
                 // 文件排序
                 html += `
-<a class='btn btn-sm btn-white' data-file-act='order' data-order="1" data-id='${file.serverId}'><i class='feather icon-arrow-up'></i></a>
-<a class='btn btn-sm btn-white' data-file-act='order' data-order="0" data-id='${file.serverId}'><i class='feather icon-arrow-down'></i></a>
+<a class='btn btn-info' data-file-act='order' data-order="1" data-id='${file.serverId}'><i class='fas fa-arrow-up'></i></a>
+<a class='btn btn-info' data-file-act='order' data-order="0" data-id='${file.serverId}'><i class='fas fa-arrow-down'></i></a>
 `;
             }
 

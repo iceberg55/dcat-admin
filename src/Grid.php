@@ -167,7 +167,7 @@ class Grid
         'toolbar'             => true,
         'create_mode'         => self::CREATE_MODE_DEFAULT,
         'dialog_form_area'    => ['700px', '670px'],
-        'table_class'         => ['table', 'custom-data-table', 'data-table'],
+        'table_class'         => ['table', 'table-striped', 'table-hover', 'custom-data-table', 'data-table'],
         'scrollbar_x'         => false,
         'actions_class'       => null,
         'batch_actions_class' => null,
@@ -994,7 +994,7 @@ HTML;
         $tableCollaps = $this->option('table_collapse') ? 'table-collapse' : '';
         $scrollbarX = $this->option('scrollbar_x') ? 'table-scrollbar-x' : '';
 
-        return "table-responsive table-wrapper complex-container table-middle mt-1 {$tableCollaps} {$scrollbarX}";
+        return "table-responsive table-wrapper complex-container table-middle {$tableCollaps} {$scrollbarX}";
     }
 
     /**

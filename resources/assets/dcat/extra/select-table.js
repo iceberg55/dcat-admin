@@ -292,7 +292,7 @@
             placeholder = box.find('.default-text'),
             option = box.find('.option');
 
-        var remove = $("<div class='pull-right ' style='font-weight:bold;cursor:pointer'>×</div>");
+        var remove = $("<div class='float-end ' style='font-weight:bold;cursor:pointer'>×</div>");
 
         option.text(selected[0]['label']);
         option.append(remove);

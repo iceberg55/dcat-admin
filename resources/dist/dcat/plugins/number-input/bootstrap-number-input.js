@@ -63,12 +63,12 @@
             var up = $("<button type='button'>+</button>").attr({'class': 'btn btn-' +settings.upClass, 'disabled': options.disabled}).click(function () {
                 setText(getVal() + 1);
             });
-            $("<span class='input-group-btn'></span>").append(down).appendTo(group);
+            group.append(down);
             clone.appendTo(group);
             if (clone) {
                 clone.css('text-align', 'center');
             }
-            $("<span class='input-group-btn'></span>").append(up).appendTo(group);
+            group.append(up);
 
             // remove spins from original
             clone.prop('type', 'text').keydown(function (e) {

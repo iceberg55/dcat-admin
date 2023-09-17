@@ -113,7 +113,6 @@ table.data-table.complex-headers thead th, table.data-table.complex-headers thea
 /* ------------------- 多表头 --------------------- */
 table.table-bordered.data-table.complex-headers {
   border-spacing: 0;
-  margin-top: 12px!important;
   box-shadow: $shadow;
 
   thead th {
@@ -207,9 +206,9 @@ $table-bg: darken(#f7f7f9, 3.8%);
     border-bottom-right-radius: $card-border-radius;
   }
 
-  .table.custom-data-table {
-    padding: 3px 5px 5px;
-  }
+  //.table.custom-data-table {
+  //  padding: 3px 5px 5px;
+  //}
 
   .table-fixed-left .table.custom-data-table {
     padding: 3px 0 0 5px;
@@ -223,11 +222,10 @@ $table-bg: darken(#f7f7f9, 3.8%);
 }
 
 
-body:not(.dark-mode) {
+body:not(.muze-dark-mode) {
   .table-collapse {
     box-shadow: $shadow;
     background: $table-bg;
-    margin-top: 1rem;
 
     .custom-data-table {
       border-spacing: 0;

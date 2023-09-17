@@ -14,23 +14,33 @@ class Asset
      * @var array
      */
     protected $alias = [
-        // Dcat Admin静态资源路径别名
+        //// Dcat Admin静态资源路径别名
         '@admin' => 'vendor/dcat-admin',
+
+        '@theme' => [
+            'js' => [
+                '@admin/js/theme.js',
+            ],
+            'css' => [
+                '@admin/css/theme.css',
+            ],
+        ],
+
         // Dcat Acmin扩展静态资源路径别名
         '@extension' => 'vendor/dcat-admin-extensions',
 
-        '@adminlte' => [
-            'js' => [
-                '@admin/adminlte/adminlte.js',
-            ],
-            'css' => [
-                '@admin/adminlte/adminlte.css',
-            ],
-        ],
-        '@nunito' => [
-            //'css' => 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i',
-            'css' => '@admin/dcat/css/nunito.css',
-        ],
+        //'@adminlte' => [
+        //    'js' => [
+        //        '@admin/adminlte/adminlte.js',
+        //    ],
+        //    'css' => [
+        //        '@admin/adminlte/adminlte.css',
+        //    ],
+        //],
+        //'@nunito' => [
+        //    //'css' => 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i',
+        //    'css' => '@admin/dcat/css/nunito.css',
+        //],
         '@dcat' => [
             'js'  => '@admin/dcat/js/dcat-app.js',
             'css' => '@admin/dcat/css/dcat-app.css',
@@ -231,7 +241,9 @@ class Asset
      * @var array
      */
     public $baseCss = [
-        'adminlte'    => '@adminlte',
+        'theme'    => '@theme',
+
+        //'adminlte'    => '@adminlte',
         'vendors'     => '@vendors',
         'toastr'      => '@toastr',
         'datatables'  => '@datatables',
@@ -244,7 +256,9 @@ class Asset
      * @var array
      */
     public $baseJs = [
-        'adminlte'  => '@adminlte',
+        'theme'  => '@theme',
+
+        //'adminlte'  => '@adminlte',
         'toastr'    => '@toastr',
         'pjax'      => '@pjax',
         'validator' => '@validator',
@@ -256,7 +270,7 @@ class Asset
      * @var array
      */
     public $fonts = [
-        '@nunito',
+        //'@nunito',
     ];
 
     /**
@@ -271,8 +285,8 @@ class Asset
         }
 
         $alias = [
-            '@adminlte',
-            '@dcat',
+            //'@adminlte',
+            //'@dcat',
         ];
 
         foreach ($alias as $n) {

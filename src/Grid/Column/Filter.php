@@ -148,7 +148,7 @@ abstract class Filter implements Renderable
         $style = $this->shouldDisplay() ? 'style=\'margin:3px 14px\'' : '';
 
         return $this->parent->addHeader(
-            "&nbsp;<a class='feather icon-rotate-ccw' href='{$this->urlWithoutFilter()}' {$style}></a>"
+            "&nbsp;<a class='fas fa-rotate-left' href='{$this->urlWithoutFilter()}' {$style}></a>"
         );
     }
 
@@ -160,8 +160,8 @@ abstract class Filter implements Renderable
         return <<<HMLT
 <li class="dropdown-divider"></li>
 <li>
-    <button class="btn btn-sm btn-primary column-filter-submit "><i class="feather icon-search"></i></button>&nbsp;
-    <a href="{$this->urlWithoutFilter()}" class="btn btn-sm btn-default"><i class="feather icon-rotate-ccw"></i></a>
+    <button class="btn btn-primary column-filter-submit "><i class="fas fa-search"></i></button>&nbsp;
+    <a href="{$this->urlWithoutFilter()}" class="btn btn-default"><i class="fas fa-rotate-left"></i></a>
 </li>
 HMLT;
     }

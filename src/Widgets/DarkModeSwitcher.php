@@ -16,22 +16,14 @@ class DarkModeSwitcher implements Renderable
 
     public function render()
     {
-        $icon = $this->defaultDarkMode ? 'icon-sun' : 'icon-moon';
+        $icon = $this->defaultDarkMode ? 'fas fa-sun' : 'fas fa-moon';
 
         return <<<HTML
-<ul class="nav navbar-nav float-right">
-    <li class="dropdown dropdown-user nav-item">
-        <a class="dropdown-toggle nav-link">
-            <span class="dark-mode-switcher">
-                <i class="feather {$icon}"></i>
-            </span>
-        </a>
-    </li>
-</ul>
-
-<script>
-Dcat.darkMode.initSwitcher('.dark-mode-switcher');
-</script>
+<div class="dropdown grid-option">
+    <a class="text-dark ms-4 ms-xxl-5 h5 mb-0 dark-mode-switcher">
+        <i class="fa {$icon}"></i>
+    </a>
+</div>
 HTML;
     }
 }

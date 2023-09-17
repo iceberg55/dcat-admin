@@ -23,12 +23,12 @@ export default class AddFile {
                     </li>`);
 
             $btns = $(`<div class="file-panel">
-                    <a class="btn btn-sm btn-white" data-file-act="cancel"><i class="feather icon-x red-dark" style="font-size:13px"></i></a>
-                    <a class="btn btn-sm btn-white" data-file-act="delete" style="display: none">
-                    <i class="feather icon-trash red-dark" style="font-size:13px"></i></a>
-                    <a class="btn btn-sm btn-white" data-file-act="preview" ><i class="feather icon-zoom-in"></i></a>
-                    <a class='btn btn-sm btn-white' data-file-act='order' data-order="1" style="display: none"><i class='feather icon-arrow-up'></i></a>
-                    <a class='btn btn-sm btn-white' data-file-act='order' data-order="0" style="display: none"><i class='feather icon-arrow-down'></i></a>
+                    <a class="btn btn-secondary" data-file-act="cancel"><i class="fas fa-ban red-dark" style="font-size:13px"></i></a>
+                    <a class="btn btn-secondary" data-file-act="delete" style="display: none">
+                    <i class="fas fa-trash red-dark" style="font-size:13px"></i></a>
+                    <a class="btn btn-secondary" data-file-act="preview" ><i class="fas fa-magnifying-glass-plus"></i></a>
+                    <a class='btn btn-secondary' data-file-act='order' data-order="1" style="display: none"><i class='feather icon-arrow-up'></i></a>
+                    <a class='btn btn-secondary' data-file-act='order' data-order="0" style="display: none"><i class='feather icon-arrow-down'></i></a>
 
                     </div>`).appendTo($li);
         } else {
@@ -46,10 +46,10 @@ export default class AddFile {
 <span style="right: 45px;" class="file-action d-none" data-file-act='order' data-order="0"><i class='feather icon-arrow-down'></i></span>
 <span style="right: 25px;" class="file-action d-none" data-file-act='download' data-id=''><i class='feather icon-download-cloud'></i></span>
 <span data-file-act="cancel" class="file-action" style="font-size:13px">
-    <i class="feather icon-x red-dark"></i>
+    <i class="fas fa-ban red-dark"></i>
 </span>
 <span data-file-act="delete" class="file-action" style="display:none">
-    <i class="feather icon-trash red-dark"></i>
+    <i class="fas fa-trash red-dark"></i>
 </span>
 `).appendTo($li);
         }

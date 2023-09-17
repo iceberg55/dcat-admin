@@ -1,42 +1,20 @@
-<body
-        class="dcat-admin-body sidebar-mini layout-fixed {{ $configData['body_class']}} {{ $configData['sidebar_class'] }}
-        {{ $configData['navbar_class'] === 'fixed-top' ? 'navbar-fixed-top' : '' }} " >
+<body class="{{ $configData['body_class']}} {{ $configData['sidebar_class'] }} {{ $configData['navbar_class'] === 'fixed-top' ? 'navbar-fixed-top' : '' }} " >
 
-<script src="/vendor/dcat-admin-extensions/mikha-dev/dcat-statistics/js/statistics.js"></script>
-        
 <script>
     var Dcat = CreateDcat({!! Dcat\Admin\Admin::jsVariables() !!});
 </script>
 
 {!! admin_section(Dcat\Admin\Admin::SECTION['BODY_INNER_BEFORE']) !!}
 
-<div class="wrapper">
-    @include('admin::partials.sidebar')
+@include('admin::partials.sidebar')
 
+<div class="main-content">
     @include('admin::partials.navbar')
 
-    <div class="app-content content">
-        <div class="content-wrapper" id="{{ $pjaxContainerId }}" style="top: 0;min-height: 900px;">
-            @yield('app')
-        </div>
+    <div class="app-content" id="{{ $pjaxContainerId }}">
+        @yield('app')
     </div>
 </div>
-
-<footer class="main-footer pt-1">
-    <p class="clearfix blue-grey lighten-2 mb-0 text-center">
-            @if(! empty(config('admin.version')))
-            <span class="text-left d-block d-md-inline-block mt-25 pull-left"> {!! config('admin.version') !!} </span>
-            @endif
-
-            <span class="text-center d-block d-md-inline-block mt-25">
-                {!! config('admin.powered') !!}
-            </span>
-
-        <button class="btn btn-primary btn-icon scroll-top pull-right" style="position: fixed;bottom: 2%; right: 10px;display: none">
-            <i class="feather icon-arrow-up"></i>
-        </button>
-    </p>
-</footer>
 
 {!! admin_section(Dcat\Admin\Admin::SECTION['BODY_INNER_AFTER']) !!}
 

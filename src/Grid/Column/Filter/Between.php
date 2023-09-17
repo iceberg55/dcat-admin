@@ -171,7 +171,7 @@ JS;
 &nbsp;<span class="dropdown">
 <form action="{$this->formAction()}" pjax-container style="display: inline-block;">
     <a href="javascript:void(0);" class="{$active}" data-toggle="dropdown">
-        <i class="feather icon-filter"></i>
+        <i class="fas fa-filter"></i>
     </a>
     <ul class="dropdown-menu" role="menu" style="min-width: 180px;padding: 10px;left: -70px;border-radius: 0;font-weight:normal;background:#fff">
         <li class="dropdown-item">

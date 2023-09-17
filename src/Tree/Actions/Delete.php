@@ -14,7 +14,7 @@ class Delete extends RowAction
 <a href="javascript:void(0);" 
     data-message="ID - {$this->getKey()}" 
     data-redirect="{$url}"
-    data-url="{$this->resource()}/{$this->getKey()}" data-action="delete"><i class="feather icon-trash"></i>&nbsp;</a>
+    data-url="{$this->resource()}/{$this->getKey()}" data-action="delete"><i class="fas fa-trash"></i>&nbsp;</a>
 HTML;
     }
 }

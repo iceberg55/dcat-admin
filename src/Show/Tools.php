@@ -250,9 +250,9 @@ class Tools implements Renderable
         $list = trans('admin.list');
 
         return <<<HTML
-<div class="btn-group pull-right btn-mini" style="margin-right: 5px">
-    <a href="{$this->getListPath()}" class="btn btn-sm btn-primary ">
-        <i class="feather icon-list"></i><span class="d-none d-sm-inline"> {$list}</span>
+<div class="btn-group float-end" style="margin-right: 5px">
+    <a href="{$this->getListPath()}" class="btn btn-primary ">
+        <i class="fas fa-list"></i><span class="d-none d-sm-inline">&nbsp;{$list}</span>
     </a>
 </div>
 HTML;
@@ -276,8 +276,8 @@ HTML;
 
         if ($this->showEdit) {
             $btn = <<<EOF
-<a href="{$url}" class="btn btn-sm btn-primary">
-        <i class="feather icon-edit-1"></i><span class="d-none d-sm-inline"> {$edit}</span>
+<a href="{$url}" class="btn btn-primary">
+        <i class="fas fa-pencil"></i><span class="d-none d-sm-inline">&nbsp;{$edit}</span>
     </a>
 EOF;
         }
@@ -293,11 +293,11 @@ EOF;
 
             $text = $this->showEdit ? '' : "<span class='d-none d-sm-inline'> &nbsp; $edit</span>";
 
-            $quickBtn = "<button data-url='$url' class='btn btn-sm btn-primary {$id}'><i class=' fa fa-clone'></i>$text</button>";
+            $quickBtn = "<button data-url='$url' class='btn btn-primary {$id}'><i class=' fa fa-clone'></i>$text</button>";
         }
 
         return <<<HTML
-<div class="btn-group pull-right btn-mini" style="margin-right: 5px">{$btn}{$quickBtn}</div>
+<div class="btn-group float-end" style="margin-right: 5px">{$btn}{$quickBtn}</div>
 HTML;
     }
 
@@ -315,9 +315,9 @@ HTML;
         $delete = trans('admin.delete');
 
         return <<<HTML
-<div class="btn-group pull-right btn-mini" style="margin-right: 5px">
-    <button class="btn btn-sm btn-white " data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
-        <i class="feather icon-trash"></i><span class="d-none d-sm-inline">  {$delete}</span>
+<div class="btn-group float-end" style="margin-right: 5px">
+    <button class="btn btn-danger" data-action="delete" data-url="{$this->getDeletePath()}" data-redirect="{$this->getListPath()}">
+        <i class="fas fa-trash"></i><span class="d-none d-sm-inline">&nbsp;{$delete}</span>
     </button>
 </div>
 HTML;
