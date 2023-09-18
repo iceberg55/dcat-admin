@@ -8,7 +8,7 @@
                     <img src="/vendor/dcat-admin/svg/icons/hamburger1.svg" alt="img">
                     <img src="/vendor/dcat-admin/svg/icons/close1.svg" style="width:20px;" class="menu-close" alt="img">
                 </a>
-                <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col-auto px-0">
+                <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col px-0">
                     @if( config('admin.logo-image') )
                         <img src="/storage/{!! config('admin.logo-image') !!}">
                     @endif
