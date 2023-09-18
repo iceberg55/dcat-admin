@@ -1,5 +1,5 @@
 <nav class="navbar navbar-vertical navbar-expand-lg navbar-light" id="sidebar">
-    <a href="{{ admin_url('/') }}" class="navbar-brand waves-effect waves-light d-none d-md-block">
+    <a href="{{ admin_url('/') }}" class="navbar-brand waves-effect waves-light d-none d-lg-block">
         @if( config('admin.logo-image') )
             <img src="/storage/{!! config('admin.logo-image') !!}">
         @endif
