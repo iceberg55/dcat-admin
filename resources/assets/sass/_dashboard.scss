@@ -906,7 +906,7 @@
   .dropdown-menu {
     .dropdown-sub-title {
       color: $gray-700;
-      padding: 0.5rem 1.5rem; 
+      padding: 0.5rem 1.5rem;
     }
     .dropdown-item {
       padding: 0.625rem 1.5rem;
@@ -1022,8 +1022,8 @@
 .checklist-box {
   textarea.form-control {
     resize: none;
-    overflow: hidden; 
-    overflow-wrap: break-word; 
+    overflow: hidden;
+    overflow-wrap: break-word;
     height: 1.5625rem;
     min-height: auto;
     padding-left: 0;
@@ -1233,7 +1233,7 @@ footer {
 }
 .simple-login-form {
   width: 30.75rem;
-  margin: -15rem auto 5.4375rem;
+  margin: auto;
   padding: 3.5rem;
 }
 /* 10. Muze User Profile Page CSS */
@@ -1438,7 +1438,7 @@ footer {
   font-style: normal;
   font-family: inherit;
   }
-} 
+}
 .ql-toolbar {
   &.ql-snow {
     border-color: $gray-200;
@@ -1634,8 +1634,8 @@ footer {
   position: relative;
   &:before {
     content: '';
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-bottom: 1.125rem solid transparent;
     border-right: 1.25rem solid $gray-100;
     position: absolute;
@@ -1862,7 +1862,7 @@ footer {
     border-color: $gray-800 !important;
     &:hover {
       background-color: $black-800 !important;
-      border-color: $black-800 !important; 
+      border-color: $black-800 !important;
     }
   }
   .link-dark:not(:hover) {
@@ -2072,7 +2072,7 @@ footer {
     border-color: $black-500;
     color: $gray-400;
   }
-  
+
   .pagination {
     .page-item:not(.active):not(:hover) {
       .page-link {
@@ -2328,7 +2328,7 @@ footer {
   .apexcharts-tooltip {
     color: $black-500;
   }
-  
+
   .card-table {
     th {
       background-color: $gray-800;
@@ -3391,7 +3391,7 @@ footer {
           }
         }
       }
-    } 
+    }
   }
   .activity-list {
     .list-group-item {
@@ -4181,7 +4181,7 @@ body {
               margin-top: -0.125rem;
             }
             span {
-              display: none;   
+              display: none;
             }
           }
           .container-fluid {
