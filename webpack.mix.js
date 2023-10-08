@@ -32,11 +32,11 @@ function dcatDistPath(path) {
 
 
 function themeCss(path) {
-  return `${distPath}/css/${path}.css`
+  return `${distPath}/css/${path}.css`;
 }
 
 function themeJs(path) {
-  return `${distPath}/js/${path}.js`
+  return `${distPath}/js/${path}.js`;
 }
 
 /*
