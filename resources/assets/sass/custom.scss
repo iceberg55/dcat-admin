@@ -1,4 +1,19 @@
 :root,
 [data-bs-theme=light] {
-	--bs-link-color-rgb: 110, 110, 110;
+  --bs-link-color-rgb: 05, 179, 132;
+}
+.btn-primary {
+  --bs-btn-bg: #02a77f;
+  --bs-btn-border-color: #02a77f;
+  --bs-btn-hover-bg: #4ef09d;
+  --bs-btn-hover-border-color: #4ef09d;
+  --bs-btn-active-bg: #4ef09d;
+  --bs-btn-active-border-color: #4ef09d;
+  --bs-btn-disabled-bg: #02a77f;
+  --bs-btn-disabled-border-color: #02a77f;
+}
+.login-form a:focus, .login-form a:hover,
+.signup-simple-template a:focus, .signup-simple-template a:hover,
+.simple-login-form a:focus, .simple-login-form a:hover,a:hover, a:not(.btn):focus {
+  color: #4ef09d!important;
 }
