@@ -1,7 +1,7 @@
 <nav class="navbar navbar-vertical navbar-expand-lg navbar-light" id="sidebar">
     <a href="{{ admin_url('/') }}" class="navbar-brand waves-effect waves-light">
-        <img src="/storage/{!! config('admin.logo-image') !!}">
-        <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo2">
+        <img src="{{asset('storage/images/logo.png')}}">
+        <img src="{{asset('storage/images/logo.png')}}" class="white-logo2">
     </a>
     <div class="navbar-collapse">
         <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
