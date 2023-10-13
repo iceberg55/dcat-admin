@@ -14,6 +14,17 @@
   --bs-btn-disabled-border-color: #02a77f;
 }
 
+.btn-outline-primary {
+  --bs-btn-color: #02a77f;
+  --bs-btn-border-color: #02a77f;
+  --bs-btn-hover-bg: #02a77f;
+  --bs-btn-hover-border-color: #02a77f;
+  --bs-btn-active-bg: #02a77f;
+  --bs-btn-active-border-color: #02a77f;
+  --bs-btn-disabled-color: #02a77f;
+  --bs-btn-disabled-border-color: #02a77f;
+}
+
 .login-form a:focus, .login-form a:hover,
 .signup-simple-template a:focus, .signup-simple-template a:hover,
 .simple-login-form a:focus, .simple-login-form a:hover, a:hover, a:not(.btn):focus {
@@ -31,4 +42,8 @@ input[type="checkbox"] {
 .muze-dark-mode .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link.active, .muze-dark-mode
 .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link:hover {
   color: #02a77f;
+}
+
+.small-box .icon > i {
+  right: 15px;
 }
