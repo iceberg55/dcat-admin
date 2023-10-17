@@ -15,8 +15,8 @@
                     </svg>
                 </a>
                 <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col-auto px-0">
-                    <img src="{{asset('storage/images/logo.png')}}">
-                    <img src="{{asset('storage/images/logo.png')}}" class="white-logo">
+                    <img src="{{asset('storage/images/logo.png')}}" class="logo-mini">
+                    <img src="{{asset('storage/images/logo.png')}}" class="white-logo logo-mini">
                 </a>
                 <div class="col d-flex align-items-center">
                     <a href="javascript:void(0);"
