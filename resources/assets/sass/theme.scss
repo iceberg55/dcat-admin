@@ -10,8 +10,6 @@ $fa-font-path: "../fonts/fontawesome";
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 /* Variables */
-@import 'muze-variables';
-@import 'variables';
 
 /* Bootstrap core */
 @import '~bootstrap/scss/bootstrap';
@@ -20,7 +18,6 @@ $fa-font-path: "../fonts/fontawesome";
 //@import 'bootstrap-extended';
 
 /* Theme */
-@import 'muze';
 
 /* Components */
 @import 'components';
