@@ -2,8 +2,8 @@
     <div class="navbar-collapse">
         <ul class="navbar-nav mb-2" id="accordionExample" data-simplebar>
             <a href="{{ admin_url('/') }}" class="navbar-brand waves-effect waves-light">
-                <img src="{{asset('storage/images/logo.png')}}">
-                <img src="{{asset('storage/images/logo.png')}}" class="white-logo2">
+                <img src="/storage/{!! config('admin.logo-image') !!}">
+                <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo2">
             </a>
             {!! admin_section(Dcat\Admin\Admin::SECTION['LEFT_SIDEBAR_MENU_TOP']) !!}
 
