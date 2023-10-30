@@ -310,8 +310,7 @@ input[type="checkbox"] {
       50px - to prevent hover glitches on the border created using shadows*/
   border-radius: 0 5px 0 50px;
 }
-@media screen and (min-width: 768px) {
-  .header .navbar-brand img {
-    max-width: 4.0625rem;
-  }
+
+.header .navbar-brand img {
+  max-width: 4.0625rem;
 }
