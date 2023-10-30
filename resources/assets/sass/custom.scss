@@ -314,3 +314,23 @@ input[type="checkbox"] {
 .header .navbar-brand img {
   max-width: 4.0625rem;
 }
+.swal2-confirm {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #7066e0;
+  color: #fff;
+  font-size: 1em;
+  padding: 1rem;
+  margin: 1rem;
+}
+.swal2-cancel {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #6e7881;
+  color: #fff;
+  font-size: 1em;
+  padding: 1rem;
+  margin: 1rem;
+}

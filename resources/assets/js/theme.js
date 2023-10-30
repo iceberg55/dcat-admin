@@ -2,6 +2,9 @@
 window.Popper = require('popper.js');
 require('bootstrap');
 
+// SweetAler
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+
 //Muze Onhover Get Inline CSS JavaScript
 var muzeNavItem = document.querySelectorAll('.navbar-vertical .nav-item').forEach((muzeNavItem) => {
   muzeNavItem.addEventListener('mouseover', (e) => {
@@ -120,14 +123,14 @@ else {
 
 //Muze Get Selected Radio Button ID By Name Javascript
 var getSelectedRadio = function getSelectedRadio(radioName) {
-  var ele = document.getElementsByName(radioName); 
+  var ele = document.getElementsByName(radioName);
   var value = '';
-  for(i = 0; i < ele.length; i++) { 
+  for(i = 0; i < ele.length; i++) {
     if(ele[i].checked) {
       value = ele[i].id;
       break;
     }
-  } 
+  }
   return value;
 }
 
