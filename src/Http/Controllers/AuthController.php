@@ -66,7 +66,7 @@ class AuthController extends Controller
 
         if($credentials[$this->username()] != 'admin') {
             $credentials['domain_id'] = Admin::domain()->id;
-        }            
+        }
 
         if ($this->guard()->attempt($credentials, $remember)) {
             return $this->sendLoginResponse($request);
@@ -181,6 +181,17 @@ class AuthController extends Controller
             else
                 $form->email('email', trans('admin.email'))->required();
 
+	        $form->radio('sidebar_style', trans('admin.menu_style'))
+		        ->options(['light' => 'Light', 'dark' => 'Dark'])
+		        ->default(config('admin.layout.sidebar-style'));
+
+	        $form->radio('color', trans('admin.base_color'))
+		        ->options(['default' => 'Default', 'blue' => 'Blue', 'blue-light' => 'Light Blue', 'blue-dark' => 'Dark Blue', 'green' => 'Green', 'black' => 'Black', 'yellow' => 'Yellow', 'brown' => 'Brown'])
+		        ->default(config('admin.layout.color'));
+
+	        $form->radio('navbar_color', trans('admin.nav_bar_color'))
+		        ->options(['' =>'Default', 'bg-primary' => 'Primary', 'bg-info' => 'Blue', 'bg-warning' => 'Orange', 'bg-success' => 'Green', 'bg-dark' => 'Dark'])
+		        ->default(config('admin.layout.navbar-color'));
             $form->image('avatar', trans('admin.avatar'))->autoUpload();
 
             $form->password('old_password', trans('admin.old_password'));

@@ -440,6 +440,20 @@ class Content implements Renderable
             config('admin.layout') ?: [],
             $this->config
         );
+		$user=Admin::user();
+		$userLayout=[
+			// default, blue, blue-light, green
+			'color' => $user->color ?? config('admin.layout.color'),
+			// light, primary, dark
+			'sidebar-style' => $user->sidebar_style ?? config('admin.layout.sidebar-style'),
+			// bg-primary, bg-info, bg-warning, bg-success, bg-danger, bg-dark
+			'navbar-color' => $user->navbar_color ?? config('admin.layout.navbar-color'),
+		];
+//	    dd($userLayout);
+	    $data = array_merge(
+		    $userLayout ?: [],
+		    $this->config
+	    );
 
         $allOptions = [
             'theme'             => '',
