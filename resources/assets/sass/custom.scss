@@ -29,6 +29,7 @@
 .signup-simple-template a:focus, .signup-simple-template a:hover,
 .simple-login-form a:focus, .simple-login-form a:hover, a:hover, a:not(.btn):focus {
   color: #4ef09d !important;
+  margin: 0px 10px;
 }
 
 a.btn:hover {
@@ -69,6 +70,23 @@ input[type="checkbox"] {
 .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link[aria-expanded=true] {
   border-radius: 1rem;
   background-color: #4ef09d1f;
+}
+
+.main-content {
+  margin-left: 19rem;
+  margin-top: 8rem;
+}
+
+.navbar-vertical.navbar-expand-lg .navbar-nav .nav-link {
+  margin: 0rem 1rem;
+}
+
+.navbar-vertical.navbar-expand-lg {
+  max-width: 19rem;
+}
+
+.header-fixed {
+  left: 19rem;
 }
 
 @media screen and (max-width: 479px) {
@@ -314,6 +332,7 @@ input[type="checkbox"] {
 .header .navbar-brand img {
   max-width: 4.0625rem;
 }
+
 .swal2-confirm {
   border: 0;
   border-radius: 0.25em;
@@ -324,6 +343,7 @@ input[type="checkbox"] {
   padding: 1rem;
   margin: 1rem;
 }
+
 .swal2-cancel {
   border: 0;
   border-radius: 0.25em;
