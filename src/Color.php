@@ -212,7 +212,7 @@ class Color
     public function getName()
     {
         if (! $this->name) {
-            $this->name = config('admin.layout.color') ?: static::DEFAULT_COLOR;
+            $this->name = Admin::user()? Admin::user()->color : static::DEFAULT_COLOR;
         }
 
         return $this->name;
