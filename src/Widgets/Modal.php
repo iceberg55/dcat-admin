@@ -370,10 +370,10 @@ JS
         return <<<HTML
 <div {$this->formatHtmlAttributes()} role="dialog">
     <div class="modal-dialog {$this->centered} {$this->scrollable} modal-{$this->size}">
-        <div class="modal-content">
+        <div class="modal-content muze-dark-mode">
             <div class="modal-header">
                 <h4 class="modal-title">{$this->renderTitle()}</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">{$this->renderContent()}</div>
             {$this->renderFooter()}
