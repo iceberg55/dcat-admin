@@ -2,6 +2,7 @@
 
 namespace Dcat\Admin;
 
+use Dcat\Admin\Services\CreditService;
 use Dcat\Admin\Contracts\ExceptionHandler;
 use Dcat\Admin\Exception\Handler;
 use Dcat\Admin\Extend\Manager;
@@ -13,6 +14,7 @@ use Dcat\Admin\Layout\Menu;
 use Dcat\Admin\Layout\Navbar;
 use Dcat\Admin\Layout\SectionManager;
 use Dcat\Admin\Models\Domain;
+use Dcat\Admin\Services\TransactionService;
 use Dcat\Admin\Support\Context;
 use Dcat\Admin\Support\Helper;
 use Dcat\Admin\Support\Setting;
@@ -241,6 +243,13 @@ class AdminServiceProvider extends ServiceProvider
         $this->app->singleton('admin.web-uploader', WebUploader::class);
         $this->app->singleton(ExceptionHandler::class, config('admin.exception_handler') ?: Handler::class);
         $this->app->singleton('admin.translator', Translator::class);
+
+        $this->app->singleton('admin.credit', CreditService::class);
+        $this->app->singleton('admin.transaction', TransactionService::class, function (Application $application) {
+            return new TransactionService(
+                $application->get('admin.credit')
+            );
+        });
     }
 
     public function registerExtensions()
