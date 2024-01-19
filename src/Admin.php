@@ -638,6 +638,7 @@ class Admin
                 $router->get('auth/logout', $authController.'@getLogout');
                 $router->get('auth/setting', $authController.'@getSetting');
                 $router->put('auth/setting', $authController.'@putSetting');
+                $router->get('auth/credit', $authController.'@getCredit')->name('user_credit');
             });
         }
 
