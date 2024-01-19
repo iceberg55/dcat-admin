@@ -277,4 +277,16 @@ class AuthController extends Controller
     {
         return Admin::guard();
     }
+
+    /**
+     * Get User Credit.
+     *
+     * @return \Dcat\Admin\Http\JsonResponse
+     */
+    public function getCredit()
+    {
+        return $this->response()->data([
+            'credit' => app('admin.credit')->getCurrentUserCredit()
+        ]);
+    }
 }
