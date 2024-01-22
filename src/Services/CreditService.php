@@ -2,6 +2,8 @@
 
 namespace Dcat\Admin\Services;
 
+use Dcat\Admin\Enums\TransactionStatus;
+use Dcat\Admin\Enums\TransactionType;
 use Dcat\Admin\Exception\CreditException;
 use Dcat\Admin\Models\Credit;
 use Dcat\Admin\Models\Transaction;
@@ -52,20 +54,20 @@ class CreditService
     {
         $balance = 0;
 
-        foreach (Transaction::POSITIVE_TYPES as $type) {
+        foreach (TransactionType::POSITIVE_TYPES as $type) {
             $balance += Transaction::where([
                 ['owner_type', $owner::class],
                 ['owner_id', $owner->getKey()],
                 ['type', $type],
-                ['status', Transaction::STATUS_SUCCESS],
+                ['status', TransactionStatus::SUCCESS],
             ])->get()->sum('amount');
         }
-        foreach (Transaction::NEGATIVE_TYPES as $type) {
+        foreach (TransactionType::NEGATIVE_TYPES as $type) {
             $balance -= Transaction::where([
                 ['owner_type', $owner::class],
                 ['owner_id', $owner->getKey()],
                 ['type', $type],
-                ['status', Transaction::STATUS_SUCCESS],
+                ['status', TransactionStatus::SUCCESS],
             ])->get()->sum('amount');
         }
 
