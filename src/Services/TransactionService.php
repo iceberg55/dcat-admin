@@ -66,7 +66,7 @@ class TransactionService
 
     /**
      * @param Model $owner
-     * @param string $type
+     * @param TransactionType $type
      * @param float|int $amount
      * @param string $currency
      * @param array $information
@@ -77,7 +77,7 @@ class TransactionService
      */
     public function createTransactionForUser(
         Model $owner,
-        string $type,
+        TransactionType $type,
         float|int $amount,
         string $currency = Transaction::CURRENCY_USD,
         array $information = [],
@@ -86,7 +86,7 @@ class TransactionService
     ): Transaction {
         $credit = $this->creditService->getUserCredit($owner);
 
-        if (in_array($type, TransactionType::NEGATIVE_TYPES) && $amount > $credit) {
+        if (in_array($type->value, TransactionType::NEGATIVE_TYPES) && $amount > $credit) {
             throw new TransactionException('Insufficient credit.');
         }
 
@@ -104,17 +104,17 @@ class TransactionService
     }
 
     /**
-     * @param string $type
+     * @param TransactionType $type
      * @param float|int $amount
      * @param string $currency
      * @param array $information
      * @param string|null $ip
      * @param string|null $wallet_address
      * @return Transaction
-     * @throws AuthenticationException|TransactionException
+     * @throws TransactionException
      */
     public function createTransactionForCurrentUser(
-        string $type,
+        TransactionType $type,
         float|int $amount,
         string $currency = Transaction::CURRENCY_USD,
         array $information = [],
@@ -130,9 +130,11 @@ class TransactionService
 
     /**
      * @param Transaction $transaction
-     * @param string $status
+     * @param TransactionStatus $status
      * @return void
-     * @throws Exception|Throwable
+     * @throws CreditException
+     * @throws TransactionException
+     * @throws \Throwable
      */
     public function setTransactionStatus(Transaction $transaction, TransactionStatus $status): void
     {
