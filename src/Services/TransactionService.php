@@ -2,6 +2,8 @@
 
 namespace Dcat\Admin\Services;
 
+use Dcat\Admin\Enums\TransactionStatus;
+use Dcat\Admin\Enums\TransactionType;
 use Dcat\Admin\Exception\CreditException;
 use Dcat\Admin\Exception\TransactionException;
 use Exception;
@@ -35,7 +37,7 @@ class TransactionService
     public function getUserTransactions(Model $owner): mixed
     {
         return Transaction::where([
-            ['owner_type', class_basename($owner)],
+            ['owner_type', $owner::class],
             ['owner_id', $owner->getKey()],
         ])->get();
     }
@@ -84,7 +86,7 @@ class TransactionService
     ): Transaction {
         $credit = $this->creditService->getUserCredit($owner);
 
-        if (in_array($type, Transaction::NEGATIVE_TYPES) && $amount > $credit) {
+        if (in_array($type, TransactionType::NEGATIVE_TYPES) && $amount > $credit) {
             throw new TransactionException('Insufficient credit.');
         }
 
@@ -132,14 +134,14 @@ class TransactionService
      * @return void
      * @throws Exception|Throwable
      */
-    public function setTransactionStatus(Transaction $transaction, string $status): void
+    public function setTransactionStatus(Transaction $transaction, TransactionStatus $status): void
     {
         $lock = Cache::lock($this->getUserLockKey($transaction->owner));
         if ($lock->get()) {
             try {
                 $oldStatus = $transaction->status;
 
-                if (! in_array($status, Transaction::STATUSES)) {
+                if (! in_array($status, TransactionStatus::STATUSES)) {
                     throw new TransactionException('Status is not valid !');
                 }
 
@@ -172,7 +174,7 @@ class TransactionService
      */
     public function setTransactionStatusSuccess(Transaction $transaction): void
     {
-        $this->setTransactionStatus($transaction, Transaction::STATUS_SUCCESS);
+        $this->setTransactionStatus($transaction, TransactionStatus::SUCCESS);
     }
 
     /**
@@ -182,7 +184,7 @@ class TransactionService
      */
     public function setTransactionStatusFailed(Transaction $transaction): void
     {
-        $this->setTransactionStatus($transaction, Transaction::STATUS_FAILED);
+        $this->setTransactionStatus($transaction, TransactionStatus::FAILED);
     }
 
     /**
@@ -192,6 +194,6 @@ class TransactionService
      */
     public function setTransactionStatusPending(Transaction $transaction): void
     {
-        $this->setTransactionStatus($transaction, Transaction::STATUS_PENDING);
+        $this->setTransactionStatus($transaction, TransactionStatus::PENDING);
     }
 }
