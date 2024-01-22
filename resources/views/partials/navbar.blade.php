@@ -5,16 +5,18 @@
         <div class="header-body px-3 px-xxl-5 py-3 py-lg-4">
             <div class="row align-items-center">
                 <a href="javascript:void(0);" class="muze-hamburger d-block d-lg-none col-auto">
-                    <img src="/vendor/dcat-admin/svg/icons/hamburger1.svg" alt="img">
-                    <img src="/vendor/dcat-admin/svg/icons/close1.svg" style="width:20px;" class="menu-close" alt="img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 16 16">
+                        <g data-name="icons/tabler/chevrons-left" transform="translate(0)">
+                            <rect data-name="Icons/Tabler/Chevrons Left background" width="16" height="16"
+                                  fill="none"/>
+                            <path d="M14.468,14.531l-.107-.093-6.4-6.4a.961.961,0,0,1-.094-1.25l.094-.107,6.4-6.4a.96.96,0,0,1,1.451,1.25l-.094.108L10,7.36l5.72,5.721a.961.961,0,0,1,.094,1.25l-.094.107a.96.96,0,0,1-1.25.093Zm-7.68,0-.107-.093-6.4-6.4a.961.961,0,0,1-.093-1.25l.093-.107,6.4-6.4a.96.96,0,0,1,1.45,1.25l-.093.108L2.318,7.36l5.72,5.721a.96.96,0,0,1,.093,1.25l-.093.107a.96.96,0,0,1-1.25.093Z"
+                                  transform="translate(0 1)" fill="#6C757D"/>
+                        </g>
+                    </svg>
                 </a>
-                <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col px-0">
-                    @if( config('admin.logo-image') )
-                        <img src="/storage/{!! config('admin.logo-image') !!}">
-                    @endif
-                    @if( config('admin.logo-dark-image') )
-                        <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo">
-                    @endif
+                <a href="{{ admin_url('/') }}" class="navbar-brand mx-auto d-lg-none col-auto px-0">
+                    <img src="/storage/{!! config('admin.logo-image') !!}">
+                    <img src="/storage/{!! config('admin.logo-dark-image') !!}" class="white-logo">
                 </a>
                 <div class="col d-flex align-items-center">
                     <a href="javascript:void(0);"
@@ -301,10 +303,19 @@
                     </div>
                 @endif
                 <div class="col-auto d-flex flex-wrap align-items-center icon-blue-hover ps-0">
+                    <a href="#" class="d-lg-none muze-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14">
+                            <rect id="Icons_Tabler_Search_background" data-name="Icons/Tabler/Search background"
+                                  width="14" height="14" fill="none"/>
+                            <path data-name="Combined Shape"
+                                  d="M13.141,13.895l-.06-.052L9.1,9.859A5.569,5.569,0,1,1,9.859,9.1l3.983,3.983a.539.539,0,0,1-.7.813ZM1.077,5.564A4.487,4.487,0,1,0,5.564,1.077,4.492,4.492,0,0,0,1.077,5.564Z"
+                                  fill="#1e1e1e"/>
+                        </svg>
+                    </a>
 
                     {!! Dcat\Admin\Admin::navbar()->render() !!}
                     {{--User Account Menu--}}
-                    {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_USER_PANEL']) !!}
+                    {{--                    {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_USER_PANEL']) !!}--}}
 
                 </div>
             </div>

@@ -62,7 +62,7 @@ class Line extends Card
         $color = Admin::color();
 
         $colors = [
-            $color->primary(),
+            $color->green(),
             $color->success(),
             $color->info(),
             $color->warning(),
