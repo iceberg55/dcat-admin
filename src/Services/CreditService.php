@@ -54,22 +54,23 @@ class CreditService
     {
         $balance = 0;
 
-        foreach (TransactionType::POSITIVE_TYPES as $type) {
-            $balance += Transaction::where([
-                ['owner_type', $owner::class],
-                ['owner_id', $owner->getKey()],
-                ['type', $type],
-                ['status', TransactionStatus::SUCCESS],
-            ])->get()->sum('amount');
-        }
-        foreach (TransactionType::NEGATIVE_TYPES as $type) {
-            $balance -= Transaction::where([
-                ['owner_type', $owner::class],
-                ['owner_id', $owner->getKey()],
-                ['type', $type],
-                ['status', TransactionStatus::SUCCESS],
-            ])->get()->sum('amount');
-        }
+        $transactions = Transaction::where([
+            ['owner_type', $owner::class],
+            ['owner_id', $owner->getKey()],
+            ['status', TransactionStatus::SUCCESS],
+        ])->chunk(1000, function ($transactions) use ($balance) {
+            foreach ($transactions as $transaction){
+                if( in_array($transaction->type, TransactionType::NEGATIVE_TYPES) ){
+                    $balance -= $transaction->amount;
+                } else if( in_array($transaction->type, TransactionType::POSITIVE_TYPES) ){
+                    $balance = $transaction->amount;
+                }
+
+                if( $balance < 0 ){
+                    throw new CreditException('Credit must be greater or equal zero ! Credit is negative at ' . $transaction->created_at . ' !');
+                }
+            }
+        });
 
         $credit = Credit::firstOrCreate([
             'owner_type' => $owner::class,
