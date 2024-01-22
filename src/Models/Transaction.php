@@ -7,6 +7,7 @@ use Dcat\Admin\Enums\TransactionStatus;
 use Dcat\Admin\Enums\TransactionType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 /**
  * Class Transaction
@@ -45,7 +46,8 @@ class Transaction extends Model
         'status' => TransactionStatus::class,
     ];
 
-    public function owner() {
+    public function owner() : MorphTo
+    {
         return $this->morphTo();
     }
 }
