@@ -17,14 +17,14 @@ enum TransactionType: string implements DcatEnumColored
     case GIFT = 'GIFT';
 
     const POSITIVE_TYPES = [
-        self::DEPOSIT,
-        self::REFERRAL,
-        self::GIFT,
+        'DEPOSIT',
+        'REFERRAL',
+        'GIFT',
     ];
 
     const NEGATIVE_TYPES = [
-        self::PAYMENT,
-        self::WITHDRAW,
+        'PAYMENT',
+        'WITHDRAW',
     ];
 
     public function color(): string
