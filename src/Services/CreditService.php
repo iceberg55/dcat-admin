@@ -5,6 +5,7 @@ namespace Dcat\Admin\Services;
 use Dcat\Admin\Enums\TransactionStatus;
 use Dcat\Admin\Enums\TransactionType;
 use Dcat\Admin\Exception\CreditException;
+use Dcat\Admin\Exception\TransactionException;
 use Dcat\Admin\Models\Credit;
 use Dcat\Admin\Models\Transaction;
 use Dcat\Admin\Admin;
@@ -54,16 +55,18 @@ class CreditService
     {
         $balance = 0;
 
-        $transactions = Transaction::where([
+        Transaction::where([
             ['owner_type', $owner::class],
             ['owner_id', $owner->getKey()],
             ['status', TransactionStatus::SUCCESS],
-        ])->chunk(1000, function ($transactions) use ($balance) {
+        ])->chunk(1000, function ($transactions) use (&$balance) {
             foreach ($transactions as $transaction){
-                if( in_array($transaction->type, TransactionType::NEGATIVE_TYPES) ){
+                if( in_array($transaction->type->value, TransactionType::NEGATIVE_TYPES) ){
                     $balance -= $transaction->amount;
-                } else if( in_array($transaction->type, TransactionType::POSITIVE_TYPES) ){
-                    $balance = $transaction->amount;
+                } else if( in_array($transaction->type->value, TransactionType::POSITIVE_TYPES) ){
+                    $balance += $transaction->amount;
+                } else {
+                    throw new TransactionException('Transaction type is not valid ! Id: ' . $transaction->id . ', Type: ' . $transaction->type->value);
                 }
 
                 if( $balance < 0 ){
