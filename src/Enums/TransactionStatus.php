@@ -15,9 +15,9 @@ enum TransactionStatus: string implements DcatEnumColored
     case FAILED = 'FAILED';
 
     const STATUSES = [
-        self::PENDING,
-        self::SUCCESS,
-        self::FAILED,
+        'PENDING',
+        'SUCCESS',
+        'FAILED',
     ];
 
     public function color(): string
