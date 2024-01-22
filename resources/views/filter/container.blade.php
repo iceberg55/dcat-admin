@@ -17,15 +17,15 @@
                     @endforeach
                 @endforeach
 
-                <div class="col-sm-1">
-                    <button class="btn btn-primary submit">
+                <div class="col-md-auto">
+                    <button class="btn btn-primary d-block w-100 submit">
                         <i class="fas fa-search"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.search') }}</span>
                     </button>
                 </div>
 
                 @if(!$disableResetButton)
-                    <div class="col-sm-1">
-                        <a href="{!! $action !!}" class="reset btn btn-danger">
+                    <div class="col-md-auto">
+                        <a href="{!! $action !!}" class="reset btn btn-danger d-block w-100">
                             <i class="fas fa-rotate-left"></i><span
                                     class="d-none d-sm-inline">&nbsp;&nbsp;{{ trans('admin.reset') }}</span>
                         </a>

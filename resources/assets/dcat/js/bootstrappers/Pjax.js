@@ -51,6 +51,7 @@ export default class Pjax {
             // 移除遮罩层
             $(".modal-backdrop").remove();
             $body.removeClass("modal-open");
+            $body.removeClass("sidebar-menu");
 
             // 刷新页面后需要重置modal弹窗设置的间隔
             if ($body.css('padding-right')) {

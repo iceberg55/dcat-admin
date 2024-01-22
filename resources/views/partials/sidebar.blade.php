@@ -14,4 +14,5 @@
             {!! admin_section(Dcat\Admin\Admin::SECTION['LEFT_SIDEBAR_USER_PANEL']) !!}
         </ul>
     </div>
+
 </nav>

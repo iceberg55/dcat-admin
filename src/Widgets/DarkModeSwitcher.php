@@ -20,7 +20,7 @@ class DarkModeSwitcher implements Renderable
 
         return <<<HTML
 <div class="dropdown grid-option">
-    <a class="text-dark ms-4 ms-xxl-5 h5 mb-0 dark-mode-switcher">
+    <a class="text-dark ms-2 ms-md-4 ms-xxl-5 h5 mb-0 dark-mode-switcher">
         <i class="fa {$icon}"></i>
     </a>
 </div>

@@ -5344,6 +5344,7 @@ body {
       .navbar-brand {
         img {
           display: none;
+          max-height: 30px;
           &.white-logo {
             display: block;
           }
