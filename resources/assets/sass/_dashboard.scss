@@ -38,51 +38,64 @@
   background-color: $gray-100;
   z-index: 16;
 }
+
 .header-search {
   min-width: 20rem;
+
   .input-group {
     > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
       margin: 0;
     }
   }
 }
+
 .notification {
   position: relative;
+
   .status {
     top: -0.9375rem;
     right: 0.4375rem;
   }
 }
+
 .header {
   .dropdown-menu {
     margin-top: 0.875rem !important;
   }
+
   .customize-btn {
     display: none;
   }
 }
+
 /* 1.2  Muze Top Header CSS */
-.top-header-nav,.double-header-nav,.white-logo {
+.top-header-nav, .double-header-nav, .white-logo {
   display: none;
 }
+
 .top-header {
   .top-header-nav {
     display: block;
   }
 }
+
 .top-header, .double-header {
   .navbar-vertical {
     &.navbar-expand-lg {
       display: none;
     }
   }
+
   .main-content {
     margin-left: 0;
   }
+
   .header {
     background-color: $white;
+
     .customize-btn {
       display: block;
+
       svg {
         path {
           fill: $white;
@@ -90,30 +103,37 @@
       }
     }
   }
+
   .header-fixed {
     left: 0;
   }
+
   .navbar-brand {
     &.d-lg-none {
       display: block !important;
     }
   }
+
   .header-search, .back-arrow {
     display: none;
   }
+
   .navbar {
     padding: 0;
     border-left: 0.0625rem solid $gray-200;
     padding-left: 0.625rem;
     margin-left: 1.5rem;
+
     .nav-item {
       position: relative;
+
       .nav-link {
         font-weight: $font-weight-semibold;
         font-size: 0.875rem;
         display: flex;
         align-items: center;
         padding: 0.6875rem 1.375rem;
+
         &[data-bs-toggle="collapse"] {
           &:after {
             display: block;
@@ -123,16 +143,19 @@
             transition: transform .2s;
           }
         }
+
         &[aria-expanded="true"] {
           &:after {
             transform: rotate(-180deg);
           }
         }
+
         svg {
           path {
             fill: $gray-600;
           }
         }
+
         .docs-version {
           border: 0.0625rem solid $gray-600;
           border-radius: 0.25rem;
@@ -141,8 +164,10 @@
           line-height: 0.875rem;
           margin-left: 0.375rem;
         }
-        &:hover,&[aria-expanded="true"] {
+
+        &:hover, &[aria-expanded="true"] {
           color: $black-600;
+
           svg {
             path {
               fill: $black-600;
@@ -150,6 +175,7 @@
           }
         }
       }
+
       .collapse-box {
         position: absolute;
         top: 100%;
@@ -158,24 +184,30 @@
         min-width: 13.125rem;
         background-color: $white;
         border-radius: 0.375rem;
-        box-shadow: 0 0.0625rem 0.5625rem rgba($black,0.08);
+        box-shadow: 0 0.0625rem 0.5625rem rgba($black, 0.08);
+
         .nav {
           padding: 0.5rem 0;
+
           .nav-item {
             .nav-link {
               padding: 0.5rem 1.375rem;
+
               &:after {
                 margin-left: auto;
               }
             }
+
             .collapse-box {
               position: static;
               padding: 0 0 0 0.625rem;
               box-shadow: none;
+
               .nav-link {
                 position: relative;
                 font-weight: $font-weight-normal;
                 padding: 0.3125rem 1.375rem;
+
                 &:before {
                   content: '';
                   width: 0.1875rem;
@@ -186,6 +218,7 @@
                   vertical-align: top;
                   margin-right: 0.4375rem;
                 }
+
                 &.active {
                   font-weight: $font-weight-semibold;
                 }
@@ -196,6 +229,7 @@
       }
     }
   }
+
   footer {
     .navbar {
       border: none;
@@ -204,38 +238,47 @@
     }
   }
 }
+
 /* 1.3  Muze Double Header CSS */
 .double-header {
   .navbar-brand {
     padding: 0;
+
     img {
       display: none;
     }
+
     .white-logo {
       display: inline-block;
     }
   }
+
   .double-header-nav {
     display: block;
     padding: 0.6875rem 0.9375rem;
   }
+
   .header-body {
     background-color: $dark-text;
+
     .customize-btn {
       background-color: $warning !important;
       border-color: $warning !important;
       color: $black-600;
+
       svg {
         path {
           fill: $black-600;
         }
       }
+
       &:hover {
         background-color: $yellow-400 !important;
         border-color: $yellow-400 !important;
       }
     }
   }
+
   .grid-option {
     > a {
       svg {
@@ -245,20 +288,25 @@
       }
     }
   }
+
   .navbar {
     border-left: none;
     margin-left: 0;
   }
+
   .main-content {
     margin-top: 10.125rem;
   }
+
   .chat-items {
     height: calc(100vh - 27.25rem);
   }
+
   .chat-list {
     height: calc(100vh - 16.3rem);
   }
 }
+
 /* 2. Muze Sidebar Versions CSS */
 /* 2.1  Muze Default Sidebar CSS */
 .navbar-toggler {
@@ -266,6 +314,7 @@
     box-shadow: none;
   }
 }
+
 .navbar-vertical {
   &.navbar-expand-lg {
     display: block;
@@ -279,6 +328,7 @@
     padding-left: 2rem;
     border-right: 0.0625rem solid $gray-200;
     padding-right: 2rem;
+
     .navbar-collapse {
       flex-direction: column;
       align-items: stretch;
@@ -290,14 +340,17 @@
       padding-right: 2rem;
       overflow-y: auto;
     }
+
     .navbar-nav {
       flex-direction: column;
       height: 100vh;
       margin-left: -2rem;
       margin-right: -2rem;
+
       .nav-item {
         padding: 0;
         margin-top: 0.625rem;
+
         &.nav-subtitle {
           small {
             font-family: $montserrat-font;
@@ -311,6 +364,7 @@
           }
         }
       }
+
       .nav-link {
         display: flex;
         align-items: center;
@@ -319,19 +373,23 @@
         color: $gray-600;
         font-family: $montserrat-font;
         font-size: 0.875rem;
+
         svg {
           path {
             fill: $gray-600;
           }
         }
-        &:hover,&.active, &[aria-expanded="true"] {
+
+        &:hover, &.active, &[aria-expanded="true"] {
           color: $black-600;
+
           svg {
             path {
               fill: $black-600;
             }
           }
         }
+
         .docs-version {
           border-radius: 0.25rem;
           font-size: 0.6875rem;
@@ -342,26 +400,32 @@
           margin-left: 0.5rem;
         }
       }
+
       .nav {
         .nav-item {
           margin-top: 0;
+
           .nav-link {
             padding-left: 3.8rem;
             padding-top: 0.50rem;
             padding-bottom: 0.50rem;
           }
+
           .nav {
             .nav-link {
               padding-left: 4.8rem;
               font-weight: 500;
+
               &:hover {
                 &:before {
                   background-color: $black-600;
                 }
               }
+
               &.active {
                 font-weight: $font-weight-semibold;
               }
+
               &:before {
                 content: '';
                 width: 0.1875rem;
@@ -376,6 +440,7 @@
           }
         }
       }
+
       .nav-link[data-bs-toggle="collapse"]:after {
         display: block;
         content: url("../svg/icons/chevron-down1.svg");
@@ -383,11 +448,13 @@
         width: 0.75rem;
         transition: transform .2s;
       }
+
       .nav-link[data-bs-toggle="collapse"][aria-expanded="true"]:after {
         transform: rotate(-180deg);
       }
     }
   }
+
   .navbar-vertical-footer-list {
     display: flex;
     flex-wrap: wrap;
@@ -395,12 +462,15 @@
     justify-content: space-between;
     padding-left: 0;
     margin-bottom: 0;
+
     > li {
       list-style: none;
       padding: 0.25rem 0;
+
       .dropdown-menu {
         min-width: 8.875rem;
       }
+
       a {
         &:hover {
           svg {
@@ -412,6 +482,7 @@
       }
     }
   }
+
   .navbar-vertical-footer {
     position: absolute;
     left: 0;
@@ -421,19 +492,23 @@
     background-color: $white;
   }
 }
+
 .nav-sm {
-  .nav-link{
+  .nav-link {
     font-size: .8125rem;
   }
 }
+
 .navbar-light {
   background-color: $white;
 }
+
 /* 2.2 Muze Sidebar Icons CSS */
 .sidebar-icons, .sidebar-compact {
   .header-fixed {
     left: 5rem;
   }
+
   .navbar-vertical {
     &.navbar-expand-lg {
       max-width: 5rem;
@@ -442,45 +517,56 @@
       overflow: visible;
       text-align: center;
       z-index: 2;
+
       .navbar-collapse {
         padding: 0;
         margin: 0;
       }
+
       .simplebar-content {
         > li {
           &:hover {
             > .collapse-box {
               display: block !important;
               height: auto !important;
+
               > .collapse-box:not(.show) {
                 display: none;
               }
             }
           }
+
           > .collapse-box {
             display: none;
           }
         }
       }
+
       .navbar-nav {
         margin: 0;
         height: calc(100vh - 10rem);
+
         .nav-item {
           position: static;
           margin-top: 1.875rem;
+
           > .nav-link {
             position: relative;
+
             span {
               font-size: 0;
               margin-left: 0 !important;
             }
           }
+
           &.nav-subtitle {
             margin-top: 0;
+
             small {
               font-size: 0;
             }
           }
+
           > .collapse-box {
             position: fixed;
             top: inherit;
@@ -491,40 +577,49 @@
             box-shadow: 0 0.0625rem 0.5625rem rgba($black, 0.08);
             z-index: 99;
             padding: 0.5rem 0;
+
             > .nav {
               min-width: 13.125rem;
             }
+
             .nav-item {
               margin-top: 0;
             }
+
             .nav-link {
               justify-content: flex-start;
               padding: 0.5rem 0.9375rem;
               font-size: 0.875rem;
+
               &[data-bs-toggle="collapse"] {
                 &:after {
                   display: block;
                 }
               }
             }
+
             .collapse-box {
               position: static;
               box-shadow: none;
               border-radius: 0;
               padding: 0;
+
               .nav-link {
                 padding-left: 1.5625rem;
               }
             }
           }
         }
+
         .nav-link {
           padding: 0.625rem;
           justify-content: center;
+
           .status {
             top: -1rem;
             left: 0.375rem;
           }
+
           > span {
             &.docs-version {
               position: absolute;
@@ -535,6 +630,7 @@
               margin: 0 auto;
             }
           }
+
           &[data-bs-toggle="collapse"] {
             &:after {
               display: none;
@@ -543,85 +639,107 @@
         }
       }
     }
+
     .navbar-vertical-footer {
       display: none;
     }
   }
+
   .signout {
     display: inline-block !important;
+
     img {
       max-width: 1.25rem;
     }
+
     .btn-lg {
       padding: 0.5rem 0.8125rem;
     }
+
     .btn-block {
       width: auto;
     }
+
     img {
       display: block;
     }
+
     span {
       display: none;
     }
   }
+
   .main-content {
     margin-left: 5rem;
     transition: transform .3s ease-out;
   }
+
   .navbar-brand {
     img {
       display: none;
     }
+
     .muze-icon {
       display: block;
       margin: 0 auto;
     }
   }
+
   .back-arrow {
     svg, img {
       transform: rotate(-180deg);
     }
   }
 }
+
 /* 2.3 Muze Sidebar Compact CSS */
 .sidebar-compact {
   .header-fixed {
     left: 9.0625rem;
   }
+
   .navbar-brand {
     img {
       display: none;
     }
+
     .muze-icon {
       display: inline-block;
     }
   }
+
   .navbar-vertical {
     &.navbar-expand-lg {
       max-width: 9.0625rem;
+
       .navbar-nav {
         .nav-item {
           margin-top: 1.375rem;
+
           > .nav-link {
             font-size: 0;
             display: block;
+
             span:not(.docs-version) {
               font-size: 0.875rem;
             }
+
             img, svg {
               display: block;
               margin: 0 auto 0.5rem;
             }
+
             .status {
               left: auto;
               top: -0.375rem;
             }
           }
+
           > .collapse-box {
             left: 9.0625rem;
             text-align: left;
           }
+
           .nav {
             .nav-item {
               > .nav-link {
@@ -633,23 +751,27 @@
       }
     }
   }
+
   .main-content {
     margin-left: 9.0625rem;
   }
+
   .signout {
     .btn-lg {
       padding: 0.625rem 1.125rem;
       height: 3.625rem;
     }
   }
+
   .navbar-vertical {
-    &.navbar-expand-lg  {
+    &.navbar-expand-lg {
       .navbar-nav {
         height: calc(100vh - 10.9375rem);
       }
     }
   }
 }
+
 /* 2.4  Muze Customize Sidebar CSS */
 .customize-sidebar {
   position: fixed;
@@ -662,10 +784,12 @@
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
   transition: all ease .4s;
+
   .btn-light {
     &:hover {
       background-color: $blue-100 !important;
       border-color: $blue-100 !important;
+
       svg {
         path {
           fill: $primary;
@@ -674,16 +798,20 @@
     }
   }
 }
+
 .customize-body {
   height: calc(100vh - 16.5625rem);
 }
+
 .customizer-controls {
   .pe-4 {
     padding-right: 0 !important;
   }
 }
+
 .customize-box {
   overflow: hidden;
+
   &:before {
     content: '';
     background-color: rgba($dark-text, 0.3);
@@ -696,21 +824,25 @@
     bottom: 0;
     z-index: 17;
   }
+
   .customize-sidebar {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
+
 .sidebar-style {
   .form-check {
     position: relative;
     padding-left: 0;
   }
+
   .form-check-input {
     position: absolute;
     bottom: 3px;
     z-index: 0;
     left: 1.5em;
+
     &:checked {
       ~ .form-check-label {
         img {
@@ -721,43 +853,52 @@
       }
     }
   }
+
   .form-check-label {
     img {
       max-width: 6.25rem;
     }
+
     span {
       padding-left: 1.5em;
     }
   }
 }
+
 /* 3. Muze Analytics Page CSS */
 .dark-radio {
   .form-check-input {
     background-color: $gray-800;
     border-color: $gray-600;
+
     &:checked {
       background-color: #0d6efd;
       border-color: #0d6efd;
     }
   }
 }
+
 .link-dark {
   &:hover {
     color: $blue-500;
+
     svg path {
       fill: $blue-500;
     }
   }
 }
+
 .signout {
   img {
     max-width: 0.875rem;
   }
 }
+
 .main-content {
   margin-left: 16.0625rem;
   margin-top: 6.0625rem;
 }
+
 .small-title {
   display: block;
   font-size: 0.75rem;
@@ -766,17 +907,21 @@
   font-weight: $font-weight-semibold;
   margin-bottom: 0.125rem;
 }
+
 .modal-close {
   margin-right: -0.625rem;
 }
+
 .form-select-sm {
   font-weight: $font-weight-semibold;
   padding-right: 1.375rem;
   background-position: right 0.3rem center;
 }
+
 .card {
   border: none;
 }
+
 .card-header {
   border-color: rgba($gray-600, 0.125);
   display: flex;
@@ -787,13 +932,16 @@
   padding-bottom: .75rem;
   background-color: transparent;
 }
+
 .list-group {
   .list-group-item {
     padding: 0.75rem 0.125rem;
     border-color: $gray-200;
+
     h6 {
       a {
         color: $gray-700;
+
         &:hover {
           color: $primary;
         }
@@ -801,18 +949,23 @@
     }
   }
 }
+
 .dropdown-ellipses {
   color: $gray-500;
+
   &:hover {
     color: $primary;
   }
+
   &:after {
     display: none;
   }
+
   .fas {
     font-size: 0.8125rem;
   }
 }
+
 .dropdown-menu {
   border: none;
   box-shadow: 0 1rem 3rem rgba($black, 0.16);
@@ -822,10 +975,12 @@
   min-width: 12.1875rem;
   z-index: 6;
   margin-top: 0.3125rem !important;
+
   .dropdown-body {
     max-height: 23.4375rem;
     overflow-y: auto;
   }
+
   .dropdown-item {
     font-size: 0.8125rem;
     font-weight: $font-weight-semibold;
@@ -833,36 +988,45 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     &:not(.active):not(:active) {
       color: $gray-700;
     }
-    &:hover,&:active,&.active {
+
+    &:hover, &:active, &.active {
       background-color: $gray-50;
       color: $black-600 !important;
+
       svg {
         path {
           fill: $black-600;
         }
       }
     }
+
     &.unread {
       background-color: $gray-100;
+
       .dropdown-title {
         color: $black-600;
       }
+
       .dropdown-content {
         color: $gray-600;
         font-weight: $font-weight-semibold;
       }
     }
+
     .dropdown-content {
       font-weight: $font-weight-normal;
     }
   }
+
   .dropdown-divider {
     border-color: $gray-300;
     opacity: 1;
   }
+
   .dropdown-sub-title {
     font-size: 0.6875rem;
     padding: 0.5rem 1rem 0.3125rem;
@@ -870,6 +1034,7 @@
     text-transform: uppercase;
     color: $gray-500;
   }
+
   .nav-tabs-line {
     .nav-item {
       width: 50%;
@@ -877,9 +1042,11 @@
     }
   }
 }
+
 .profile-dropdown {
   > .dropdown-menu {
     min-width: 15.5625rem;
+
     .dropdown-menu {
       min-width: 10rem;
       right: 100%;
@@ -887,14 +1054,17 @@
       top: 0;
     }
   }
+
   .dropdown-item {
     padding: 0.75rem 1.5rem;
   }
 }
+
 .grid-option {
   > .dropdown-menu {
     min-width: 23.625rem;
   }
+
   .dropdown-body {
     .dropdown-item {
       border-top: 0.0625rem solid $gray-50;
@@ -902,20 +1072,24 @@
     }
   }
 }
+
 .export-dropdown {
   .dropdown-menu {
     .dropdown-sub-title {
       color: $gray-700;
       padding: 0.5rem 1.5rem;
     }
+
     .dropdown-item {
       padding: 0.625rem 1.5rem;
     }
   }
+
   .btn {
     svg {
       transition: all ease .4s;
     }
+
     &[aria-expanded="true"] {
       svg {
         transform: rotate(180deg);
@@ -923,15 +1097,18 @@
     }
   }
 }
+
 .get-startedtwo {
   position: absolute;
   right: 1.875rem;
   bottom: -1.5625rem;
   z-index: -1;
 }
+
 .card-table {
   margin-bottom: 0;
   color: $gray-700;
+
   td {
     font-size: 1rem;
     padding: 0.9375rem 2rem;
@@ -939,6 +1116,7 @@
     border-color: $gray-200 !important;
     color: $black-600;
   }
+
   th {
     font-size: 0.8125rem;
     text-transform: uppercase;
@@ -947,19 +1125,23 @@
     padding: 0.8125rem 2rem;
     background-color: $gray-100;
     border-color: $gray-100 !important;
+
     &:last-child {
       width: 6.875rem;
     }
   }
+
   tr:last-child {
     td {
       border-bottom: 0;
     }
   }
+
   &.table-nowrap td, &.table-nowrap th, &.table [data-sort] {
     white-space: nowrap;
   }
 }
+
 .check-list {
   .form-check-input {
     &:checked {
@@ -969,15 +1151,18 @@
       }
     }
   }
+
   .form-check-label {
     color: $gray-700;
   }
 }
+
 .list-group-activity {
   .list-group-item {
     border-bottom: none;
     position: relative;
     z-index: 1;
+
     &:first-child {
       .col-auto {
         &:after {
@@ -985,6 +1170,7 @@
         }
       }
     }
+
     &:last-child {
       .col-auto {
         &:after {
@@ -992,6 +1178,7 @@
         }
       }
     }
+
     .col-auto {
       &:after {
         content: '';
@@ -1007,18 +1194,22 @@
     }
   }
 }
+
 .badge-sm {
   padding: 0.3125rem 0.625rem;
   font-size: 0.6em;
 }
+
 .form-check-sm {
   .form-check-input {
     margin-top: 0.25em;
   }
+
   .form-check-label {
     font-size: 90%;
   }
 }
+
 .checklist-box {
   textarea.form-control {
     resize: none;
@@ -1030,76 +1221,95 @@
     border: none;
     font-size: 1rem;
     color: $gray-700;
+
     &::-webkit-input-placeholder {
       color: $gray-700;
     }
+
     &::-moz-placeholder {
       color: $gray-700;
     }
+
     &:-ms-input-placeholder {
       color: $gray-700;
     }
+
     &:-moz-placeholder {
       color: $gray-700;
     }
+
     &:focus {
       box-shadow: none;
     }
   }
 }
+
 .muze-icon {
   display: none;
 }
+
 .nav-tabs-sm {
   .nav-link {
     font-size: .8125rem;
   }
 }
+
 .card-header-tabs {
   border-bottom: none;
   margin: -.75rem 0;
+
   .nav-item {
     padding: 0 0.5rem;
   }
+
   .nav-link {
     border: none;
     padding: 1.25rem 0;
     color: $gray-500;
     font-weight: $font-weight-medium;
+
     &.active {
       border-bottom: 0.0625rem solid $primary;
       color: $black;
     }
   }
 }
+
 .btn-link {
   &.link-primary {
     &:hover {
       color: $dark;
+
       svg path {
         fill: $dark;
       }
     }
   }
 }
+
 .get-started-img {
-	position: absolute;
-	bottom: -19.375rem;
+  position: absolute;
+  bottom: -19.375rem;
   right: 3.125rem;
   z-index: -1;
 }
+
 .get-started-two {
   bottom: -1.875rem;
 }
+
 footer {
   .navbar {
     justify-content: flex-end;
     border: none;
+
     li {
       padding: 0.3125rem 0 0.3125rem 3.125rem;
+
       a {
         color: $gray-600;
         font-size: 1rem;
+
         &:hover {
           color: $primary;
         }
@@ -1107,6 +1317,7 @@ footer {
     }
   }
 }
+
 /* 4. Muze Project management Page CSS */
 .get-startedthree {
   position: absolute;
@@ -1114,6 +1325,7 @@ footer {
   transform: translateY(-50%);
   right: -18.4375rem;
 }
+
 .project-management-template {
   table {
     td {
@@ -1124,17 +1336,21 @@ footer {
     }
   }
 }
+
 /* 5. Muze Festive Page CSS */
 .title-box {
   min-height: 3.125rem;
 }
+
 /* 6. Muze Settings Page CSS */
 .sidebar-nav {
   padding-left: 0;
   margin-bottom: 0.5rem;
+
   li {
     list-style: none;
     border-top: 0.0625rem solid $gray-200;
+
     a {
       font-weight: $font-weight-semibold;
       color: $gray-500;
@@ -1142,16 +1358,19 @@ footer {
       display: block;
       font-size: 0.875rem;
       border-left: 0.25rem solid transparent;
+
       &:hover, &.active {
         color: $black-600;
         border-left-color: $primary;
         background-color: $gray-100;
+
         svg {
           path {
             fill: $black-600;
           }
         }
       }
+
       svg {
         path {
           fill: $gray-500;
@@ -1161,12 +1380,15 @@ footer {
     }
   }
 }
+
 .form-style-two {
   .form-control {
     color: $gray-600;
   }
+
   ul {
     padding-left: 0;
+
     li {
       font-size: 0.8125rem;
       color: $gray-800;
@@ -1175,37 +1397,45 @@ footer {
     }
   }
 }
+
 /* 7. Muze Billing Page CSS */
 .invoice-table {
   tr {
     vertical-align: middle;
+
     &:last-child {
       td {
         border: none;
       }
     }
   }
+
   td {
     padding: 1.5625rem 0.625rem;
     white-space: nowrap;
+
     &:first-child {
       padding-left: 0;
     }
+
     &:last-child {
       padding-right: 0;
     }
   }
 }
+
 .invoice-template {
   .card-table {
     td {
       padding: 1.375rem 2rem;
+
       &:last-child {
         text-align: right;
       }
     }
   }
 }
+
 /* 8. Muze Sign Up Page CSS */
 .signup-template {
   .cover-fit {
@@ -1214,9 +1444,11 @@ footer {
     object-fit: cover;
   }
 }
+
 .login-form {
   max-width: 32.9375rem;
 }
+
 /* 9. Muze Sign Up Simple Page CSS */
 .login-form, .simple-login-form, .signup-simple-template {
   a {
@@ -1224,18 +1456,22 @@ footer {
       color: $primary !important;
     }
   }
+
   .form-check-label {
     margin-top: 0.125rem;
   }
 }
+
 .signup-header {
   padding: 7rem;
 }
+
 .simple-login-form {
   width: 33.75rem;
   margin: auto;
   padding: 3.5rem;
 }
+
 /* 10. Muze User Profile Page CSS */
 .user-profile-template {
   a {
@@ -1243,33 +1479,40 @@ footer {
       color: $primary;
     }
   }
+
   .avatar-xs {
     width: 2rem;
     height: 2rem;
     min-width: 2rem;
   }
+
   .list-group {
     .list-group-item {
       padding-top: 1.25rem;
       padding-bottom: 1.25rem;
     }
   }
+
   .tiny {
     font-size: 0.625rem !important;
   }
+
   .get-startedtwo {
     bottom: -6.25rem;
     right: -8.4375rem;
   }
 }
+
 .profile-list {
   margin-top: 1rem;
   margin-bottom: 0;
+
   li {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     padding: 0.5rem 0;
+
     span + span {
       width: calc(100% - 2rem);
       padding-left: 0.75rem;
@@ -1277,6 +1520,7 @@ footer {
     }
   }
 }
+
 .group-cards {
   .avatar {
     &.avatar-lg {
@@ -1285,37 +1529,45 @@ footer {
       height: 3.5rem;
     }
   }
+
   .title-box {
     min-height: 5.625rem;
   }
 }
+
 /* 11. Muze Pricing Page CSS */
 .pricing-template {
   .top-less {
     margin-top: -15.625rem;
   }
+
   .badge {
     &.position-absolute {
       &.end-0 {
         right: 1rem !important;
       }
+
       &.top-0 {
         top: 1rem !important;
       }
     }
   }
+
   .nav-segment {
     padding: 0.375rem;
+
     &.nav-pills {
       .nav-link {
         padding: .4rem 1.2rem;
         color: $white;
         border-radius: 1.25rem;
+
         &.active {
           background-color: $yellow-500;
           color: $black-600;
         }
       }
+
       .show {
         > .nav-link {
           background-color: $yellow-500;
@@ -1325,6 +1577,7 @@ footer {
     }
   }
 }
+
 .muze-collapes {
   .card {
     background-color: transparent;
@@ -1332,14 +1585,17 @@ footer {
     border-bottom: 0.0625rem solid #e9ecef !important;
     padding: .5rem 0;
     border-radius: 0;
+
     .card-header {
       background-color: transparent;
       border: none;
       margin-bottom: 0;
       height: auto;
+
       h5 {
         width: 100%;
       }
+
       .btn-light {
         background-color: transparent !important;
         border: none !important;
@@ -1348,9 +1604,11 @@ footer {
         font-weight: $font-weight-semibold;
         box-shadow: none;
         position: relative;
+
         &[aria-expanded="true"]:before {
           display: none;
         }
+
         &:after {
           content: '';
           height: 0.125rem;
@@ -1362,6 +1620,7 @@ footer {
           transform: translateY(-50%);
           right: 0;
         }
+
         &:before {
           content: '';
           height: 1.25rem;
@@ -1377,25 +1636,31 @@ footer {
     }
   }
 }
+
 .plan-list {
   li {
     line-height: 1.75rem;
     color: $gray-700;
+
     + li {
       margin-top: 0.9375rem;
     }
+
     span {
       padding-left: 0.8125rem;
     }
   }
 }
+
 /* 12. Muze Help Center Page CSS */
 .search-less {
   margin-top: -2.5rem;
 }
+
 .search-left {
   width: 100%;
 }
+
 /* 13. Muze All Projects Page CSS */
 .all-projects-template {
   a {
@@ -1403,11 +1668,13 @@ footer {
       color: $primary;
     }
   }
+
   .nav-pills {
     .nav-link {
       border-radius: 1.875rem;
       font-size: 0.9375rem;
       color: $gray-700;
+
       &.active {
         font-weight: $font-weight-semibold;
         color: $white;
@@ -1416,11 +1683,13 @@ footer {
     }
   }
 }
+
 /* 14. Muze New Projects Page CSS */
 .new-projects-template {
   .form-label {
     color: $black-600;
   }
+
   form {
     .circle-xl {
       width: 6.25rem;
@@ -1428,23 +1697,26 @@ footer {
     }
   }
 }
+
 .ql-container {
   &.ql-snow {
     border-color: $gray-200;
-  border-radius: 0 0 .25rem .25rem;
-  height: 18.125rem;
-  font-size: 1rem;
-  color: $black-600;
-  font-style: normal;
-  font-family: inherit;
+    border-radius: 0 0 .25rem .25rem;
+    height: 18.125rem;
+    font-size: 1rem;
+    color: $black-600;
+    font-style: normal;
+    font-family: inherit;
   }
 }
+
 .ql-toolbar {
   &.ql-snow {
     border-color: $gray-200;
     border-radius: .25rem .25rem 0 0;
   }
 }
+
 .ql-editor {
   &.ql-blank {
     &:before {
@@ -1452,17 +1724,21 @@ footer {
     }
   }
 }
+
 .step-list {
   display: flex;
   padding-left: 0;
+
   .circle {
     margin: 0 auto;
   }
+
   li {
     position: relative;
     list-style: none;
     width: 33.33%;
     text-align: center;
+
     &:not(:first-child):before {
       content: '';
       height: 0.125rem;
@@ -1473,6 +1749,7 @@ footer {
       top: 1.5625rem;
       z-index: -1;
     }
+
     &.active {
       &:before {
         background-color: $primary;
@@ -1480,6 +1757,7 @@ footer {
     }
   }
 }
+
 /* 15. Muze Project Details Page CSS */
 .activity-list {
   .list-group-item {
@@ -1487,6 +1765,7 @@ footer {
     padding-top: 0;
     padding-bottom: 2.5rem;
     position: relative;
+
     &:not(:last-child):before {
       content: '';
       width: 0.0625rem;
@@ -1499,10 +1778,12 @@ footer {
     }
   }
 }
+
 /* 16. Muze Calendar Page CSS */
 .fc .fc-view-harness {
   z-index: 0;
 }
+
 .calendar-template {
   .calendar-box {
     a {
@@ -1510,34 +1791,41 @@ footer {
       font-weight: normal;
     }
   }
+
   .fc {
     .fc-button-primary {
       background-color: $blue-500;
       border-color: $blue-500;
+
       &:not(:disabled).fc-button-active, &:not(:disabled):active, &:not(:disabled):hover {
         background-color: $blue-600;
         border-color: $blue-600;
       }
     }
+
     .fc-today-button {
       background-color: $blue-200;
       border-color: $blue-200;
     }
+
     .fc-toolbar-title {
       font-weight: $font-weight-semibold;
     }
   }
 }
+
 /* 17. Muze File Manager Page CSS */
 .file-manager-template {
   .dropdown {
     &.top-0 {
       top: 0.5rem !important;
     }
+
     &.end-0 {
       right: 0.5rem !important;
     }
   }
+
   .btn-icon {
     &.btn-sm {
       width: 1.5rem;
@@ -1545,12 +1833,15 @@ footer {
     }
   }
 }
+
 /* 18. Muze Chat Page CSS */
 .chat-header {
   a.circle {
     background-color: $gray-200;
+
     &:hover {
       background-color: $primary;
+
       svg {
         path {
           fill: $white;
@@ -1559,33 +1850,42 @@ footer {
     }
   }
 }
+
 .opacity-1 {
   opacity: 1;
 }
+
 .chat-list {
   height: calc(100vh - 12.125rem);
+
   a {
     padding: 1.625rem 2.5rem;
     display: block;
     color: $black-600;
     border-left: 0.3125rem solid transparent;
+
     &.active {
       border-color: $primary;
       background-color: $blue-50;
+
       h6 {
         font-weight: $font-weight-semibold;
       }
     }
+
     &.unread {
       background-color: $gray-100;
+
       h6, p {
         font-weight: $font-weight-semibold;
         color: $black-600;
       }
+
       .unread-status {
         display: block;
       }
     }
+
     .unread-status {
       display: none;
       position: absolute;
@@ -1593,11 +1893,13 @@ footer {
       bottom: 0.625rem;
       z-index: 0;
     }
+
     h6 {
       font-weight: $font-weight-normal;
       font-family: $font-family-base;
       margin-bottom: 0.25rem;
     }
+
     p {
       font-size: 0.8125rem;
       text-overflow: ellipsis;
@@ -1608,6 +1910,7 @@ footer {
       padding-right: 3.4375rem;
     }
   }
+
   .media {
     .media-body {
       width: calc(100% - 4.125rem);
@@ -1615,23 +1918,28 @@ footer {
     }
   }
 }
+
 .chat-item {
   padding: 1.5rem 0;
   max-width: 48.125rem;
 }
+
 .chat-item-inner {
   display: flex;
   align-items: center;
 }
+
 .chat-message {
   padding-left: 1.5625rem;
   padding-top: 0.625rem;
 }
+
 .message-box {
   background-color: $gray-100;
   padding: 1.125rem 2rem;
   border-radius: 0.5rem;
   position: relative;
+
   &:before {
     content: '';
     width: 0;
@@ -1642,6 +1950,7 @@ footer {
     bottom: 30%;
     left: -1.125rem;
   }
+
   p {
     margin-bottom: 0;
     font-size: 1rem;
@@ -1649,13 +1958,16 @@ footer {
     color: $gray-800;
   }
 }
+
 .message-files {
   padding-left: 2.1875rem;
+
   ul {
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     margin: 0.625rem -0.375rem;
+
     li {
       list-style: none;
       padding: 0 0.375rem;
@@ -1663,21 +1975,27 @@ footer {
     }
   }
 }
+
 .message-sender {
   padding-left: 2.5rem;
+
   .message-box {
     background-color: $primary;
+
     &:before {
       border-right: 1.25rem solid $primary;
     }
+
     p {
       color: $white;
     }
   }
+
   .message-files {
     padding-left: 4.6875rem;
   }
 }
+
 .attachment {
   background-color: $gray-200;
   border-radius: 1.5rem;
@@ -1686,9 +2004,11 @@ footer {
   display: inline-block;
   color: $gray-800;
 }
+
 .chat-items {
   height: calc(100vh - 23.25rem);
 }
+
 .message-footer {
   .form-control {
     font-size: 1rem;
@@ -1697,8 +2017,10 @@ footer {
     padding-left: 0;
     min-height: 3.125rem;
   }
+
   a:not(.btn) {
     margin-right: 2.5rem;
+
     &:hover {
       svg {
         path {
@@ -1708,10 +2030,12 @@ footer {
     }
   }
 }
+
 /* 19. Muze Dark Mode CSS */
 .white-logo2, .muze-icon-white {
   display: none;
 }
+
 .muze-dark-mode {
   color: $gray-500;
   background-color: $black-600 !important;
@@ -1719,27 +2043,33 @@ footer {
   .apexcharts-gridline {
     stroke: $gray-800;
   }
+
   .highcharts-yaxis-grid {
     .highcharts-grid-line {
       stroke: $gray-800;
     }
   }
+
   .simplebar-scrollbar {
     &:before {
       background-color: $gray-400;
     }
+
     &.simplebar-visible {
       &:before {
         opacity: 1;
       }
     }
   }
+
   .form-control {
     color: $gray-200;
   }
+
   .progress {
     background-color: $gray-800;
   }
+
   .navbar-vertical-footer-list {
     > li:not(.dropup) {
       a {
@@ -1749,20 +2079,24 @@ footer {
       }
     }
   }
+
   &.sidebar-icons, &.sidebar-compact {
     .navbar-vertical {
       .navbar-brand {
         img {
           display: none;
-          &.white-logo2  {
+
+          &.white-logo2 {
             display: none;
           }
+
           &.muze-icon-white {
             display: block;
             margin: 0 auto;
           }
         }
       }
+
       &.navbar-expand-lg {
         .navbar-nav {
           .nav-item {
@@ -1774,15 +2108,18 @@ footer {
       }
     }
   }
+
   .navbar-vertical {
     .navbar-brand {
       img {
         display: none;
-        &.white-logo2  {
+
+        &.white-logo2 {
           display: block;
         }
       }
     }
+
     &.navbar-expand-lg {
       .navbar-nav {
         .nav-link {
@@ -1794,26 +2131,31 @@ footer {
       }
     }
   }
+
   &.top-header, &.double-header {
     .header {
       .navbar-brand {
         img {
           display: none;
+
           &.white-logo {
             display: block;
           }
         }
       }
+
       .customize-btn {
         &.btn-dark {
           background-color: $warning !important;
           border-color: $warning !important;
           color: $black-600;
+
           svg {
             path {
               fill: $black-600;
             }
           }
+
           &:hover {
             background-color: $yellow-400 !important;
             border-color: $yellow-400 !important;
@@ -1821,65 +2163,80 @@ footer {
         }
       }
     }
+
     .navbar {
       border-color: $gray-800;
+
       .nav-item {
         .nav-link {
           color: $gray-200;
+
           svg {
             path {
               fill: $gray-500;
             }
           }
         }
+
         .collapse-box {
           background-color: $black-800;
         }
       }
     }
   }
+
   .muze-hamburger {
     img {
       filter: brightness(10);
     }
   }
+
   .avatar {
     .avatar-initials {
       color: $black-600;
     }
   }
+
   .btn-dark-100:not(:hover) {
     background-color: $gray-800;
     color: $gray-500;
+
     svg {
       path {
         fill: $gray-500;
       }
     }
   }
+
   .btn-dark {
     background-color: $gray-800 !important;
     border-color: $gray-800 !important;
+
     &:hover {
       background-color: $black-800 !important;
       border-color: $black-800 !important;
     }
   }
+
   .link-dark:not(:hover) {
     color: $gray-500 !important;
+
     svg {
       path {
         fill: $gray-500;
       }
     }
   }
+
   .list-group {
     .text-gray-700 {
       color: $gray-200 !important;
     }
+
     .list-group-item {
       background-color: $dark-text;
       border-color: $gray-800;
+
       h6 {
         a:not(:hover) {
           color: $gray-300;
@@ -1887,9 +2244,11 @@ footer {
       }
     }
   }
+
   .navbar-light {
     background-color: $black-600;
   }
+
   .header-search {
     form {
       .input-group {
@@ -1900,54 +2259,67 @@ footer {
         }
       }
     }
+
     .form-control {
       background-color: $dark-text !important;
       color: $gray-400;
     }
+
     .border-gray-300 {
       border-color: $dark-text !important;
     }
   }
+
   .btn-outline-dark:not(:hover) {
     border-color: $gray-500 !important;
     color: $gray-500 !important;
+
     svg {
       path {
         fill: $gray-500;
       }
     }
   }
+
   .btn-light {
     background-color: $gray-800 !important;
     border-color: $gray-800 !important;
     color: $gray-500;
+
     &:hover {
       background-color: $gray-900 !important;
       border-color: $gray-900 !important;
     }
+
     svg {
       path {
         fill: $white;
       }
     }
   }
+
   .header-fixed {
     background-color: $black-600;
   }
-  .bg-white,.bg-blue-50 {
+
+  .bg-white, .bg-blue-50 {
     background-color: $dark-text !important;
   }
+
   .text-gray-600:not(a) {
     color: $gray-500 !important;
   }
+
   .back-arrow {
     &.border-gray-200 {
       border-color: $dark-text !important;
     }
   }
+
   .bg-gray-50 {
     background-color: $gray-800 !important;
   }
+
   .icon-blue-hover {
     .grid-option {
       > a {
@@ -1956,33 +2328,41 @@ footer {
             fill: $white;
           }
         }
+
         i {
           color: $white;
         }
       }
     }
   }
+
   .navbar-vertical {
     &.navbar-expand-lg {
       border-color: $gray-800;
+
       .navbar-nav {
         .nav-link {
           color: $gray-500;
+
           &.nav-subtitle {
             small {
               color: $gray-600;
             }
           }
+
           svg {
             path {
               fill: $gray-500;
             }
           }
+
           &:hover, &.active {
             color: $gray-200;
+
             &:before {
               background-color: $gray-200 !important;
             }
+
             svg {
               path {
                 fill: $gray-200;
@@ -1992,12 +2372,15 @@ footer {
         }
       }
     }
+
     .navbar-vertical-footer {
       background-color: $black-600;
+
       &.border-gray-50 {
         border-color: $gray-800 !important;
       }
     }
+
     .navbar-vertical-footer-list {
       > li {
         a {
@@ -2006,6 +2389,7 @@ footer {
               fill: $gray-500;
             }
           }
+
           &:hover {
             svg {
               path {
@@ -2017,20 +2401,25 @@ footer {
       }
     }
   }
+
   .border-gray-200 {
     border-color: $gray-800 !important;
   }
+
   .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: $gray-200;
   }
+
   .small-box {
     .icon {
-      color: rgba(255,255,255,.15);
+      color: rgba(255, 255, 255, .15);
     }
   }
+
   .card, .box {
     color: $gray-200;
     background-color: $dark-text;
+
     &.border-gray-50 {
       border-color: $gray-800 !important;
     }
@@ -2039,25 +2428,32 @@ footer {
       border-top-color: $gray-600;
     }
   }
+
   .box-header.with-border, .card-header.with-border {
     border-bottom-color: $gray-600;
   }
+
   .box.box-solid.box-default {
     background-color: $black-600;
     border-color: $black-400;
   }
+
   .form-control {
     background-color: $black-600;
     border-color: $black-500;
+
     &::-webkit-input-placeholder {
       color: $gray-400;
     }
+
     &::-moz-placeholder {
       color: $gray-400;
     }
+
     &:-ms-input-placeholder {
       color: $gray-400;
     }
+
     &:-moz-placeholder {
       color: $gray-400;
     }
@@ -2067,6 +2463,7 @@ footer {
       border-color: $black-400 !important;
     }
   }
+
   .input-group-text {
     background-color: $black-600;
     border-color: $black-500;
@@ -2081,6 +2478,7 @@ footer {
         border-color: $black-500;
       }
     }
+
     .page-item {
       &:not(.active) {
         .page-link:hover {
@@ -2089,6 +2487,7 @@ footer {
           border-color: $black-400;
         }
       }
+
       &.active {
         .page-link {
           background-color: $black-500;
@@ -2107,6 +2506,7 @@ footer {
       border-spacing: 0;
     }
   }
+
   .table.default-table td,
   .table.default-table th {
     border-color: $black-600 !important;
@@ -2137,12 +2537,14 @@ footer {
         td {
           border: 0;
           color: $gray-400;
+
           code {
             background-color: $gray-600;
           }
         }
       }
     }
+
     thead {
       tr {
         th {
@@ -2151,6 +2553,7 @@ footer {
         }
       }
     }
+
     tbody {
       tr {
         background: $black-600 !important;
@@ -2162,21 +2565,25 @@ footer {
             border-color: $black-600;
           }
         }
+
         &.table-dark {
           td,
           th {
             color: $white;
           }
         }
+
         &.table-active {
           td,
           th {
             color: $gray-300;
           }
         }
+
         th {
           background-color: lighten($black-600, 5%);
         }
+
         td {
           background-color: lighten($black-600, 5%);
           color: $gray-400;
@@ -2186,6 +2593,7 @@ footer {
 
     &.table-bordered {
       border-color: $black-400 !important;
+
       thead,
       tbody {
         tr {
@@ -2200,7 +2608,7 @@ footer {
     &.table-striped {
       tbody {
         tr {
-          &:nth-child(odd){
+          &:nth-child(odd) {
             th, td {
               background-color: lighten($black-600, 2%);
             }
@@ -2231,6 +2639,7 @@ footer {
     border-color: $black-500 !important;
     color: $gray-400 !important;
   }
+
   .select2-container--default .select2-search--inline .select2-search__field,
   .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: $gray-400 !important;
@@ -2245,12 +2654,15 @@ footer {
   .select2-container--default .select2-selection--multiple {
     border-color: $black-500 !important;
   }
-  .select2-container--default .select2-results>.select2-results__options {
+
+  .select2-container--default .select2-results > .select2-results__options {
     background-color: $black-500 !important;
   }
+
   .select2-dropdown {
     background-color: $black-600 !important;
   }
+
   .select2-container--default .select2-results__option[aria-selected=true],
   .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background-color: $black-600 !important;
@@ -2258,13 +2670,14 @@ footer {
   }
 
   .switchery {
-    >small {
+    > small {
       background-color: $black-500;
     }
   }
 
   .layui-layer {
     background-color: $black-500 !important;
+
     .layui-layer-title {
       background-color: lighten($black-600, 5%) !important;
       border-bottom-color: lighten($black-600, 5%) !important;
@@ -2279,6 +2692,7 @@ footer {
       }
     }
   }
+
   .form-divider {
     border-color: $black-500;
 
@@ -2292,26 +2706,31 @@ footer {
       color: $gray-400 !important;
     }
   }
+
   .apexcharts-radialbar-track {
     path {
       stroke: $black-600;
     }
   }
+
   .apexcharts-inner {
     polygon {
       stroke: $black-500 !important;
       fill: $black-600 !important;
     }
   }
+
   .apexcharts-pie-series {
     path {
       stroke: $black-600;
     }
   }
+
   .apexcharts-menu {
     background-color: $black-600;
     border: 0;
   }
+
   .apexcharts-toolbar {
     .apexcharts-zoom-in-icon,
     .apexcharts-zoom-out-icon,
@@ -2325,6 +2744,7 @@ footer {
       }
     }
   }
+
   .apexcharts-tooltip {
     color: $black-500;
   }
@@ -2335,36 +2755,45 @@ footer {
       border-color: $gray-800 !important;
       color: $gray-500;
     }
+
     td {
       border-color: $gray-800 !important;
       color: $gray-500;
+
       .bg-white {
         background-color: $white !important;
       }
+
       .text-gray-700 {
         color: $gray-200 !important;
       }
     }
   }
+
   .table-radius-wrapper {
     .table-responsive {
       background-color: transparent;
+
       .table {
         background-color: transparent;
       }
     }
   }
+
   .grid-selector {
     .wrap {
       background-color: $dark-text;
     }
+
     .select-label {
       color: $gray-200;
     }
   }
+
   .arrow-icon {
     filter: brightness(7);
   }
+
   footer {
     .navbar {
       li {
@@ -2374,11 +2803,13 @@ footer {
       }
     }
   }
+
   .dropdown {
     .btn-dark-100 {
       &:hover {
         background-color: $blue-500;
         color: $white;
+
         svg {
           path {
             fill: $white;
@@ -2387,78 +2818,98 @@ footer {
       }
     }
   }
+
   .dropdown-menu {
     background-color: $black-600;
     border: 0.125rem solid $dark-text;
     box-shadow: none;
+
     .text-black-600 {
       color: $gray-500;
     }
+
     .dropdown-sub-title {
       color: $gray-600;
     }
+
     .dropdown-divider {
       border-color: $gray-800;
     }
+
     .dropdown-item {
       &:not(.active):not(:active) {
         color: $gray-200;
       }
-      &:hover,&:focus {
+
+      &:hover, &:focus {
         background-color: $dark-text;
         color: $gray-200 !important;
       }
+
       svg {
         path {
           fill: $gray-500;
         }
       }
     }
+
     .dropdown-body {
       .dropdown-item {
         border-color: $gray-800;
         color: $gray-500 !important;
+
         &:hover {
           background-color: $dark-text;
         }
+
         &.unread {
           background-color: $black-600;
+
           .dropdown-title {
             color: $gray-400;
           }
         }
+
         .text-gray-600 {
           color: $gray-600 !important;
         }
       }
     }
+
     .dropdown-footer {
       background-color: $dark-text;
     }
+
     .border-top {
       border-color: $gray-800 !important;
     }
   }
+
   .nav-tabs {
     &.nav-tabs-line {
       border-color: $gray-800;
     }
+
     .nav-link {
       color: $gray-500;
+
       &.active {
         color: $gray-200;
       }
+
       &:hover:not(.active) {
         border-color: $gray-200;
         color: $gray-200;
       }
     }
   }
+
   .check-list {
     .form-check-input:not(:checked) {
       border-color: $gray-700;
       background-color: transparent;
     }
+
     .form-check-input {
       &:checked {
         ~ .form-check-label {
@@ -2466,126 +2917,159 @@ footer {
         }
       }
     }
+
     .form-check-label {
       color: $gray-200;
     }
   }
+
   .checklist-box {
     textarea.form-control {
       color: $gray-200;
       background-color: transparent;
+
       &::-webkit-input-placeholder {
         color: $gray-500;
       }
+
       &::-moz-placeholder {
         color: $gray-500;
       }
+
       &:-ms-input-placeholder {
         color: $gray-500;
       }
+
       &:-moz-placeholder {
         color: $gray-500;
       }
     }
   }
+
   &.project-management-template {
     .card {
       &.border-gray-50 {
         border-color: transparent !important;
       }
     }
+
     .border-gray-300 {
       border-color: transparent !important;
     }
+
     .text-black-600 {
       color: $gray-500;
     }
+
     .h1 {
       &.text-black-600 {
         color: $gray-200;
       }
+
       ~ .text-gray-700 {
         color: $gray-500 !important;
       }
     }
+
     .bg-gray-100 {
       background-color: $dark-text !important;
     }
   }
+
   &.signup-simple-template, &.signup-template {
     &.bg-white {
       background-color: $black-600 !important;
     }
+
     a {
       &.bg-white {
         background-color: $white !important;
       }
+
       &.text-gray-600 {
         color: $gray-400 !important;
       }
+
       &:hover {
         color: $primary !important;
       }
     }
+
     .bg-gray-100 {
       background-color: $black-600 !important;
     }
+
     .dark-mode-image {
       filter: brightness(0) invert(1);
     }
+
     .text-gray-600 {
       color: $gray-600 !important;
+
       a {
         &.text-gray-600:not(:hover) {
           color: inherit !important;
         }
       }
     }
+
     hr {
       &.bg-gray-200 {
         background-color: $gray-800 !important;
       }
     }
+
     .form-control {
       background-color: $gray-800;
       border-color: $gray-800;
       color: $gray-400;
     }
+
     .form-check-input:not(:checked) {
       border-color: $gray-400;
       background-color: $dark-text;
     }
+
     .form-check-label {
       color: $gray-400 !important;
+
       .text-gray-600:not(:hover) {
         color: inherit !important;
       }
     }
+
     .text-gray-700:not(a) {
       color: $gray-400 !important;
+
       a {
         &.text-gray-700:not(:hover) {
           color: inherit !important;
         }
       }
     }
+
     .dark-logo {
       display: none;
     }
+
     .white-logo {
       display: inline-block;
     }
   }
+
   &.festive-template {
     .border-gray-50 {
       border-color: $dark-text !important;
     }
+
     .card {
       &.bg-gray-800 {
         background-color: $gray-800 !important;
+
         .btn-dark-100:not(:hover) {
           background-color: $gray-100;
           color: $black-600;
+
           svg {
             path {
               fill: $black-600;
@@ -2593,11 +3077,14 @@ footer {
           }
         }
       }
+
       &.bg-indigo-light {
         background-color: $indigo-light !important;
+
         .btn-dark-100:not(:hover) {
           background-color: $gray-100;
           color: $black-600;
+
           svg {
             path {
               fill: $black-600;
@@ -2605,11 +3092,14 @@ footer {
           }
         }
       }
+
       &.bg-teal-500 {
         background-color: $teal-500 !important;
+
         .btn-dark-100:not(:hover) {
           background-color: $gray-100;
           color: $black-600;
+
           svg {
             path {
               fill: $black-600;
@@ -2618,21 +3108,26 @@ footer {
         }
       }
     }
+
     .main-content {
       .btn-dark {
         background-color: $black-600 !important;
         border-color: $black-600 !important;
+
         &:hover {
           background-color: $gray-800 !important;
           border-color: $gray-800 !important;
         }
       }
+
       .bg-gray-100 {
         background-color: $dark-text !important;
       }
+
       .border-gray-300 {
         border-color: $dark-text !important;
       }
+
       .get-started-two {
         img {
           filter: brightness(0) invert(1);
@@ -2640,38 +3135,47 @@ footer {
       }
     }
   }
+
   &.settings-template {
     .sidebar-nav {
       li {
         border-color: $gray-800;
+
         a {
           color: $gray-200;
+
           svg {
             path {
               fill: $gray-200;
             }
           }
+
           &.active, &:hover {
             background-color: $dark-text;
           }
         }
       }
     }
+
     aside {
       &.border-gray-200 {
         border-color: $dark-text !important;
       }
     }
+
     .border-gray-50 {
       border-color: $dark-text !important;
     }
+
     .form-control {
       background-color: $black-600;
       border-color: $black-600;
     }
+
     .text-gray-700, .text-black-600 {
       color: $gray-400 !important;
     }
+
     .form-style-two {
       ul {
         li {
@@ -2679,6 +3183,7 @@ footer {
         }
       }
     }
+
     .main-content {
       .media {
         .avatar {
@@ -2686,6 +3191,7 @@ footer {
             background-color: $white !important;
           }
         }
+
         .media-body {
           span {
             &.fs-16 {
@@ -2695,44 +3201,53 @@ footer {
         }
       }
     }
+
     .form-switch {
       .form-check-input:not(:checked) {
         background-color: $gray-800;
         border-color: $gray-800;
       }
     }
+
     h6 {
       img {
         filter: brightness(0) invert(1);
       }
     }
+
     .card-body {
       .text-gray-600 {
         color: $gray-600 !important;
       }
     }
   }
+
   &.billing-templete {
     .border-gray-50 {
       border-color: $dark-text !important;
     }
+
     span, small, p {
       &.text-gray-600 {
         color: $gray-600 !important;
       }
+
       &.fs-16 {
         color: $gray-200;
       }
     }
+
     .badge {
       &.bg-blue-50 {
         background-color: $blue-50 !important;
       }
     }
+
     .invoice-table {
       .table {
         td {
           border-color: $gray-800;
+
           span {
             &.avatar-border {
               border-width: 0.125rem;
@@ -2741,6 +3256,7 @@ footer {
         }
       }
     }
+
     footer {
       p {
         &.text-gray-600 {
@@ -2749,35 +3265,43 @@ footer {
       }
     }
   }
+
   &.invoice-template {
     .border-gray-50 {
       border-color: $dark-text !important;
     }
+
     .main-content {
       .dark-logo {
         display: none;
       }
+
       .white-logo {
         display: inline-block;
       }
+
       p {
         &.text-gray-700, &.text-gray-600 {
           color: $gray-600 !important;
         }
       }
+
       .avatar-border {
         border-width: 0.125rem;
       }
+
       .card-table {
         td, th {
           color: $gray-200;
         }
       }
+
       span {
         &.text-black-600 {
           color: $gray-200;
         }
       }
+
       footer {
         p {
           &.text-gray-600 {
@@ -2787,25 +3311,30 @@ footer {
       }
     }
   }
+
   &.apikeys-template {
     .border-gray-50 {
       border-color: $dark-text !important;
     }
+
     .card {
       &.border-gray-200 {
         border: none !important;
         background-color: $black-600;
       }
     }
+
     .card-table {
       td {
         color: $gray-200;
+
         img {
           filter: brightness(0) invert(0.8);
         }
       }
     }
   }
+
   &.user-profile-template {
     h6 {
       a {
@@ -2814,24 +3343,29 @@ footer {
         }
       }
     }
+
     .border-gray-50 {
       border: none !important;
     }
+
     p {
       &.text-gray-700, .text-gray-700 {
         color: $gray-400 !important;
       }
+
       svg {
         path {
           fill: $gray-400;
         }
       }
     }
+
     .customize-sidebar {
       p {
         &.text-gray-700, .text-gray-700 {
           color: $gray-600 !important;
         }
+
         svg {
           path {
             fill: $gray-600;
@@ -2839,17 +3373,21 @@ footer {
         }
       }
     }
+
     span {
       &.text-gray-700 {
         color: $gray-200 !important;
       }
+
       &.text-gray-800 {
         color: $gray-400;
       }
     }
+
     .progress {
       background-color: $gray-800;
     }
+
     .profile-list {
       li {
         span {
@@ -2859,6 +3397,7 @@ footer {
         }
       }
     }
+
     .card-body {
       .avatar {
         &.bg-white {
@@ -2866,14 +3405,17 @@ footer {
         }
       }
     }
+
     .media-body {
       .text-black-600 {
         color: $gray-200;
       }
+
       .text-gray-600 {
         color: $gray-600 !important;
       }
     }
+
     .list-group {
       .list-group-item {
         h6 {
@@ -2883,19 +3425,23 @@ footer {
         }
       }
     }
+
     strong {
       &.text-black-600 {
         color: $gray-200 !important;
       }
     }
+
     .card-text {
       &.text-gray-600 {
         color: $gray-600 !important;
       }
     }
+
     .small {
       &.text-gray-600 {
         color: $gray-600 !important;
+
         svg {
           path {
             fill: $gray-600;
@@ -2903,20 +3449,24 @@ footer {
         }
       }
     }
+
     form {
       .input-group {
         &.bg-white {
           background-color: $gray-800 !important;
+
           &.border-gray-300 {
             border-color: $gray-800 !important;
           }
         }
       }
+
       .form-control {
         background-color: $gray-800;
         color: $white;
       }
     }
+
     h5 {
       a {
         &.text-black-600 {
@@ -2924,19 +3474,23 @@ footer {
         }
       }
     }
+
     .avatar-initials {
       color: $black-600;
     }
   }
+
   &.pricing-template {
     .bg-blue-50 {
       background-color: $blue-50 !important;
     }
+
     .plan-list {
       li {
         color: $gray-200;
       }
     }
+
     .small {
       &.text-gray-600 {
         a {
@@ -2946,24 +3500,29 @@ footer {
         }
       }
     }
+
     .bg-blue-50 {
       &.alert-dismissible {
         background-color: $dark-text !important;
       }
     }
   }
+
   .muze-collapes {
     .card {
       border-color: $gray-800 !important;
       background-color: transparent;
+
       .card-header {
         .btn-light {
           color: $gray-200;
-          &:after,&:before {
+
+          &:after, &:before {
             background-color: $gray-200;
           }
         }
       }
+
       .card-body {
         p {
           &.text-gray-700 {
@@ -2973,55 +3532,68 @@ footer {
       }
     }
   }
+
   .search-less {
     .search-left {
       img {
         filter: brightness(0) invert(0.7);
       }
+
       .form-control {
         background-color: $dark-text !important;
         color: $white;
       }
     }
   }
+
   .customize-sidebar {
     color: $dark-text;
+
     .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
       color: $black-600;
     }
+
     .btn-light {
       background-color: $white !important;
       border-color: $white !important;
       color: $black-600;
+
       &:hover {
         background-color: $blue-50 !important;
         border-color: $blue-50 !important;
+
         svg {
           path {
             fill: $primary;
           }
         }
       }
+
       svg {
         path {
           fill: $black-600;
         }
       }
     }
+
     .border-gray-200 {
       border-color: $gray-200 !important;
     }
+
     .bg-white {
       background-color: $white !important;
     }
+
     .text-gray-600 {
       color: $gray-600 !important;
     }
+
     .btn-outline-dark:not(:hover) {
       border-color: $dark !important;
       color: $dark !important;
+    }
   }
-  }
+
   &.help-center-template {
     .main-content {
       h5 {
@@ -3031,22 +3603,26 @@ footer {
           }
         }
       }
+
       p {
-        &.text-gray-700,&.text-black-600  {
+        &.text-gray-700, &.text-black-600 {
           color: $gray-400 !important;
         }
       }
+
       form {
         .form-control, .form-select {
           background-color: $black-600;
           border-color: $black-600;
           color: $white;
         }
+
         .form-check {
           .form-check-input:not(:checked) {
             background-color: transparent;
             border-color: $gray-500;
           }
+
           .form-check-label {
             color: $gray-400;
           }
@@ -3054,6 +3630,7 @@ footer {
       }
     }
   }
+
   &.empty-state-template {
     p {
       &.text-black-600 {
@@ -3061,10 +3638,12 @@ footer {
       }
     }
   }
+
   .chat-header {
     a {
       &.circle:not(:hover) {
         background-color: $gray-800;
+
         svg {
           path {
             fill: $gray-200;
@@ -3073,6 +3652,7 @@ footer {
       }
     }
   }
+
   &.chat-template {
     .nav {
       &.nav-pills {
@@ -3081,30 +3661,39 @@ footer {
         }
       }
     }
+
     .message-box {
       background-color: $gray-800;
+
       &:before {
         border-right: 1.25rem solid $gray-800;
       }
+
       p {
         color: $gray-200;
       }
     }
+
     .chat-list {
       a {
         background-color: $black-600;
+
         &.active {
           background-color: $dark-text;
         }
+
         &.unread {
           background-color: $gray-800;
+
           h6 {
             color: $gray-200;
           }
         }
+
         p {
           color: $gray-500;
         }
+
         .media-body {
           span {
             &.text-muted {
@@ -3114,16 +3703,20 @@ footer {
         }
       }
     }
+
     .attachment {
       background-color: $gray-800;
       color: $gray-200;
+
       svg {
         path {
           fill: $gray-200;
         }
       }
+
       &:hover {
         color: $primary;
+
         svg {
           path {
             fill: $primary;
@@ -3131,36 +3724,43 @@ footer {
         }
       }
     }
+
     .chat-items {
       hr {
         &.bg-gray-200 {
           background-color: $gray-800;
         }
       }
+
       span {
         &.text-gray-600 {
           color: $gray-600 !important;
         }
       }
     }
+
     .chat-message {
       .text-gray-600 {
         color: $gray-600 !important;
       }
     }
+
     .message-sender {
       .message-box {
         background-color: $primary;
+
         &:before {
           border-right-color: $primary;
         }
       }
     }
+
     .message-footer {
       .form-control {
         background-color: transparent;
         color: $gray-200;
       }
+
       a:not(:hover) {
         svg {
           path {
@@ -3170,69 +3770,85 @@ footer {
       }
     }
   }
+
   &.file-manager-template {
     figure {
-      &.border-gray-200{
+      &.border-gray-200 {
         border: none !important;
       }
+
       .arrow-icon {
         filter: brightness(4);
       }
     }
-    .text-gray-600{
+
+    .text-gray-600 {
       color: $gray-600 !important;
     }
+
     .badge-soft-primary {
       background-color: $gray-800;
       color: $white;
     }
   }
+
   &.calendar-template {
     .fc-theme-standard {
       td, th, .fc-scrollgrid {
         border-color: $gray-800;
       }
     }
+
     .calendar-box {
       a {
         color: $gray-400;
       }
     }
   }
+
   &.all-projects-template {
     .nav-pills {
       .nav-link {
         color: $gray-200;
       }
     }
+
     form {
       .input-group {
         &.border-gray-300 {
           border-color: $gray-800 !important;
         }
+
         &.bg-white {
           background-color: $gray-800 !important;
         }
+
         img {
           filter: brightness(2);
         }
+
         .form-control {
           background-color: inherit;
+
           &::-webkit-input-placeholder {
             color: $gray-400;
           }
+
           &::-moz-placeholder {
             color: $gray-400;
           }
+
           &:-ms-input-placeholder {
             color: $gray-400;
           }
+
           &:-moz-placeholder {
             color: $gray-400;
           }
         }
       }
     }
+
     .card-body {
       a {
         &.text-black-600:not(:hover) {
@@ -3240,11 +3856,13 @@ footer {
         }
       }
     }
+
     .group-cards {
       .card {
         &.border-gray-200 {
           border: none !important;
         }
+
         span {
           &.text-gray-700 {
             color: $gray-200 !important;
@@ -3252,53 +3870,63 @@ footer {
         }
       }
     }
+
     span {
       &.text-gray-600.small {
         color: $gray-200 !important;
       }
     }
+
     .badge {
       &.bg-gray-200 {
         background-color: $gray-800 !important;
+
         &.text-gray-700 {
           color: $gray-500 !important;
         }
       }
     }
   }
+
   .step-list {
     li:not(:first-child):not(.active) {
       &:before {
         background-color: $gray-800;
       }
     }
+
     li:not(.active) {
       .circle {
         background-color: $gray-700;
       }
     }
   }
+
   &.new-projects-template {
     .card {
       &.border-gray-200 {
         border: none !important;
       }
     }
+
     .form-label {
       color: $gray-200;
     }
+
     .form-control {
       background-color: $black-600;
       border-color: $black-600;
       color: $gray-200;
     }
   }
+
   .ql-toolbar {
     &.ql-snow {
       border-color: $black-600;
       background-color: $black-600;
     }
   }
+
   .ql-container {
     &.ql-snow {
       border-color: $black-600;
@@ -3306,11 +3934,13 @@ footer {
       color: $gray-200;
     }
   }
+
   .ql-editor {
     .ql-blank {
       color: $gray-500;
     }
   }
+
   .ql-formats {
     button:not(:hover) {
       svg {
@@ -3318,63 +3948,76 @@ footer {
           stroke: $gray-200;
         }
       }
+
       .ql-stroke {
         stroke: $gray-200;
       }
+
       .ql-fill {
         fill: $gray-200;
       }
     }
   }
+
   &.project-details-template {
     .main-content {
       .card {
         &.border-gray-200 {
           border: none !important;
         }
+
         .card-body {
           a {
             &.text-black-600 {
               color: $gray-200;
             }
           }
+
           span {
             &.text-gray-700 {
               color: $gray-200 !important;
             }
           }
+
           p {
             &.text-gray-600:not(.card-text) {
               color: $gray-600 !important;
             }
           }
         }
+
         &.border-gray-50 {
           border: none !important;
         }
       }
+
       .list-group {
         .avatar-border-xs {
           border-color: transparent;
         }
+
         p {
           &.text-gray-600 {
             color: $gray-600 !important;
           }
         }
+
         span {
           &.text-gray-800 {
             color: $gray-400 !important;
           }
         }
+
         strong {
           &.text-black-600 {
             color: $gray-200 !important;
           }
         }
+
         .link-primary {
           &:hover {
             color: $gray-400;
+
             svg {
               path {
                 fill: $gray-400;
@@ -3382,6 +4025,7 @@ footer {
             }
           }
         }
+
         .list-group-item {
           figure {
             &.border-gray-200 {
@@ -3393,6 +4037,7 @@ footer {
       }
     }
   }
+
   .activity-list {
     .list-group-item {
       &:not(:last-child) {
@@ -3403,19 +4048,23 @@ footer {
     }
   }
 }
+
 /* 20. Muze RTL CSS */
 .muze-rtl {
   ul {
     padding-right: 0;
   }
+
   .main-content {
     margin-left: 0;
     margin-right: 16.0625rem;
   }
+
   .header-fixed {
     left: 0;
     right: 16.0625rem;
   }
+
   .avatar-group {
     .avatar {
       + .avatar {
@@ -3423,12 +4072,14 @@ footer {
         margin-right: -1.4375rem;
       }
     }
+
     .avatar-lg {
       + .avatar-lg {
         margin-left: 0;
         margin-right: -1.25rem;
       }
     }
+
     .avatar-xs {
       + .avatar-xs {
         margin-left: 0;
@@ -3436,14 +4087,17 @@ footer {
       }
     }
   }
+
   .end-0 {
     left: 0 !important;
     right: auto !important;
   }
+
   .navbar-vertical {
     &.navbar-expand-lg {
       border-left: .0625rem solid #e9ecef;
       border-right: none;
+
       .navbar-nav {
         .nav-link {
           &[data-bs-toggle="collapse"] {
@@ -3452,21 +4106,25 @@ footer {
               margin-right: auto;
             }
           }
+
           .docs-version {
             margin-left: 0;
             margin-right: 0.5rem;
           }
         }
+
         .nav {
           .nav-item {
             .nav-link {
               padding-left: 2rem;
               padding-right: 3.8rem;
             }
+
             .nav {
               .nav-link {
                 padding-left: 2rem;
                 padding-right: 4.8rem;
+
                 &:before {
                   margin-right: 0;
                   margin-left: 0.4375rem;
@@ -3477,97 +4135,121 @@ footer {
         }
       }
     }
+
     .navbar-vertical-footer-list {
       padding-right: 0;
     }
   }
+
   .dropdown-menu {
     &[style] {
       left: 0 !important;
     }
+
     &.dropdown-menu-end {
       left: 0 !important;
       right: auto;
     }
+
     li {
       text-align: right;
     }
+
     .dropdown-item {
       .media-body {
         text-align: right;
       }
     }
   }
+
   [class*="me-"]:not(.align-items-center) {
     margin-right: 0 !important;
   }
+
   [class*="ms-"]:not(.align-items-center) {
     margin-left: 0 !important;
+
     &.ms-auto {
       margin-right: auto !important;
     }
   }
+
   .text-end {
     text-align: left !important;
   }
+
   .form-control {
     text-align: right;
   }
+
   .form-check {
     padding-left: 0;
     margin-right: 0;
+
     .form-check-input {
       margin-left: 0;
       float: right;
     }
   }
+
   .form-switch {
     padding-left: 0;
   }
+
   .end-16 {
     left: 1rem;
     right: auto;
   }
+
   .get-started-img {
     right: auto;
     left: 3.125rem;
   }
+
   .arrow-icon {
     transform: rotate(180deg);
   }
+
   .get-startedtwo {
     left: 1.875rem;
     right: auto;
   }
+
   .header-body {
     .back-arrow {
       svg {
         transform: rotate(180deg);
       }
     }
+
     .icon-blue-hover {
       &.ps-0 {
-        padding-left: calc(var(--bs-gutter-x)/ 2) !important;
+        padding-left: calc(var(--bs-gutter-x) / 2) !important;
       }
     }
+
     .notification {
       margin-right: 0 !important;
+
       .status {
         right: -0.4375rem;
       }
     }
+
     .header-search {
       .form-control {
         background-color: transparent;
       }
     }
   }
+
   &.muze-dark-mode {
     .navbar-vertical {
       &.navbar-expand-lg {
         border-color: $gray-800;
       }
     }
+
     .message-box {
       &:before {
         border-right: none;
@@ -3575,18 +4257,22 @@ footer {
       }
     }
   }
+
   &.sidebar-icons {
     .main-content {
       margin-left: 0;
       margin-right: 5rem;
     }
+
     .header-fixed {
       left: 0;
       right: 5rem;
     }
+
     .back-arrow {
       transform: rotate(180deg);
     }
+
     .navbar-vertical {
       &.navbar-expand-lg {
         .navbar-nav {
@@ -3596,9 +4282,11 @@ footer {
                 margin-right: 0 !important;
               }
             }
+
             > .collapse-box {
               left: auto;
               right: 5rem;
+
               .collapse-box {
                 .nav-link {
                   padding-left: 0.9375rem;
@@ -3607,12 +4295,14 @@ footer {
               }
             }
           }
+
           .nav-link {
-              .status {
-                left: 0;
-                right: 0.375rem;
-              }
+            .status {
+              left: 0;
+              right: 0.375rem;
+            }
           }
+
           .nav {
             .nav-item {
               .nav-link {
@@ -3624,18 +4314,22 @@ footer {
       }
     }
   }
+
   &.sidebar-compact {
     .main-content {
       margin-left: 0;
       margin-right: 9.0625rem;
     }
+
     .back-arrow {
       transform: rotate(180deg);
     }
+
     .header-fixed {
       left: 0;
       right: 9.0625rem;
     }
+
     .navbar-vertical {
       &.navbar-expand-lg {
         .navbar-nav {
@@ -3645,9 +4339,11 @@ footer {
                 margin-right: 0 !important;
               }
             }
+
             > .collapse-box {
               left: auto;
               right: 9.0625rem;
+
               .collapse-box {
                 .nav-link {
                   padding-left: 0.9375rem;
@@ -3656,12 +4352,14 @@ footer {
               }
             }
           }
+
           .nav-link {
-              .status {
-                left: 0;
-                right: -0.5rem;
-              }
+            .status {
+              left: 0;
+              right: -0.5rem;
+            }
           }
+
           .nav {
             .nav-item {
               .nav-link {
@@ -3673,16 +4371,19 @@ footer {
       }
     }
   }
+
   .customize-sidebar {
     transform: translateX(-100%);
     right: auto;
     left: 0;
   }
+
   &.customize-box {
     .customize-sidebar {
       transform: translateX(0);
     }
   }
+
   footer {
     .navbar {
       li {
@@ -3691,20 +4392,25 @@ footer {
       }
     }
   }
+
   .text-md-end {
     text-align: left !important;
   }
+
   .start-50 {
     left: auto !important;
     right: 50% !important;
   }
+
   .translate-middle {
-    transform: translate(50%,-50%) !important;
+    transform: translate(50%, -50%) !important;
   }
+
   .chat-message {
     padding-left: 0;
     padding-right: 1.5625rem;
   }
+
   .message-box {
     &:before {
       left: auto;
@@ -3713,44 +4419,52 @@ footer {
       border-left: 1.25rem solid $gray-100;
     }
   }
+
   .message-sender {
     .message-box {
       &:before {
         border-left: 1.25rem solid $primary;
       }
     }
+
     .message-files {
       padding-left: 0;
       padding-right: 4.6875rem;
+
       ul {
         padding-right: 0;
       }
     }
   }
+
   .message-footer {
     a:not(.btn) {
       margin-right: 0;
       margin-left: 2.5rem;
     }
   }
+
   .chat-list {
     a {
       .unread-status {
         right: auto;
         left: 0;
       }
+
       p {
         padding-right: 0;
         padding-left: 3.4375rem;
       }
     }
   }
+
   .checklist-box {
     textarea.form-control {
       padding-left: 0.9375rem;
       padding-right: 0;
     }
   }
+
   &.file-manager-template {
     .dropdown {
       &.end-0 {
@@ -3758,19 +4472,23 @@ footer {
         left: 0.5rem !important;
       }
     }
+
     .arrow-icon {
       transform: none;
     }
+
     .alert-dismissible {
       .arrow-icon {
         transform: rotate(180deg);
       }
     }
   }
+
   .ms-auto {
     margin-left: 0 !important;
     margin-right: auto !important;
   }
+
   .muze-collapes {
     .card {
       .card-header {
@@ -3778,10 +4496,12 @@ footer {
           padding-left: 2rem !important;
           padding-right: 0 !important;
           text-align: right !important;
+
           &:after {
             right: auto;
             left: 0;
           }
+
           &:before {
             right: auto;
             left: 0.5625rem;
@@ -3790,11 +4510,13 @@ footer {
       }
     }
   }
+
   .form-select {
     background-position: left 0.5rem center;
     padding-left: 1.75rem;
     padding-right: 0.75rem;
   }
+
   &.help-center-template {
     .form-check {
       .form-check-input {
@@ -3802,6 +4524,7 @@ footer {
       }
     }
   }
+
   &.pricing-template {
     .badge {
       &.position-absolute {
@@ -3812,9 +4535,11 @@ footer {
       }
     }
   }
+
   .ql-editor {
     text-align: right;
   }
+
   .step-list {
     li:not(:first-child) {
       &:before {
@@ -3823,6 +4548,7 @@ footer {
       }
     }
   }
+
   .activity-list {
     .list-group-item:not(:last-child) {
       &:before {
@@ -3831,29 +4557,35 @@ footer {
       }
     }
   }
+
   .get-startedthree {
     right: auto;
     left: -18.4375rem;
   }
+
   .sidebar-nav {
     li {
       a {
         border-left: none;
         border-right: 0.25rem solid transparent;
+
         &:hover, &.active {
           border-color: $primary;
         }
       }
     }
   }
+
   .ms-md-4 {
     margin-left: 0 !important;
   }
+
   .btn-link {
     svg {
       transform: rotate(180deg);
     }
   }
+
   .profile-list {
     li {
       span {
@@ -3864,6 +4596,7 @@ footer {
       }
     }
   }
+
   &.top-header {
     .navbar {
       border-left: none;
@@ -3874,7 +4607,8 @@ footer {
       margin-right: 1.5rem;
     }
   }
-  &.top-header,&.double-header {
+
+  &.top-header, &.double-header {
     .header {
       .customize-btn {
         .ps-2 {
@@ -3882,18 +4616,22 @@ footer {
         }
       }
     }
+
     .main-content {
       margin-right: 0;
     }
+
     .header-fixed {
       right: 0;
     }
+
     .header-body {
       .icon-blue-hover {
         &.ps-0 {
           padding-left: 0 !important;
         }
       }
+
       .input-group {
         > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
           margin-right: 0;
@@ -3901,6 +4639,7 @@ footer {
         }
       }
     }
+
     .navbar {
       .nav-item {
         .nav-link {
@@ -3910,11 +4649,13 @@ footer {
               margin-right: .8125rem;
             }
           }
+
           .docs-version {
             margin-left: 0;
             margin-right: .375rem;
           }
         }
+
         .collapse-box {
           .nav {
             .nav-item {
@@ -3924,12 +4665,15 @@ footer {
                   margin-right: auto;
                 }
               }
+
               .collapse-box {
                 padding-left: 0;
                 padding-right: .625rem;
+
                 .nav {
                   padding: 0;
                 }
+
                 .nav-link {
                   &:before {
                     margin-right: 0;
@@ -3943,6 +4687,7 @@ footer {
       }
     }
   }
+
   &.double-header {
     .header-search {
       .input-group {
@@ -3952,18 +4697,22 @@ footer {
         padding-right: 1.5625rem !important;
       }
     }
+
     .navbar {
       padding-left: 0;
       padding-right: .625rem;
+
       .nav-item {
         .collapse-box {
           left: auto;
           right: 0;
+
           .nav {
             .nav-item {
               .collapse-box {
                 padding-left: 0;
                 padding-right: .625rem;
+
                 .nav {
                   padding: 0;
                 }
@@ -3973,12 +4722,14 @@ footer {
         }
       }
     }
+
     .header-body {
       > .row {
         margin-right: 0;
       }
     }
   }
+
   &.festive-template {
     .main-content {
       .border-end {
@@ -3986,10 +4737,12 @@ footer {
       }
     }
   }
+
   &.billing-templete {
     .media {
       .ps-xxl-5 {
-        padding-left: calc(var(--bs-gutter-x)/ 2) !important;
+        padding-left: calc(var(--bs-gutter-x) / 2) !important;
+
         .d-flex {
           &.ps-xxl-5 {
             padding-left: 0 !important;
@@ -3998,6 +4751,7 @@ footer {
       }
     }
   }
+
   .plan-list {
     li {
       span {
@@ -4006,21 +4760,25 @@ footer {
       }
     }
   }
-  &.pricing-template,&.empty-state-template {
+
+  &.pricing-template, &.empty-state-template {
     .btn-soft-primary, .btn-primary {
       svg {
         transform: rotate(180deg);
       }
     }
   }
+
   .sidebar-style {
     .form-check {
       padding-right: 0;
     }
+
     .form-check-input {
       right: 1.5em;
       left: auto;
     }
+
     .form-check-label {
       span {
         padding-left: 0;
@@ -4029,6 +4787,7 @@ footer {
     }
   }
 }
+
 /* 21. Muze Container Layout CSS */
 body {
   &.container {
@@ -4037,60 +4796,72 @@ body {
         padding: 1.5rem !important;
       }
     }
+
     &:not(.top-header):not(.double-header) {
       .header-fixed {
         left: auto;
         right: auto;
         position: static;
       }
+
       .main-content {
         margin-top: 0;
       }
+
       .navbar-vertical {
         &.navbar-expand-lg {
           background-color: transparent;
           border-left: 0.0625rem solid $gray-200;
         }
+
         .navbar-vertical-footer {
           background-color: transparent;
         }
       }
+
       &.muze-rtl {
         .navbar-vertical {
           &.navbar-expand-lg {
             border-right: 0.0625rem solid $gray-200;
           }
         }
+
         .muze-chats {
           border-right: none;
           border-left: 0.0625rem solid $gray-200;
         }
+
         .border-end {
           border-right: none !important;
         }
       }
+
       &.muze-dark-mode {
         .navbar-vertical {
           &.navbar-expand-lg {
             border-left: 0.0625rem solid $gray-800;
           }
         }
+
         &.muze-rtl {
           .navbar-vertical {
             &.navbar-expand-lg {
               border-right: 0.0625rem solid $gray-800;
             }
           }
+
           .muze-chats {
             border-right: none;
             border-left: 0.0625rem solid $gray-800;
           }
+
           .border-end {
             border-right: none !important;
           }
         }
       }
     }
+
     &:not(.muze-rtl) {
       .main-content {
         .p-xxl-5, .px-xxl-5 {
@@ -4098,6 +4869,7 @@ body {
         }
       }
     }
+
     &.muze-rtl {
       &:not(.top-header, .double-header) {
         .main-content {
@@ -4106,16 +4878,19 @@ body {
           }
         }
       }
+
       &.top-header, &.double-header {
         .icon-blue-hover {
           .ms-xxl-5 {
             margin-right: 1.5rem !important;
           }
         }
+
         .navbar {
           margin-right: 0;
           padding-right: 0;
         }
+
         .main-content {
           .header {
             .px-xxl-5 {
@@ -4124,6 +4899,7 @@ body {
           }
         }
       }
+
       &.sidebar-compact {
         .navbar-vertical {
           &.navbar-expand-lg {
@@ -4132,6 +4908,7 @@ body {
                 > .collapse-box {
                   right: auto;
                   margin-right: 9.0625rem;
+
                   .collapse-box {
                     margin-right: 0;
                   }
@@ -4141,6 +4918,7 @@ body {
           }
         }
       }
+
       &.sidebar-icons {
         .navbar-vertical {
           &.navbar-expand-lg {
@@ -4149,6 +4927,7 @@ body {
                 > .collapse-box {
                   right: auto;
                   margin-right: 5rem;
+
                   .collapse-box {
                     margin-right: 0;
                   }
@@ -4158,41 +4937,49 @@ body {
           }
         }
       }
+
       &.project-management-template {
         .get-startedthree {
           left: -27rem;
         }
       }
     }
+
     &.top-header, &.double-header {
       .main-content {
         > .p-xxl-5, > .px-xxl-5 {
           padding-right: 0 !important;
           padding-left: 0 !important;
         }
+
         .header {
           .px-xxl-5 {
             padding-left: 0 !important;
           }
+
           .customize-btn {
             padding-left: 1.15rem;
             padding-right: 1.15rem;
+
             svg {
               margin-top: -0.125rem;
             }
+
             span {
               display: none;
             }
           }
+
           .container-fluid {
             max-width: 82.5rem;
-            padding-right: var(--bs-gutter-x,.75rem) !important;
-            padding-left: var(--bs-gutter-x,.75rem) !important;
+            padding-right: var(--bs-gutter-x, .75rem) !important;
+            padding-left: var(--bs-gutter-x, .75rem) !important;
             margin-right: auto;
             margin-left: auto;
           }
         }
       }
+
       &.festive-template {
         .main-content {
           .col-xxl-9 {
@@ -4205,16 +4992,19 @@ body {
           }
         }
       }
+
       &:not(.muze-rtl) {
         .icon-blue-hover {
           .ms-xxl-5 {
             margin-left: 1.5rem !important;
           }
         }
+
         .navbar {
           margin-left: .625rem;
         }
       }
+
       .navbar {
         .nav-item {
           .nav-link {
@@ -4223,6 +5013,7 @@ body {
         }
       }
     }
+
     &.double-header {
       .header {
         &:before {
@@ -4235,14 +5026,17 @@ body {
           z-index: -1;
           height: 6rem;
         }
+
         .navbar {
           padding-left: 0;
           margin-left: 0;
         }
       }
+
       .double-header-nav {
         padding-left: 0;
         padding-right: 0;
+
         .navbar-expand-lg {
           .navbar-nav {
             margin: 0 -0.75rem;
@@ -4250,6 +5044,7 @@ body {
         }
       }
     }
+
     &.sidebar-compact {
       &:not(.muze-rtl) {
         .navbar-vertical {
@@ -4259,6 +5054,7 @@ body {
                 > .collapse-box {
                   left: auto;
                   margin-left: 9.0625rem;
+
                   .collapse-box {
                     margin-left: 0;
                   }
@@ -4269,6 +5065,7 @@ body {
         }
       }
     }
+
     &.sidebar-icons {
       &:not(.muze-rtl) {
         .navbar-vertical {
@@ -4278,6 +5075,7 @@ body {
                 > .collapse-box {
                   left: auto;
                   margin-left: 5rem;
+
                   .collapse-box {
                     margin-left: 0;
                   }
@@ -4288,6 +5086,7 @@ body {
         }
       }
     }
+
     &.muze-dark-mode {
       &.top-header {
         .main-content {
@@ -4298,37 +5097,44 @@ body {
             }
           }
         }
+
         .header-body {
           > .row {
             margin-right: 0;
           }
         }
       }
+
       .muze-chats {
         border-right: 0.0625rem solid $gray-800;
       }
     }
+
     &.project-management-template {
       .main-content {
         .bg-gray-100 {
           &.p-md-5 {
             padding-left: 1rem !important;
             padding-right: 1.5rem !important;
+
             .col-xl-6 {
               width: 60%;
             }
           }
         }
       }
+
       &:not(.muze-rtl) {
         .get-startedthree {
           right: -27rem;
         }
       }
     }
+
     .muze-chats {
       border-right: 0.0625rem solid $gray-200;
     }
+
     .bg-blue-50 {
       &.alert-dismissible {
         .ps-xl-3 {
@@ -4349,25 +5155,30 @@ body {
         .col-xxl-9 {
           width: 66.667%;
         }
+
         .col-xxl-3 {
           width: 33.333%;
         }
       }
+
       .bg-blue-50 {
         &.alert-dismissible {
           .ps-xl-3 {
             padding-left: 0 !important;
           }
+
           .col-xxl-4 {
             width: 50%;
           }
         }
       }
+
       &.analytics-template {
         .col-xxl-3 {
           width: 50%;
         }
       }
+
       &.apikeys-template {
         .main-content {
           .col-xxl-4 {
@@ -4375,25 +5186,30 @@ body {
           }
         }
       }
+
       &.user-profile-template {
         .col-xxl-2 {
           width: 25%;
         }
+
         .px-md-4 {
           padding-left: 0.65rem !important;
           padding-right: 0.65rem !important;
         }
+
         .row {
           &.ps-xl-3 {
             padding-left: 0 !important;
           }
         }
+
         .btn {
           &.m-md-3 {
             margin-left: 0 !important;
             margin-right: 0 !important;
           }
         }
+
         .card-body {
           .p-xl-4 {
             padding-left: 1rem !important;
@@ -4401,6 +5217,7 @@ body {
           }
         }
       }
+
       &.team-template {
         .card-body {
           .px-md-3 {
@@ -4409,6 +5226,7 @@ body {
           }
         }
       }
+
       &.pricing-template, &.help-center-template {
         .col-xxl-6 {
           &.p-md-5 {
@@ -4416,17 +5234,20 @@ body {
             padding-right: 0 !important;
           }
         }
+
         .h-100 {
           &.px-lg-5 {
             padding-left: 1.5rem !important;
             padding-right: 1.5rem !important;
           }
         }
+
         .after-header {
           ~ .px-xxl-5 {
             padding-right: 3rem !important;
           }
         }
+
         &.muze-rtl {
           .after-header {
             ~ .px-xxl-5 {
@@ -4435,11 +5256,13 @@ body {
           }
         }
       }
+
       &.file-manager-template {
         .has-xxl-5 {
           width: 33.333%;
         }
       }
+
       &.chat-template {
         .muze-chats {
           .px-xxl-5 {
@@ -4448,21 +5271,26 @@ body {
           }
         }
       }
+
       &.festive-template {
         .main-content {
           .col-xxl-9 {
             width: 100%;
+
             > .p-xxl-5 {
               padding-bottom: 0 !important;
+
               &.border-end {
                 border: none !important;
               }
             }
           }
+
           .col-xxl-3 {
             width: 100%;
           }
         }
+
         footer {
           margin-top: 3rem;
         }
@@ -4476,6 +5304,7 @@ body {
     .p-xxl-5 {
       padding: 1.5rem !important;
     }
+
     .px-xxl-5 {
       padding-left: 1.5rem !important;
       padding-right: 1.5rem !important;
@@ -4491,11 +5320,13 @@ body {
     }
   }
 }
+
 @media screen and (min-width: 1400px) and (max-width: 1599px) {
   .festive-template {
     .col-xxl-9 {
       width: 70%;
     }
+
     .col-xxl-3 {
       width: 30%;
     }
@@ -4523,11 +5354,13 @@ body {
           margin-right: 1.2rem !important;
         }
       }
+
       .navbar {
         padding-right: .625rem;
         padding-left: 0;
         margin-left: 0;
         margin-right: 0.675rem;
+
         .nav-item {
           .nav-link {
             padding: .6875rem;
@@ -4540,6 +5373,7 @@ body {
     &:not(.muze-rtl) {
       .navbar {
         margin-left: 1rem;
+
         .nav-item {
           .nav-link {
             padding-left: 1rem;
@@ -4547,6 +5381,7 @@ body {
           }
         }
       }
+
       .icon-blue-hover {
         .ms-xxl-5 {
           margin-left: 1.6rem !important;
@@ -4555,6 +5390,7 @@ body {
     }
   }
 }
+
 @media screen and (min-width: 1520px) {
   .has-xxl-5 {
     -ms-flex: 0 0 auto;
@@ -4572,6 +5408,7 @@ body {
     width: calc(100% - 29.0625rem);
   }
 }
+
 @media screen and (min-width: 1200px) and (max-width: 1519px) {
   .get-started-two {
     max-width: 15rem;
@@ -4599,6 +5436,7 @@ body {
     }
   }
 }
+
 @media screen and (max-width: 1399px) {
   .chat-list {
     a {
@@ -4625,10 +5463,12 @@ body {
     .navbar {
       padding-left: 0;
       margin-left: 0;
+
       .nav-item {
         .nav-link {
           padding: 0.6875rem;
           font-size: .8rem;
+
           &[data-bs-toggle="collapse"] {
             &:after {
               margin-left: 0.5625rem;
@@ -4637,12 +5477,14 @@ body {
         }
       }
     }
+
     .header {
       .customize-btn {
         span {
           font-size: 0;
           padding-left: 0 !important;
         }
+
         &.btn-lg {
           padding: 0.5rem 1rem;
         }
@@ -4653,6 +5495,7 @@ body {
     .navbar {
       padding-left: 0;
     }
+
     .chat-items {
       height: calc(100vh - 25.25rem);
     }
@@ -4664,19 +5507,23 @@ body {
           margin-right: 0;
         }
       }
+
       .navbar {
         padding-right: 0;
       }
     }
+
     &.top-header {
       .navbar {
         margin-right: 0.50rem;
       }
+
       .header-body {
         > .row {
           margin-right: 0;
         }
       }
+
       .header {
         .customize-btn {
           .ps-2 {
@@ -4696,11 +5543,13 @@ body {
             }
           }
         }
+
         &:not(.muze-rtl) {
           .navbar {
             margin-left: 0;
           }
         }
+
         &.festive-template {
           &:not(.muze-rtl) {
             .main-content {
@@ -4713,6 +5562,7 @@ body {
               }
             }
           }
+
           &.muze-rtl {
             .main-content {
               .col-xxl-9 {
@@ -4726,6 +5576,7 @@ body {
           }
         }
       }
+
       &.festive-template {
         &:not(.muze-rtl) {
           .main-content {
@@ -4735,17 +5586,20 @@ body {
           }
         }
       }
-      &.pricing-template,&.help-center-template {
+
+      &.pricing-template, &.help-center-template {
         .after-header {
           ~ .px-xxl-5 {
             padding-right: 1rem !important;
           }
         }
+
         .btn-soft-primary {
           padding-left: 0.5rem;
           padding-right: 0.5rem;
         }
       }
+
       &.chat-template {
         .muze-chats {
           .px-xxl-5 {
@@ -4753,7 +5607,8 @@ body {
           }
         }
       }
-      &.help-center-template,&.pricing-template {
+
+      &.help-center-template, &.pricing-template {
         .h-100 {
           &.px-lg-5 {
             padding-left: 1.5rem !important;
@@ -4764,6 +5619,7 @@ body {
     }
   }
 }
+
 @media screen and (max-width: 1199px) {
   footer {
     .navbar {
@@ -4787,6 +5643,7 @@ body {
     .menu-icon {
       display: none;
     }
+
     .menu-close {
       display: block;
     }
@@ -4795,6 +5652,7 @@ body {
     .nav {
       &.nav-pills {
         margin-top: 0.0625rem;
+
         .nav-link {
           padding: .3rem 0.9rem;
           font-size: 0.875rem;
@@ -4814,6 +5672,7 @@ body {
   }
   .chat-list {
     height: calc(100vh - 10.68rem);
+
     a {
       h6 {
         white-space: nowrap;
@@ -4828,6 +5687,7 @@ body {
   }
   .message-box {
     padding: 0.9375rem;
+
     p {
       font-size: 0.875rem;
       line-height: 1.6;
@@ -4847,35 +5707,43 @@ body {
           display: flex;
         }
       }
+
       .top-header-nav {
         opacity: 1;
         visibility: visible;
       }
+
       .header-fixed {
         left: 0;
       }
+
       .main-content {
         margin-left: 0;
       }
+
       .back-arrow {
         img {
           display: none;
+
           &.menu-close {
             display: block;
           }
         }
       }
     }
+
     .navbar-brand {
       &.d-lg-none {
         display: inherit !important;
       }
     }
+
     .back-arrow {
       &.d-lg-none {
         display: block !important;
       }
     }
+
     .top-header-nav {
       opacity: 0;
       visibility: hidden;
@@ -4886,31 +5754,37 @@ body {
       padding: 0.625rem 0;
       transition: all ease .4s;
       border-bottom: 0.0625rem solid rgba($gray-600, 0.125);
+
       .nav-item {
         .nav-link {
           padding: 0.6875rem 1.375rem;
         }
       }
     }
+
     &.sidebar-menu {
       .top-header-nav {
         display: block;
         opacity: 1;
         visibility: visible;
       }
+
       .muze-hamburger {
         img {
           display: none;
+
           &.menu-close {
             display: block;
           }
         }
       }
     }
+
     .navbar {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
       border-left: 0;
+
       .nav-item {
         .collapse-box {
           .nav {
@@ -4919,12 +5793,14 @@ body {
         }
       }
     }
+
     .muze-hamburger {
       display: block !important;
     }
+
     .header-body {
       > .row {
-        margin-left: calc(var(--bs-gutter-x)/ -2) !important;
+        margin-left: calc(var(--bs-gutter-x) / -2) !important;
       }
     }
   }
@@ -4932,9 +5808,11 @@ body {
     .navbar {
       padding-left: 0;
     }
+
     .chat-items {
       height: calc(100vh - 23.7rem);
     }
+
     .chat-list {
       height: calc(100vh - 14.7rem);
     }
@@ -4949,11 +5827,13 @@ body {
           }
         }
       }
+
       .header-body {
         > .row {
-          margin-right: calc(var(--bs-gutter-x)/ -2);
+          margin-right: calc(var(--bs-gutter-x) / -2);
         }
       }
+
       &.muze-dark-mode {
         .navbar {
           border: none;
@@ -4962,14 +5842,17 @@ body {
         }
       }
     }
+
     .customize-body {
       .form-check-inline {
         margin-right: 0;
       }
     }
+
     footer {
       .navbar {
         padding-left: 0;
+
         li {
           padding-right: 1.5rem;
         }
@@ -4981,9 +5864,10 @@ body {
       &.top-header {
         .header-body {
           > .row {
-            margin-left: calc(var(--bs-gutter-x)/ -2);
+            margin-left: calc(var(--bs-gutter-x) / -2);
           }
         }
+
         .main-content {
           .header {
             .container-fluid {
@@ -4992,6 +5876,7 @@ body {
           }
         }
       }
+
       &.double-header {
         .main-content {
           .header {
@@ -5004,6 +5889,7 @@ body {
     }
   }
 }
+
 @media screen and (min-width: 992px) {
   /*1. Muze Header Versions CSS */
   /* 1.2  Muze Top Header CSS */
@@ -5018,28 +5904,35 @@ body {
   .double-header {
     .header-search {
       display: block;
+
       .input-group {
         background-color: transparent !important;
         border: none !important;
         border-left: 0.0625rem solid $gray-700 !important;
         border-radius: 0 !important;
         padding-left: 1.5625rem !important;
+
         .form-control {
           background-color: transparent;
           color: $gray-400;
+
           &::-webkit-input-placeholder {
             color: $gray-400;
           }
+
           &::-moz-placeholder {
             color: $gray-400;
           }
+
           &:-ms-input-placeholder {
             color: $gray-400;
           }
+
           &:-moz-placeholder {
             color: $gray-400;
           }
         }
+
         img {
           filter: brightness(3);
         }
@@ -5067,6 +5960,7 @@ body {
     padding: 0.9375rem;
     cursor: pointer;
     box-shadow: 0 0.125rem 0.25rem rgba($black, 0.08) !important;
+
     form {
       width: calc(100% - 1.875rem);
     }
@@ -5075,6 +5969,7 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 9;
+
     &:before {
       content: '';
       width: 100%;
@@ -5087,6 +5982,7 @@ body {
       bottom: 0;
       z-index: 10;
     }
+
     .header-search {
       display: flex;
       align-items: center;
@@ -5112,18 +6008,18 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
       padding-top: 0;
+
       .navbar-nav {
         margin-left: 0;
         margin-right: 0;
         height: calc(100vh - 12.5rem);
-        .nav-link {
-          padding: 0.775rem 0;
-        }
+
         .nav {
           .nav-item {
             .nav-link {
               padding-left: 1.8rem;
             }
+
             .nav {
               .nav-link {
                 padding-left: 2.8rem;
@@ -5133,12 +6029,15 @@ body {
         }
       }
     }
+
     .navbar-collapse {
       height: 100%;
     }
+
     .navbar-vertical-footer {
       padding: 0.375rem 0.9375rem;
     }
+
     .simplebar-track {
       right: -0.875rem;
     }
@@ -5146,26 +6045,32 @@ body {
   .sidebar-icons {
     .navbar-vertical {
       max-width: 5rem;
+
       &.navbar-expand-lg {
         .navbar-nav {
           height: calc(100vh - 10.625rem);
+
           .nav-item {
             margin-top: 1.25rem;
           }
         }
       }
+
       .simplebar-track {
         right: 0;
       }
     }
+
     .header-fixed {
       left: 0;
     }
+
     .navbar-brand {
       img:not(.white-logo) {
         display: block;
       }
     }
+
     .main-content {
       margin-left: 0;
     }
@@ -5178,32 +6083,39 @@ body {
         }
       }
     }
+
     .main-content {
       margin-left: 0;
     }
+
     .header-fixed {
       left: 0;
     }
+
     .navbar-brand {
       img:not(.white-logo) {
         display: block;
       }
     }
+
     .simplebar-track {
       right: 0;
     }
   }
   .sidebar-menu {
     overflow: hidden;
+
     .navbar-vertical {
       transform: translateX(0);
       top: 4.29rem;
       height: calc(100vh - 4.29rem);
     }
+
     .muze-hamburger {
       img {
         display: none;
       }
+
       .menu-close {
         display: block;
       }
@@ -5214,13 +6126,15 @@ body {
       .header-body {
         .icon-blue-hover {
           &.ps-0 {
-            padding-left: calc(var(--bs-gutter-x)/ 2) !important;
+            padding-left: calc(var(--bs-gutter-x) / 2) !important;
           }
         }
+
         .notification {
           margin-right: 1.5rem !important;
         }
       }
+
       .header {
         .customize-btn {
           span {
@@ -5228,6 +6142,7 @@ body {
           }
         }
       }
+
       .top-header-nav {
         &.navbar {
           .nav-item {
@@ -5239,22 +6154,26 @@ body {
                 }
               }
             }
+
             .collapse-box {
               padding-left: 0;
             }
           }
         }
       }
+
       .after-header {
         margin-top: 6.0625rem;
       }
     }
+
     &.double-header {
       .header-body {
         .notification {
           margin-right: 1.5rem !important;
         }
       }
+
       &.search-open {
         .header-search {
           .input-group {
@@ -5263,6 +6182,7 @@ body {
           }
         }
       }
+
       .navbar {
         .nav-item {
           hr {
@@ -5270,6 +6190,7 @@ body {
               background-color: transparent !important;
             }
           }
+
           .nav-link {
             &[data-bs-toggle="collapse"] {
               &:after {
@@ -5278,36 +6199,44 @@ body {
               }
             }
           }
+
           .collapse-box {
             padding-left: 0;
           }
         }
       }
     }
+
     &.sidebar-compact, &.sidebar-icons {
       .main-content {
         margin-right: 0;
       }
+
       .header-fixed {
         right: 0;
       }
     }
+
     .main-content {
       margin-right: 0;
     }
+
     .header-fixed {
       right: 0;
     }
+
     .header-body {
       .notification {
         margin-right: 1.5rem !important;
       }
     }
+
     .navbar-vertical {
       &.navbar-expand-lg {
         left: auto;
         right: 0;
         transform: translateX(100%);
+
         .navbar-nav {
           .nav {
             .nav-item {
@@ -5315,6 +6244,7 @@ body {
                 padding-left: 0;
                 padding-right: 1.8rem;
               }
+
               .nav {
                 .nav-link {
                   padding-left: 0;
@@ -5326,6 +6256,7 @@ body {
         }
       }
     }
+
     &.sidebar-menu {
       .navbar-vertical {
         transform: translateX(0);
@@ -5340,20 +6271,24 @@ body {
         }
       }
     }
+
     .header {
       .navbar-brand {
         img {
           display: none;
           max-height: 30px;
+
           &.white-logo {
             display: block;
           }
         }
       }
     }
+
     .navbar-vertical {
       &.navbar-expand-lg {
         padding: 0;
+
         .navbar-collapse {
           margin: 0;
           padding-left: 1rem;
@@ -5362,6 +6297,7 @@ body {
         }
       }
     }
+
     &.search-open {
       .muze-search {
         > svg {
@@ -5369,6 +6305,7 @@ body {
             fill: $black-600;
           }
         }
+
         &:hover {
           > svg {
             path {
@@ -5377,6 +6314,7 @@ body {
           }
         }
       }
+
       .header-search {
         form {
           .input-group {
@@ -5388,6 +6326,7 @@ body {
             }
           }
         }
+
         .form-control {
           background-color: $white !important;
         }
@@ -5409,9 +6348,11 @@ body {
   .navbar {
     padding: .75rem 1rem;
     border-bottom: 0.0625rem solid rgba($gray-600, 0.125);
+
     .dropdown-toggle:after {
       display: none;
     }
+
     &.navbar-light .navbar-toggler {
       border-color: transparent;
     }
@@ -5427,6 +6368,7 @@ body {
       min-width: 2.25rem;
       height: 2.25rem;
     }
+
     &.avatar-circle {
       .avatar-sm-status {
         bottom: -0.0625rem;
@@ -5448,6 +6390,7 @@ body {
     .form-check-input {
       margin-right: 0;
     }
+
     .form-check-label {
       margin-left: 1rem !important;
     }
@@ -5457,9 +6400,11 @@ body {
       &:before {
         z-index: 8;
       }
+
       .header-search {
         display: flex;
       }
+
       .muze-search {
         svg {
           path {
@@ -5468,6 +6413,7 @@ body {
         }
       }
     }
+
     &.sidebar-menu, &.sidebar-compact {
       .double-header-nav {
         opacity: 1;
@@ -5475,12 +6421,15 @@ body {
         display: block;
       }
     }
+
     .header-search {
       display: none;
     }
+
     .main-content {
       margin-top: 5.0625rem;
     }
+
     .muze-search {
       svg {
         path {
@@ -5488,12 +6437,14 @@ body {
         }
       }
     }
+
     .muze-hamburger {
       img {
         -webkit-filter: brightness(10);
         filter: brightness(10);
       }
     }
+
     .double-header-nav {
       padding: 0;
       transition: all ease .4s;
@@ -5505,10 +6456,12 @@ body {
       opacity: 0;
       visibility: hidden;
       display: none;
+
       .navbar {
         padding-left: 0;
       }
     }
+
     .navbar {
       .nav-item {
         .nav-link {
@@ -5518,21 +6471,25 @@ body {
             }
           }
         }
+
         .collapse-box {
           position: static;
           min-width: 100%;
           box-shadow: none;
           border-radius: 0;
           padding-left: 1.875rem;
+
           .nav {
             padding: 0;
           }
         }
       }
     }
+
     .chat-items {
       height: calc(100vh - 18.6rem);
     }
+
     .chat-list {
       height: calc(100vh - 9.6rem);
     }
@@ -5541,8 +6498,10 @@ body {
     .navbar {
       padding: 0;
     }
+
     .top-header-nav {
       top: 4.3125rem;
+
       &.navbar {
         .nav-item {
           .nav-link {
@@ -5552,6 +6511,7 @@ body {
               }
             }
           }
+
           .collapse-box {
             position: static;
             min-width: 100%;
@@ -5562,6 +6522,7 @@ body {
         }
       }
     }
+
     .main-content {
       margin-top: 5.0625rem;
     }
@@ -5577,10 +6538,11 @@ body {
       .header-body {
         > .row {
           margin-left: 0;
-          margin-right: calc(var(--bs-gutter-x)/ -2);
+          margin-right: calc(var(--bs-gutter-x) / -2);
         }
       }
     }
+
     .form-check {
       .form-check-input {
         margin-right: -1.5em;
@@ -5596,6 +6558,7 @@ body {
           }
         }
       }
+
       &.muze-rtl {
         .main-content {
           .px-xxl-5, .p-xxl-5 {
@@ -5603,6 +6566,7 @@ body {
           }
         }
       }
+
       &:not(.top-header):not(.top-header) {
         .navbar-vertical {
           &.navbar-expand-lg {
@@ -5611,6 +6575,7 @@ body {
           }
         }
       }
+
       &.double-header, &.top-header {
         .main-content {
           .header {
@@ -5620,12 +6585,14 @@ body {
           }
         }
       }
+
       &.double-header {
         .header {
           &:before {
             height: 5.0625rem;
           }
         }
+
         .double-header-nav {
           .navbar-expand-lg {
             .navbar-nav {
@@ -5634,12 +6601,14 @@ body {
           }
         }
       }
+
       &.festive-template {
         &:not(.muze-rtl) {
           .main-content {
             .p-xxl-5 {
               padding-right: 1rem !important;
             }
+
             .col-md-5.col-xxl-3 {
               .p-xxl-5, .px-xxl-5 {
                 padding-right: 0 !important;
@@ -5649,13 +6618,15 @@ body {
           }
         }
       }
-      &.pricing-template,&.help-center-template {
+
+      &.pricing-template, &.help-center-template {
         .after-header {
           ~ .px-xxl-5 {
             padding-left: 1rem !important;
           }
         }
       }
+
       &.chat-template {
         .muze-chats {
           .px-xxl-5 {
@@ -5680,6 +6651,7 @@ body {
     th {
       padding: 0.8125rem 0.9375rem;
     }
+
     td {
       padding: 0.9375rem;
     }
@@ -5696,9 +6668,11 @@ body {
   footer {
     text-align: center;
     padding-top: 0.625rem;
+
     .navbar {
       justify-content: center;
       padding: 0;
+
       li {
         padding-left: 0;
         padding-right: 0.9375rem;
@@ -5734,6 +6708,7 @@ body {
       font-size: 3.5rem;
       line-height: 4.5rem;
     }
+
     .cover-fit {
       height: auto;
     }
@@ -5746,6 +6721,7 @@ body {
         height: 3.125rem;
       }
     }
+
     .avatar-lg-status {
       width: 0.875rem;
       height: 0.875rem;
@@ -5773,7 +6749,7 @@ body {
     }
   }
   .ql-container.ql-snow {
-    height: 7.5rems;
+    height: 7.5 rems;
   }
   .step-list {
     h5 {
@@ -5798,20 +6774,24 @@ body {
       width: 2.375rem;
       height: 2.375rem;
       min-width: 2.375rem;
+
       svg {
         width: 1rem;
       }
     }
+
     .col-auto {
       &.has-xxl-4 {
         width: 100%;
       }
     }
+
     .col {
       &.has-xxl-8 {
         width: 100%;
       }
     }
+
     .nav {
       &.nav-pills {
         flex-wrap: nowrap;
@@ -5832,19 +6812,23 @@ body {
   .chat-list {
     height: auto;
     border-bottom: 0.0625rem solid $gray-200;
+
     a {
       padding: 0.625rem;
       border-left: 0;
       border-bottom: 0.3125rem solid transparent;
+
       &.active {
         background-color: transparent;
       }
     }
+
     .media {
       .media-body {
         display: none;
       }
     }
+
     .simplebar-content {
       display: flex;
       overflow-x: auto;
@@ -5861,10 +6845,12 @@ body {
     right: 0;
     z-index: 1;
     background-color: $white;
+
     .form-control {
       height: 3.125rem;
       padding: 0;
     }
+
     a:not(.btn) {
       margin-right: 1.25rem;
     }
@@ -5874,6 +6860,7 @@ body {
   }
   .message-box {
     padding: 0.625rem;
+
     &:before {
       border-bottom: 0.875rem solid transparent;
       bottom: 21%;
@@ -5899,6 +6886,7 @@ body {
       position: relative;
       padding-top: 3rem;
     }
+
     .fc-toolbar-chunk {
       .fc-toolbar-title {
         position: absolute;
@@ -5922,23 +6910,28 @@ body {
   .double-header {
     .double-header-nav {
       top: 4.25rem;
+
       .navbar {
         padding-left: 0;
       }
     }
+
     .customize-btn {
       &.btn-lg {
         line-height: 1.28rem;
         padding: .5rem 0.875rem;
       }
+
       span {
         font-size: 0;
         padding-left: 0 !important;
       }
     }
+
     .chat-items {
       height: calc(100vh - 21.5rem);
     }
+
     .chat-list {
       height: auto;
     }
@@ -5949,6 +6942,7 @@ body {
         line-height: 1.28rem;
         padding: .5rem 0.875rem;
       }
+
       span {
         font-size: 0;
         padding-left: 0 !important;
@@ -5964,6 +6958,7 @@ body {
         }
       }
     }
+
     .header {
       .customize-btn {
         .ps-2 {
@@ -5971,11 +6966,13 @@ body {
         }
       }
     }
+
     &.top-header {
       .after-header {
         margin-top: 4.0625rem;
       }
     }
+
     footer {
       .navbar {
         li {
@@ -5983,15 +6980,17 @@ body {
         }
       }
     }
+
     &.festive-template {
       .col-auto {
         &.ps-0 {
           &.ps-md-3 {
-            padding-left: calc(var(--bs-gutter-x)/ 2) !important;
+            padding-left: calc(var(--bs-gutter-x) / 2) !important;
           }
         }
       }
     }
+
     .activity-list {
       .list-group-item {
         &:not(:last-child) {
@@ -6012,9 +7011,11 @@ body {
         }
       }
     }
+
     .message-footer {
       background-color: $dark-text;
     }
+
     .nav-tabs {
       &.nav-tabs-line {
         .nav-link:not(.active) {
@@ -6039,6 +7040,7 @@ body {
     &.container {
       max-width: 100%;
       padding: 0;
+
       &:not(.muze-rtl) {
         .main-content {
           .px-xxl-5, .p-xxl-5 {
@@ -6047,20 +7049,24 @@ body {
           }
         }
       }
+
       &.double-header {
         .main-content {
           .header {
             &:before {
               height: 4.6875rem;
             }
+
             .container-fluid {
               max-width: 100%;
             }
+
             .px-xxl-5 {
               padding-right: 0 !important;
             }
           }
         }
+
         &.festive-template {
           &:not(.muze-rtl) {
             .main-content {
@@ -6073,6 +7079,7 @@ body {
               }
             }
           }
+
           &.muze-rtl {
             .main-content {
               .col-xxl-9 {
@@ -6086,6 +7093,7 @@ body {
           }
         }
       }
+
       &.top-header {
         .main-content {
           .header {
@@ -6094,6 +7102,7 @@ body {
             }
           }
         }
+
         &.festive-template {
           &:not(.muze-rtl) {
             .main-content {
@@ -6106,6 +7115,7 @@ body {
               }
             }
           }
+
           &.muze-rtl {
             .main-content {
               .col-xxl-9 {
@@ -6119,6 +7129,7 @@ body {
           }
         }
       }
+
       &.muze-rtl {
         .main-content {
           .px-xxl-5, .p-xxl-5 {
@@ -6127,6 +7138,7 @@ body {
           }
         }
       }
+
       &.project-management-template {
         .main-content {
           .bg-gray-100 {
@@ -6137,12 +7149,14 @@ body {
             }
           }
         }
+
         &:not(.muze-rtl) {
           .get-startedthree {
             right: -6.25rem;
           }
         }
       }
+
       &.festive-template {
         &:not(.muze-rtl) {
           .main-content {
@@ -6154,6 +7168,7 @@ body {
           }
         }
       }
+
       .muze-chats {
         border-right: none !important;
       }
@@ -6177,9 +7192,11 @@ body {
     .fs-16 {
       font-size: 0.875rem !important;
     }
+
     .navbar {
       li {
         padding-top: 0;
+
         a {
           font-size: 0.875rem;
         }
@@ -6231,13 +7248,14 @@ body {
         z-index: 9;
         border-radius: 50%;
         width: 2.625rem;
+
         &.btn-lg {
           padding: .5rem 0.675rem;
         }
       }
     }
   }
-  .top-header,.double-header {
+  .top-header, .double-header {
     .main-content {
       margin-top: 4.3125rem;
     }
@@ -6268,6 +7286,7 @@ body {
     }
   }
 }
+
 @media screen and (max-width: 479px) {
   .display-4 {
     font-size: 2.1rem;
@@ -6290,6 +7309,7 @@ body {
           .nav-link {
             font-size: 0.75rem;
           }
+
           > .collapse-box {
             > .nav {
               .nav-link {
@@ -6309,6 +7329,7 @@ body {
             .nav-link {
               font-size: 0;
             }
+
             > .collapse-box {
               > .nav {
                 .nav-link {
@@ -6325,6 +7346,7 @@ body {
     .navbar-vertical {
       &.navbar-expand-lg {
         max-width: 7.5rem;
+
         .navbar-nav {
           .nav-item {
             > .nav-link {
@@ -6332,10 +7354,13 @@ body {
                 font-size: 0.75rem;
               }
             }
+
             > .collapse-box {
               left: 7.5rem;
+
               > .nav {
                 min-width: 11.875rem;
+
                 .nav-link {
                   font-size: 0.75rem;
                 }
@@ -6345,6 +7370,7 @@ body {
         }
       }
     }
+
     .signout {
       .btn-lg {
         padding: 0.625rem 0.9375rem;
@@ -6356,6 +7382,7 @@ body {
     > .dropdown-menu {
       min-width: 17.5rem;
     }
+
     .dropdown-body {
       .dropdown-item {
         padding: 0.9375rem 0.625rem;
@@ -6420,6 +7447,7 @@ body {
       height: 2.5rem;
       min-width: 2.5rem;
     }
+
     .avatar-status {
       min-width: 0.75rem;
       width: 0.75rem;
@@ -6430,10 +7458,12 @@ body {
     h6 {
       font-size: 0.875rem;
     }
+
     .dropdown {
       &.end-0 {
         right: 0.3125rem !important;
       }
+
       &.top-0 {
         top: 0.3125rem !important;
       }
@@ -6445,6 +7475,7 @@ body {
       padding-top: 1.75rem;
       text-align: center;
     }
+
     .fc-toolbar-chunk {
       margin-top: 0.625rem;
     }
@@ -6457,6 +7488,7 @@ body {
     }
   }
 }
+
 @media screen and (max-width: 420px) {
   .header {
     .navbar-brand {
@@ -6464,17 +7496,20 @@ body {
         max-width: 4.0625rem;
       }
     }
+
     .icon-blue-hover {
       .muze-search {
         svg {
           max-width: 1rem;
         }
       }
+
       .dropdown {
         a {
           &.ms-4 {
             margin-left: 1rem !important;
           }
+
           svg {
             max-width: 1rem;
           }
@@ -6496,15 +7531,18 @@ body {
           }
         }
       }
+
       .after-header {
         margin-top: 4.5625rem;
       }
     }
+
     &.double-header {
       .after-header {
         margin-top: 0;
       }
     }
+
     &.muze-dark-mode {
       &.top-header {
         .after-header {
@@ -6512,9 +7550,11 @@ body {
         }
       }
     }
+
     .form-check-inline {
       margin-right: 0;
     }
+
     .header {
       .icon-blue-hover {
         .dropdown {
@@ -6527,15 +7567,18 @@ body {
         }
       }
     }
+
     .message-footer {
       a:not(.btn) {
         margin-left: 1.5rem;
       }
     }
+
     &.billing-templete {
       .btn-outline-dark {
         &.me-3 {
           margin-left: 0 !important;
+
           ~ .btn {
             &.btn-lg.btn-primary.mt-2 {
               margin-right: 0.5rem;
@@ -6556,6 +7599,7 @@ body {
           }
         }
       }
+
       &.double-header {
         &:not(.muze-rtl) {
           .icon-blue-hover {
@@ -6564,6 +7608,7 @@ body {
             }
           }
         }
+
         .main-content {
           .header {
             &:before {
