@@ -143,7 +143,7 @@ class TransactionService
             try {
                 $oldStatus = $transaction->status;
 
-                if (! in_array($status, TransactionStatus::STATUSES)) {
+                if (! in_array($status->value, TransactionStatus::STATUSES)) {
                     throw new TransactionException('Status is not valid !');
                 }
 
