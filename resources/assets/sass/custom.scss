@@ -103,6 +103,9 @@ input[type="checkbox"] {
   .header-fixed {
     left: 0;
   }
+  ul.navbar-nav > .navbar-brand{
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 479px) {
