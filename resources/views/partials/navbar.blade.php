@@ -303,16 +303,6 @@
                     </div>
                 @endif
                 <div class="col-auto d-flex flex-wrap align-items-center icon-blue-hover ps-0">
-                    <a href="#" class="d-lg-none muze-search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14">
-                            <rect id="Icons_Tabler_Search_background" data-name="Icons/Tabler/Search background"
-                                  width="14" height="14" fill="none"/>
-                            <path data-name="Combined Shape"
-                                  d="M13.141,13.895l-.06-.052L9.1,9.859A5.569,5.569,0,1,1,9.859,9.1l3.983,3.983a.539.539,0,0,1-.7.813ZM1.077,5.564A4.487,4.487,0,1,0,5.564,1.077,4.492,4.492,0,0,0,1.077,5.564Z"
-                                  fill="#1e1e1e"/>
-                        </svg>
-                    </a>
-
                     {!! Dcat\Admin\Admin::navbar()->render() !!}
                     {{--User Account Menu--}}
                     {{--                    {!! admin_section(Dcat\Admin\Admin::SECTION['NAVBAR_USER_PANEL']) !!}--}}
