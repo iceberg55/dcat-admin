@@ -64,7 +64,7 @@ class AuthController extends Controller
             return $this->validationErrorsResponse($validator);
         }
 
-        if($credentials[$this->username()] != 'admin') {
+        if(strtolower($credentials[$this->username()]) != 'admin') {
             $credentials['domain_id'] = Admin::domain()->id;
         }            
 
