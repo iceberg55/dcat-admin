@@ -108,7 +108,22 @@ div.collapse-box {
 }
 
 .card {
-  margin-bottom: var(--bs-gutter-x)!important;
+  margin-bottom: var(--bs-gutter-x) !important;
+}
+.muze-dark-mode {
+  ul.nav-tabs{
+    li.nav-item{
+      a.nav-link{
+        background-color: #1a1919;
+        color: #e9ecef;
+        border-color: #1a1919;
+      }
+    }
+  }
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
+  border-color: rgb(151 151 151) transparent transparent !important;
 }
 
 @media screen and (max-width: 991px) {
