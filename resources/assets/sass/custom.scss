@@ -110,15 +110,24 @@ div.collapse-box {
 .card {
   margin-bottom: var(--bs-gutter-x) !important;
 }
+
 .muze-dark-mode {
-  ul.nav-tabs{
-    li.nav-item{
-      a.nav-link{
+  ul.nav-tabs {
+    li.nav-item {
+      a.nav-link {
         background-color: #1a1919;
         color: #e9ecef;
         border-color: #1a1919;
       }
     }
+  }
+
+  .dd-handle, .iconpicker-popover, .popover-title, .iconpicker-items, .popover, .arrow, .iconpicker,
+  .iconpicker-popover.popover.bottom > .arrow, .iconpicker-popover.popover.bottomLeft > .arrow:after {
+    background-color: #0b0b0b !important;
+    background: #0b0b0b !important;
+    color: #e9ecef !important;
+    border-color: #171717 !important;
   }
 }
 
