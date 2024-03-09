@@ -47,18 +47,10 @@ export default class DarkMode {
                 $(this.options.selector).find('i')
                     .removeClass(this.options.icons.dark)
                     .addClass(this.options.icons.light);
-                $('.modal-content').removeClass(this.options.class);
-                $(this.options.selector).find('i')
-                    .removeClass(this.options.icons.dark)
-                    .addClass(this.options.icons.light);
                 break;
             case 'dark':
                 this.getStorage().setItem(this.options.storageKey, color);
                 $('body').addClass(this.options.class);
-                $(this.options.selector).find('i')
-                    .removeClass(this.options.icons.light)
-                    .addClass(this.options.icons.dark);
-                $('.modal-content').addClass(this.options.class);
                 $(this.options.selector).find('i')
                     .removeClass(this.options.icons.light)
                     .addClass(this.options.icons.dark);
