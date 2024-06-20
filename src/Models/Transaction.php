@@ -50,4 +50,9 @@ class Transaction extends Model
     {
         return $this->morphTo();
     }
+
+    public function for() : MorphTo
+    {
+        return $this->morphTo();
+    }
 }
