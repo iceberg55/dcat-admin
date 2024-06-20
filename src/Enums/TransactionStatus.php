@@ -12,12 +12,12 @@ enum TransactionStatus: string implements DcatEnumColored
 
     case PENDING = 'PENDING';
     case SUCCESS = 'SUCCESS';
-    case FAILED = 'FAILED';
+    case REJECTED = 'REJECTED';
 
     const STATUSES = [
         'PENDING',
         'SUCCESS',
-        'FAILED',
+        'REJECTED',
     ];
 
     public function color(): string
@@ -25,7 +25,7 @@ enum TransactionStatus: string implements DcatEnumColored
         return match ($this) {
             self::PENDING => '#dd9710',
             self::SUCCESS => '#49d758',
-            self::FAILED => '#db633e',
+            self::REJECTED => '#db633e',
         };
     }
 }
