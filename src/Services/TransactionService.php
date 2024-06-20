@@ -66,6 +66,7 @@ class TransactionService
 
     /**
      * @param Model $owner
+     * @param Model|null $for
      * @param TransactionType $type
      * @param float|int $amount
      * @param string $currency
@@ -77,6 +78,7 @@ class TransactionService
      */
     public function createTransactionForUser(
         Model $owner,
+        ?Model $for,
         TransactionType $type,
         float|int $amount,
         string $currency = Transaction::CURRENCY_USD,
@@ -92,6 +94,9 @@ class TransactionService
 
         $transaction = new Transaction();
         $transaction->owner()->associate($owner);
+        if($for){
+            $transaction->for()->associate($for);
+        }
         $transaction->type = $type;
         $transaction->amount = $amount;
         $transaction->currency = $currency;
@@ -104,6 +109,7 @@ class TransactionService
     }
 
     /**
+     * @param Model|null $for
      * @param TransactionType $type
      * @param float|int $amount
      * @param string $currency
@@ -114,6 +120,7 @@ class TransactionService
      * @throws TransactionException
      */
     public function createTransactionForCurrentUser(
+        ?Model $for,
         TransactionType $type,
         float|int $amount,
         string $currency = Transaction::CURRENCY_USD,
@@ -125,7 +132,7 @@ class TransactionService
             throw new AuthenticationException();
         }
 
-        return $this->createTransactionForUser(Admin::user(), $type, $amount, $currency, $information, $ip, $wallet_address);
+        return $this->createTransactionForUser(Admin::user(), $for, $type, $amount, $currency, $information, $ip, $wallet_address);
     }
 
     /**
@@ -184,9 +191,9 @@ class TransactionService
      * @return void
      * @throws Exception|Throwable
      */
-    public function setTransactionStatusFailed(Transaction $transaction): void
+    public function setTransactionStatusRejected(Transaction $transaction): void
     {
-        $this->setTransactionStatus($transaction, TransactionStatus::FAILED);
+        $this->setTransactionStatus($transaction, TransactionStatus::REJECTED);
     }
 
     /**
