@@ -14,6 +14,7 @@ use Dcat\Admin\Layout\Menu;
 use Dcat\Admin\Layout\Navbar;
 use Dcat\Admin\Layout\SectionManager;
 use Dcat\Admin\Models\Domain;
+use Dcat\Admin\Services\ReferralService;
 use Dcat\Admin\Services\TransactionService;
 use Dcat\Admin\Support\Context;
 use Dcat\Admin\Support\Helper;
@@ -248,6 +249,11 @@ class AdminServiceProvider extends ServiceProvider
         $this->app->singleton('admin.transaction', TransactionService::class, function (Application $application) {
             return new TransactionService(
                 $application->get('admin.credit')
+            );
+        });
+        $this->app->singleton('admin.referral', ReferralService::class, function (Application $application) {
+            return new ReferralService(
+                $application->get('admin.transaction')
             );
         });
     }
