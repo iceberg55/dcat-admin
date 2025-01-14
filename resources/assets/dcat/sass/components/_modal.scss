@@ -2,3 +2,14 @@
   border: 0;
   border-radius: 0;
 }
+
+.muze-dark-mode {
+  .modal {
+    .modal-content {
+      background-color: #1e1e1e;
+    }
+    .modal-header, .modal-footer {
+      border-color: #2e2e2e;
+    }
+  }
+}
