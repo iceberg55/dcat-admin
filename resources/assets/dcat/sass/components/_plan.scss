@@ -1,0 +1,22 @@
+.plan {
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+  margin-bottom: 1.5rem;
+  background-color: var(--bs-body-bg);
+  padding: 1rem;
+
+  .plan-header {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+
+  .plan-body {
+    margin: 0 0 1rem 0;
+  }
+}
+
+.muze-dark-mode {
+  .plan {
+    background-color: #1a1919;
+  }
+}
