@@ -38,3 +38,33 @@
     margin: -1.1rem;
   }
 }
+
+.colorful-card {
+  .card-header {
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    height: auto;
+    border-bottom-width: 0px;
+  }
+  .card-body {
+    color: #ffffff;
+    text-align: justify;
+  }
+
+  &.colorful-1 {
+    background: #8360c3;
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+    background: linear-gradient(to right, #2ebf91, #8360c3);
+  }
+  &.colorful-2 {
+    background: #544a7d;
+    background: -webkit-linear-gradient(to right, #544a7d, #f2ac21);
+    background: linear-gradient(to right, #544a7d, #f2ac21);
+  }
+  &.colorful-3 {
+    background: #8A2387;
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  }
+}
