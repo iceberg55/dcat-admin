@@ -44,10 +44,13 @@ table.data-table {
   border: 0;
 }
 
-.table td {
+.table:not(.table-sm) td {
   padding: .55rem;
   height: 55px;
   line-height: 1.42857;
+}
+
+.table td {
   border-color: $table-border-color;
 }
 
