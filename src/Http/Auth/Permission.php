@@ -32,7 +32,7 @@ class Permission
             return true;
         }
 
-        if (Admin::user()->cannot($permission)) {
+        if (Admin::user()->cannot($permission)) {dd($permission);
             static::error();
         }
     }
@@ -49,7 +49,7 @@ class Permission
             return true;
         }
 
-        if (! Admin::user()->inRoles($roles)) {
+        if (! Admin::user()->inRoles($roles)) {dd($roles);
             static::error();
         }
     }
@@ -76,7 +76,7 @@ class Permission
             return true;
         }
 
-        if (Admin::user()->inRoles($roles)) {
+        if (Admin::user()->inRoles($roles)) {dd($roles);
             static::error();
         }
     }

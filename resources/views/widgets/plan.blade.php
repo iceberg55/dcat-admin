@@ -149,7 +149,7 @@
     </div>
     <div class="plan-footer">
         <button class="btn btn-primary d-block w-100" data-bs-toggle="modal" data-bs-target="#planModal{!! $hash_id !!}">
-            <i class="fas fa-shopping-basket"></i> But for {!! $price !!}$
+            <i class="fas fa-shopping-basket"></i> Buy for {!! $price !!}$
         </button>
         <div class="modal fade" id="planModal{!! $hash_id !!}" tabindex="-1" aria-labelledby="planModal{!! $hash_id !!}Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -168,7 +168,7 @@
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-danger">Don't have Voucher Code</button>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-shopping-basket mr-1"></i> But for {!! $price !!}$
+                            <i class="fas fa-shopping-basket mr-1"></i> Buy for {!! $price !!}$
                         </button>
                     </div>
                 </form>
