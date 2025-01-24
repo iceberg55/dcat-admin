@@ -1,11 +1,7 @@
 <div class="box-footer">
-
-    <div class="col-md-{{$width['label']}} d-md-block" style="display: none"></div>
-
-    <div class="col-md-{{$width['field']}}">
-
+    <div class="col">
         @if(! empty($buttons['submit']))
-            <div class="btn-group float-end">
+            <div class="float-end">
                 <button class="btn btn-primary submit"><i class="fas fa-save"></i>&nbsp;{{ trans('admin.submit') }}</button>
             </div>
 
@@ -16,7 +12,7 @@
         @endif
 
         @if(! empty($buttons['reset']))
-        <div class="btn-group float-start">
+        <div class="float-start">
             <button type="reset" class="btn btn-warning"><i class="fas fa-rotate-left"></i>&nbsp;{{ trans('admin.reset') }}</button>
         </div>
         @endif

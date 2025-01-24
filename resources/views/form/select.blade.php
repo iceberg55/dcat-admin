@@ -9,8 +9,6 @@
 
         @include('admin::form.error')
 
-        <input type="hidden" name="{{$name}}"/>
-
         <select class="form-control {{$class}}" style="width: 100%;" name="{{$name}}" {!! $attributes !!} >
             <option value=""></option>
             @if($groups)
