@@ -67,7 +67,7 @@ select.form-control:not([multiple=multiple]) {
 
 @media (min-width: 768px) {
   .form-group .control-label {
-    text-align: right;
+    //text-align: right;
   }
 }
 
@@ -101,8 +101,11 @@ select.form-control:not([multiple=multiple]) {
   color: $red-darker;
 }
 
-.form-group.has-error .form-control {
-  border-color: $red-darker;
+.form-group.has-error .form-control,
+.form-group.has-error .input-group-text,
+.form-group.has-error .select2-selection--single,
+.form-group.has-error .select2-selection--multiple {
+border-color: $red-darker !important;
 }
 
 .input-group-prepend .input-group-text {
