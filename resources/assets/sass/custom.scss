@@ -31,16 +31,12 @@
 
 .login-form a:focus, .login-form a:hover,
 .signup-simple-template a:focus, .signup-simple-template a:hover,
-.simple-login-form a:focus, .simple-login-form a:hover, a:hover, a:not(.btn):focus {
+.simple-login-form a:focus, .simple-login-form a:hover, a:not(.btn):hover, a:not(.btn):focus {
   color: #4ef09d !important;
 }
 
 li.nav-item > a:hover {
   margin: 0px 10px;
-}
-
-a.btn:hover {
-  background-color: #0000;
 }
 
 input[type="checkbox"] {
