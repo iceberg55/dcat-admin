@@ -439,3 +439,10 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   padding: 1rem;
   margin: 1rem;
 }
+
+/* Dashboard Banner */
+.dashboard-banner {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+}
