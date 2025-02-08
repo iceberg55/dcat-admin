@@ -4,6 +4,7 @@ namespace Dcat\Admin\Layout;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Color;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class Asset
@@ -297,6 +298,12 @@ class Asset
             foreach ($before as $css) {
                 $this->alias[$n]['css'][] = str_replace('.css', "-{$color}.css", $css);
             }
+        }
+
+        $domain = Admin::domain();
+        $domainStylesPath = "css/{$domain->host}/styles.css";
+        if (File::exists(public_path($domainStylesPath))) {
+            $this->alias['@theme']['css'][] = $domainStylesPath;
         }
     }
 
