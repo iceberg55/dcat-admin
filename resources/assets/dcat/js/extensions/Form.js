@@ -27,7 +27,7 @@ class Form {
             // tab表单css选择器
             tabSelector: '.tab-pane',
             // 错误信息模板
-            errorTemplate: '<label class="text-danger" for="inputError"><i class="fas fa-ban"></i> {message}</label><br/>',
+            errorTemplate: '<label class="text-danger"><i class="fas fa-ban"></i> {message}</label><br/>',
             // 是否允许跳转
             redirect: true,
             // 自动移除表单错误信息
