@@ -191,6 +191,10 @@ class Asset
         '@autocomplete' => [
             'js' => '@admin/dcat/plugins/autocomplete/jquery.autocomplete.min.js',
         ],
+        '@custom' => [
+            'css' => [],
+            'js' => [],
+        ]
     ];
 
     /**
@@ -303,8 +307,15 @@ class Asset
         $domain = Admin::domain();
         $domainStylesPath = "css/{$domain->host}/styles.css";
         if (File::exists(public_path($domainStylesPath))) {
-            $this->alias['@theme']['css'][] = $domainStylesPath;
+            $this->alias['@custom']['css'][] = $domainStylesPath;
         }
+
+        $domainJsPath = "js/{$domain->host}/script.js";
+        if (File::exists(public_path($domainJsPath))) {
+            $this->alias['@custom']['js'][] = $domainJsPath;
+        }
+
+        $this->require('@custom');
     }
 
     /**
