@@ -1,4 +1,9 @@
 //  ------------------------------
+//    Background
+//  ------------------------------
+$background-image: '../images/bg.png' !default;
+
+//  ------------------------------
 //    Buttons
 //  ------------------------------
 $gradient-button-bs: 0 8px 25px -8px #aaa;
@@ -6,6 +11,7 @@ $gradient-button-bs: 0 8px 25px -8px #aaa;
 //  ------------------------------
 //    Colors
 //  ------------------------------
+$primary : #02a77f !default;
 $pure-black : #565656;
 $nav-component-border-color: #ddd;
 $custom-border-color: #E4E7ED;
@@ -48,7 +54,7 @@ $table-td-height: 60px;
 //    VS Checkbox
 //  ------------------------------
 $vs-checkbox-radio-border-width: 2px;
-$vs-checkbox-radio-border-color: $gray-600;
+$vs-checkbox-radio-border-color: #6c757d;
 $vs-checkbox-box: 20px;
 $vs-checkbox-box-sm: 15px;
 $vs-checkbox-box-lg: 24px;
