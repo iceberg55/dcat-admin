@@ -283,11 +283,11 @@ class Asset
      */
     protected function setUpTheme()
     {
-        $color = Admin::color()->getName();
-
-        if ($color === Color::DEFAULT_COLOR) {
-            return;
-        }
+        //$color = Admin::color()->getName();
+        //
+        //if ($color === Color::DEFAULT_COLOR) {
+        //    return;
+        //}
 
         $alias = [
             //'@adminlte',
