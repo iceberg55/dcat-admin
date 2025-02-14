@@ -1,3 +1,7 @@
+/* Variables */
+@import 'muze-variables';
+@import 'variables';
+
 /* Bootstrap setup */
 @import "~bootstrap/scss/functions";
 @import '~bootstrap/scss/variables';
@@ -8,10 +12,6 @@ $fa-font-path: "../fonts/fontawesome";
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
-
-/* Variables */
-@import 'muze-variables';
-@import 'variables';
 
 /* Bootstrap core */
 @import '~bootstrap/scss/bootstrap';
