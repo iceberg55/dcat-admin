@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\File;
 use Symfony\Component\HttpFoundation\Response;
 
 class Admin
@@ -695,5 +696,16 @@ class Admin
             $router->post('helpers/scaffold/table', 'Dcat\Admin\Http\Controllers\ScaffoldController@table');
             $router->get('helpers/icons', 'Dcat\Admin\Http\Controllers\IconController@index');
         });
+    }
+
+    public static function imageUrl(string $prefix, string $path): string
+    {
+        $currentDomain = static::domain();
+        $file = $prefix.'/'.$currentDomain->host.'/'.$path;
+        if (! File::exists($file)) {
+            $file = $prefix.'/'.$path;
+        }
+
+        return url($file);
     }
 }
