@@ -308,6 +308,7 @@ class Asset
         $domainStylesPath = "css/{$domain->host}/styles.css";
         if (File::exists(public_path($domainStylesPath))) {
             $this->alias['@custom']['css'][] = $domainStylesPath;
+            $this->alias['@theme']['css'] = [];
         }
 
         $domainJsPath = "js/{$domain->host}/script.js";
