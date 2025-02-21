@@ -2047,8 +2047,10 @@ caption, .caption {
     margin-left: -2em;
   }
   .form-check-input:checked[type="radio"] {
-    background-image: url("../svg/icons/check-light.svg");
-    background-size: 1rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 }
 .form-check-input[type="checkbox"] {
@@ -2135,7 +2137,7 @@ textarea.form-control {
   border-color: $gray-300;
   font-size: 0.875rem;
   height: 2.375rem;
-  background-image: url("../svg/icons/down-arrow.svg");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Crect fill='none'/%3E%3Cpath d='M.214.212a.738.738,0,0,1,.952-.07l.082.07L7.1,5.989a.716.716,0,0,1,.071.94L7.1,7.011l-5.85,5.778a.738.738,0,0,1-1.034,0,.716.716,0,0,1-.071-.94l.071-.081L5.547,6.5.214,1.233A.716.716,0,0,1,.143.293Z' transform='translate(13 3.25) rotate(90)' fill='%236c757d'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-size: 1rem 0.75rem;
   background-position: right 0.5rem center;
@@ -2514,8 +2516,10 @@ textarea.form-control {
 }
 /* 2.  28.  Muze Btn Close CSS */
 .btn-close {
-  background: transparent url("../svg/icons/close1.svg");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='none'/%3E%3Cpath d='M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z' transform='translate(2 2)' fill='%231e1e1e'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 /* 2.  29.  Muze Opacity CSS */
 .opacity-100 {
