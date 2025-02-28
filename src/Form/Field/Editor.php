@@ -36,6 +36,7 @@ class Editor extends Field
         'min_height' => 400,
         'save_enablewhendirty' => true,
         'convert_urls' => false,
+        'valid_children' => '+body[style]'
     ];
 
     protected $disk;
