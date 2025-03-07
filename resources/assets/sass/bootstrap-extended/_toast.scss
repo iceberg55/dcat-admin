@@ -85,3 +85,27 @@
     position: fixed !important;
     left: 74% !important;
   }
+
+/* Colors */
+#toast-container {
+    // Background color
+    .toast {
+        background-color: $primary !important;
+    }
+
+    .toast-success {
+        background-color: $success !important;
+    }
+
+    .toast-error {
+        background-color: $danger !important;
+    }
+
+    .toast-info {
+        background-color: $info !important;
+    }
+
+    .toast-warning {
+        background-color: $warning !important;
+    }
+}

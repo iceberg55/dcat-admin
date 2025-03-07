@@ -17,7 +17,7 @@ $fa-font-path: "../fonts/fontawesome" !default;
 @import '~bootstrap/scss/bootstrap';
 
 /* Bootstrap extends */
-//@import 'bootstrap-extended';
+@import 'bootstrap-extended';
 
 /* Theme */
 @import 'muze';
