@@ -2048,7 +2048,7 @@ footer {
 
 .muze-dark-mode {
   color: $gray-500;
-  background-color: $black-600 !important;
+  background-color: $background-color !important;
 
   .apexcharts-gridline {
     stroke: $gray-800;
@@ -2256,7 +2256,7 @@ footer {
   }
 
   .navbar-light {
-    background-color: $black-600;
+    background-color: $background-color;
   }
 
   .header-search {
@@ -2309,7 +2309,7 @@ footer {
   }
 
   .header-fixed {
-    background-color: $black-600;
+    background-color: $background-color;
   }
 
   .bg-white, .bg-blue-50 {
@@ -2384,7 +2384,7 @@ footer {
     }
 
     .navbar-vertical-footer {
-      background-color: $black-600;
+      background-color: $background-color;
 
       &.border-gray-50 {
         border-color: $gray-800 !important;
